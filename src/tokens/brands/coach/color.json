@@ -1,0 +1,8 @@
+{
+  "color": {
+    "ryan": { "value": "blue" },
+    "brand": {
+      "error": { "value": "pink" }
+    }
+  }
+}
