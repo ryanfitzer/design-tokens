@@ -1,8 +1,0 @@
-{
-  "color": {
-    "brand": {
-      "error": { "value": "red" },
-      "success": { "value": "green" }
-    }
-  }
-}
