@@ -17,10 +17,13 @@ module.exports = brands.map((brand) => [
                     'size/line-height/unitless',
                 ],
                 buildPath: `${paths.build.root}${brand}/`,
+                options: {
+                    outputReferences: true,
+                },
                 files: [
                     {
-                        destination: `variables.css`,
                         format: `css/variables`,
+                        destination: `variables.css`,
                     },
                 ],
             },
