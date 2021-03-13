@@ -1,0 +1,26 @@
+{
+  "color": {
+    "primary": { "value": "#000001" },
+    "secondary": { "value": "#fffffe" },
+    "white": { "value": "#ffffff" },
+    "black": { "value": "#000000" },
+    "neutral": {
+      "light": { "value": "#f7f7f7" },
+      "dark": { "value": "#333333" }
+    },
+    "error": {
+      "primary": { "value": "#ee0011" }
+    },
+    "inactive": { "value": "#d8d8d8" },
+    "scrim": {
+      "light": { "value": "rgba(255, 255, 255, 0.5)" },
+      "dark": { "value": "rgba(0, 0, 0, 0.8)" }
+    },
+    "standout": {
+      "primary": { "value": "#333333" }
+    },
+    "success": {
+      "primary": { "value": "#2d9d78" }
+    }
+  }
+}

@@ -1,6 +1,0 @@
-{
-  "color": {
-    "error": { "value": "{color.brand.error.value}" },
-    "success": { "value": "{color.brand.success.value}" }
-  }
-}

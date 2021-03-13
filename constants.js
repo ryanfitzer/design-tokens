@@ -15,17 +15,19 @@ module.exports = {
         root,
         scripts: {
             root: resolve('scripts'),
+            styleDictionary: resolve('scripts/style-dictionary'),
+            filters: resolve('scripts/style-dictionary/filters'),
+            transforms: resolve('scripts/style-dictionary/transforms'),
         },
         src: {
             root: resolve('src'),
-            tokens: resolve('src/tokens'),
+            properties: resolve('src/properties'),
         },
         build: {
             root: resolve('build'),
             assets: resolve('build/assets'),
             styles: resolve('build/assets/styles'),
             properties: resolve('build/properties'),
-            scripts: resolve('build/scripts'),
         },
     },
 };
