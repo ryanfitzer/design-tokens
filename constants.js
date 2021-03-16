@@ -23,11 +23,9 @@ module.exports = {
             root: resolve('src'),
             properties: resolve('src/properties'),
         },
-        build: {
-            root: resolve('build'),
-            assets: resolve('build/assets'),
-            styles: resolve('build/assets/styles'),
-            properties: resolve('build/properties'),
+        dist: {
+            root: resolve('dist'),
+            version: resolve(`dist/${pkg.version}`),
         },
     },
 };
