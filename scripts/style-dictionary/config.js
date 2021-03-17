@@ -6,14 +6,14 @@ const brands = ['coach', 'kate-spade', 'stuart-weitzman'];
 module.exports = brands.map((brand) => [
     brand,
     {
-        include: [`${paths.src.properties}global/**/*.json`],
+        include: [`${paths.src.properties}@defaults/**/*.json`],
         source: [`${paths.src.properties}${brand}/**/*.json`],
         platforms: {
             css: {
                 transformGroup: 'custom-css-variables',
                 buildPath: `${paths.dist.version}${brand}/`,
                 options: {
-                    outputReferences: true,
+                    // outputReferences: true,
                 },
                 files: [
                     {

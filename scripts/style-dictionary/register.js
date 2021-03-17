@@ -31,9 +31,9 @@ module.exports = {
             transforms: [
                 'attribute/cti',
                 'name/cti/kebab',
-                'color/css',
                 'size/pxToRem',
                 'size/line-height/unitless',
+                'color/css',
             ],
         },
     ],

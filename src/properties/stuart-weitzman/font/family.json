@@ -1,0 +1,14 @@
+{
+  "font": {
+    "family": {
+      "sans-serif": {
+        "value": "FuturaBT, Arial, sans-serif"
+      },
+      "serif": {
+        "regular": {
+          "value": "HeldaneText-Regular, serif"
+        }
+      }
+    }
+  }
+}

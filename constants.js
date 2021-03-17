@@ -10,7 +10,10 @@ module.exports = {
         prefix: 'dt',
         global: 'DT',
     },
-    pkgName: pkg.name,
+    pkg: {
+        name: pkg.name,
+        version: pkg.version,
+    },
     paths: {
         root,
         scripts: {

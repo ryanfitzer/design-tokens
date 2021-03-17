@@ -2,7 +2,14 @@ const getSources = (props) => {
     const srcs = [];
     const delim = ',\n\t\t ';
     const names = [].concat(props.local.value);
-    const formats = ['otf', 'ttf', 'woff', 'woff2'];
+    const formats = [
+        'embedded-opentype',
+        'opentype',
+        'svg',
+        'truetype',
+        'woff',
+        'woff2',
+    ];
 
     const urls = formats.filter((format) => props[format]);
 
