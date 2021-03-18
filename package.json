@@ -1,17 +1,15 @@
 {
   "name": "@tapestry-inc/design-tokens",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tapestry Design Tokens",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "https://github.com/Tapestry-Inc/design_tokens.git"
   },
-  "files": [
-    "build/**/*"
-  ],
   "scripts": {
     "build": "npm run tokens",
+    "prebuild": "cp package.json ./build",
     "cdn": "npm run build && node ./scripts/cdn",
     "test": "echo '[ToDo] Setup testing framework!'",
     "tokens": "node scripts/style-dictionary/build.js",

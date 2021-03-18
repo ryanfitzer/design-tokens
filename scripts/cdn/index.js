@@ -5,7 +5,10 @@ const { paths, pkg } = require('../../constants');
 // Create versioned assets for package
 fs.copySync(paths.build.root, paths.dist.root);
 fs.copySync(paths.build.root, paths.dist.version);
-// fs.copySync(`${paths.root}package.json`, `${paths.dist.version}package.json`);
+
+// Remove unneeded package.json files
+fs.removeSync(`${paths.dist.root}package.json`);
+fs.removeSync(`${paths.dist.version}package.json`);
 
 // Publish to gh-pages branch
 ghpages.publish(
