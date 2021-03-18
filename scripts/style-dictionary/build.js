@@ -9,8 +9,10 @@ Object.entries(registrations).forEach(([type, configs]) =>
     configs.forEach((config) => StyleDictionary[`register${type}`](config))
 );
 
-// Copy package.json into build directory
-fs.copySync(`${paths.root}package.json`, `${paths.build.root}package.json`);
+// Copy package files into build directory
+['package.json', 'README.md'].forEach((file) =>
+    fs.copySync(`${paths.root}${file}`, `${paths.build.root}${file}`)
+);
 
 // Build each brand
 configs.forEach(([brand, config]) => {
