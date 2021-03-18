@@ -11,7 +11,7 @@ module.exports = brands.map((brand) => [
         platforms: {
             css: {
                 transformGroup: 'custom-css-variables',
-                buildPath: `${paths.dist.version}${brand}/`,
+                buildPath: `${paths.build.root}${brand}/`,
                 options: {
                     // outputReferences: true,
                 },
@@ -29,7 +29,7 @@ module.exports = brands.map((brand) => [
                 ],
             },
             'css/asset/font-face': {
-                buildPath: `${paths.dist.version}${brand}/`,
+                buildPath: `${paths.build.root}${brand}/`,
                 transforms: ['attribute/cti'],
                 files: [
                     {

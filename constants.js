@@ -15,7 +15,15 @@ module.exports = {
         version: pkg.version,
     },
     paths: {
-        root,
+        root: resolve(root),
+        build: {
+            root: resolve('build'),
+            version: resolve(`build/${pkg.version}`),
+        },
+        dist: {
+            root: resolve('dist'),
+            version: resolve(`dist/${pkg.version}`),
+        },
         scripts: {
             root: resolve('scripts'),
             styleDictionary: resolve('scripts/style-dictionary'),
@@ -25,10 +33,6 @@ module.exports = {
         src: {
             root: resolve('src'),
             properties: resolve('src/properties'),
-        },
-        dist: {
-            root: resolve('dist'),
-            version: resolve(`dist/${pkg.version}`),
         },
     },
 };

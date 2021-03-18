@@ -11,7 +11,7 @@ Object.entries(registrations).forEach(([type, configs]) =>
 
 // Build each brand
 configs.forEach(([brand, config]) => {
-    console.log(`\nBuilding ${brand}`);
+    console.log(`\nBuilding ${brand.toUpperCase()}`);
 
     const styleDictionary = StyleDictionary.extend(config);
 
@@ -21,6 +21,6 @@ configs.forEach(([brand, config]) => {
     // Temporary
     fs.copySync(
         './examples/index.html',
-        `${paths.dist.version}${brand}/index.html`
+        `${paths.build.root}${brand}/index.html`
     );
 });

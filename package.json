@@ -1,14 +1,20 @@
 {
-  "name": "design-tokens",
+  "name": "@tapestry-inc/design-tokens",
   "version": "0.1.0",
   "description": "Tapestry Design Tokens",
   "license": "UNLICENSED",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tapestry-Inc/design_tokens.git"
+  },
+  "files": [
+    "build/**/*"
+  ],
   "scripts": {
-    "build": "node scripts/style-dictionary/build.js",
-    "gh-pages": "node scripts/gh-pages/index.js",
-    "publish": "npm run build && npm run gh-pages",
+    "build": "npm run tokens",
+    "cdn": "npm run build && node ./scripts/cdn",
     "test": "echo '[ToDo] Setup testing framework!'",
+    "tokens": "node scripts/style-dictionary/build.js",
     "postinstall": "husky install"
   },
   "devDependencies": {

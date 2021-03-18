@@ -2,13 +2,16 @@ const fs = require('fs-extra');
 const ghpages = require('gh-pages');
 const { paths, pkg } = require('../../constants');
 
+// Create versioned assets for package
+fs.copySync(paths.build.root, paths.dist.root);
+fs.copySync(paths.build.root, paths.dist.version);
+// fs.copySync(`${paths.root}package.json`, `${paths.dist.version}package.json`);
+
+// Publish to gh-pages branch
 ghpages.publish(
     paths.dist.root,
     {
         add: true,
-        async beforeAdd() {
-            return fs.copySync(paths.dist.version, paths.dist.root);
-        },
     },
     (err) => {
         if (err) return console.log(err);
