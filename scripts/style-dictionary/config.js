@@ -3,6 +3,8 @@ const checkAttr = require('./helpers/check-attr');
 
 const brands = ['coach', 'kate-spade', 'stuart-weitzman'];
 
+console.log('`${paths.build.root}${brand}/`', `${paths.build.root}TEST/`);
+
 module.exports = brands.map((brand) => [
     brand,
     {

@@ -9,7 +9,6 @@
   },
   "scripts": {
     "build": "npm run tokens",
-    "prebuild": "cp package.json ./build",
     "cdn": "npm run build && node ./scripts/cdn",
     "test": "echo '[ToDo] Setup testing framework!'",
     "tokens": "node scripts/style-dictionary/build.js",
