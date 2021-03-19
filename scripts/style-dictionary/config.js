@@ -1,22 +1,15 @@
-const { paths } = require('../../constants');
-const checkAttr = require('./helpers/check-attr');
-
-const brands = ['coach', 'kate-spade', 'stuart-weitzman'];
-
-console.log('`${paths.build.root}${brand}/`', `${paths.build.root}TEST/`);
+const { brands, paths } = require('../../constants');
+const checkAttr = require('./filters/check-attr');
 
 module.exports = brands.map((brand) => [
     brand,
     {
-        include: [`${paths.src.properties}@defaults/**/*.json`],
-        source: [`${paths.src.properties}${brand}/**/*.json`],
+        include: [`${paths.src.root}@defaults/**/*.json`],
+        source: [`${paths.src.root}${brand}/**/*.json`],
         platforms: {
             css: {
-                transformGroup: 'custom-css-variables',
+                transformGroup: 'css-custom',
                 buildPath: `${paths.build.root}${brand}/`,
-                options: {
-                    // outputReferences: true,
-                },
                 files: [
                     {
                         format: `css/variables`,
@@ -32,7 +25,7 @@ module.exports = brands.map((brand) => [
             },
             'css/asset/font-face': {
                 buildPath: `${paths.build.root}${brand}/`,
-                transforms: ['attribute/cti'],
+                transforms: ['attribute/cti', 'name/cti/kebab'],
                 files: [
                     {
                         destination: 'font-face.css',
@@ -41,6 +34,44 @@ module.exports = brands.map((brand) => [
                             attributes: {
                                 category: 'font',
                                 type: 'face',
+                            },
+                        },
+                    },
+                ],
+            },
+            json: {
+                buildPath: `${paths.build.root}${brand}/properties/`,
+                transformGroup: 'json-custom',
+                files: [
+                    {
+                        destination: 'index.json',
+                        format: 'json/properties',
+                    },
+                    {
+                        destination: 'color.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'color',
+                            },
+                        },
+                    },
+                    {
+                        destination: 'font.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'font',
+                                type: 'family',
+                            },
+                        },
+                    },
+                    {
+                        destination: 'size.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'size',
                             },
                         },
                     },

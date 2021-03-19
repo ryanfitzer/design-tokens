@@ -6,6 +6,7 @@ const root = path.resolve(__dirname);
 const resolve = (part) => path.normalize(`${path.resolve(root, part)}/`);
 
 module.exports = {
+    brands: ['coach', 'kate-spade', 'stuart-weitzman'],
     namespace: {
         prefix: 'dt',
         global: 'DT',
@@ -32,7 +33,6 @@ module.exports = {
         },
         src: {
             root: resolve('src'),
-            properties: resolve('src/properties'),
         },
     },
 };

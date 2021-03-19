@@ -16,7 +16,7 @@ Object.entries(registrations).forEach(([type, configs]) =>
 
 // Build each brand
 configs.forEach(([brand, config]) => {
-    console.log(`\nBuilding ${brand.toUpperCase()}`);
+    console.log(`\nBuilding ${brand.replace('-', ' ').toUpperCase()}`);
 
     const styleDictionary = StyleDictionary.extend(config);
 

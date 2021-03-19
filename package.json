@@ -11,12 +11,14 @@
     "build": "npm run tokens",
     "cdn": "npm run build && node ./scripts/cdn",
     "test": "echo '[ToDo] Setup testing framework!'",
-    "tokens": "node scripts/style-dictionary/build.js",
+    "tailwind": "node scripts/tailwind",
+    "tokens": "node scripts/style-dictionary",
     "postinstall": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
+    "autoprefixer": "^10.2.5",
     "cross-env": "^7.0.3",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
@@ -24,8 +26,10 @@
     "gh-pages": "^3.1.0",
     "husky": "^5.1.3",
     "lint-staged": "^10.5.4",
+    "postcss": "^8.2.8",
+    "postcss-import": "^14.0.0",
     "prettier": "2.2.1",
     "style-dictionary": "^3.0.0-rc.6",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "^2.0.4"
   }
 }

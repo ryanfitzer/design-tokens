@@ -1,7 +1,0 @@
-{
-  "extends": ["eslint:recommended", "prettier"],
-  "env": {
-    "es2017": true,
-    "node": true
-  }
-}
