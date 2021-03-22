@@ -9,11 +9,6 @@ Object.entries(registrations).forEach(([type, configs]) =>
     configs.forEach((config) => StyleDictionary[`register${type}`](config))
 );
 
-// Copy package files into build directory
-['package.json', 'README.md'].forEach((file) =>
-    fs.copySync(`${paths.root}${file}`, `${paths.build.root}${file}`)
-);
-
 // Build each brand
 configs.forEach(([brand, config]) => {
     console.log(`\nBuilding ${brand.replace('-', ' ').toUpperCase()}`);
