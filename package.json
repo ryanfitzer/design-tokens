@@ -13,7 +13,7 @@
     "test": "echo '[ToDo] Setup testing framework!'",
     "tailwind": "node scripts/tailwind",
     "tokens": "node scripts/style-dictionary",
-    "postinstall": "husky install"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
