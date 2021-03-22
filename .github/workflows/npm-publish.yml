@@ -13,6 +13,7 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://npm.pkg.github.com'
+      - run: echo "HUSKY=0" >> $GITHUB_ENV
       - run: npm install
       - run: npm run build
       - run: npm publish ./build
