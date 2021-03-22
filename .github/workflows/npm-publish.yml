@@ -12,8 +12,8 @@ jobs:
           node-version: '14.x'
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install
+        env: HUSKY: 0
       - run: npm run build
       - run: npm publish ./build
         env:
-          HUSKY: 0
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
