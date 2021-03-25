@@ -1,21 +1,25 @@
 # Design Tokens System
 
-Design tokens are style primitives (color, typography, spacing, etc.) that are stored in a platform/code/use-agnostic system, enabling greater efficiency in  maintaining and scaling a brand's style.
+Design tokens are style primitives (color, typography, spacing, etc.) that are stored in a platform/code/use-agnostic system, enabling greater efficiency in maintaining and scaling a brand's style.
 
-## Benefits
+With these tokens, we also generate a customized version of [Tailwind](https://tailwindcss.com/docs). This enables using utility classes encoded with a brand's design tokens for situations where using a utility class is more optimal than using a variable.
 
-- Centralize control over brand style
-- Ease in enforcing UI consistency across platforms.
-- Automate generation of brand-themed assets like CSS & JavaScript variables, SVG icons, and CSS utility classes.
-- Structured adoption through versioned packages.
+## Development
 
-## Common Style Primitives
+### Commit Conventions
 
-- Colors (inform text, borders, backgrounds, icons, etc.)
-- Spacing scale (informs padding, margin, etc.)
-- Font Families
-- Text scale (size and line-height combos, agnostic of usage)
-- Border scale
-- Breakpoints 
-- Transitions
-- SVG icons
+This projects requires commit messages use the [ESLint convention](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-eslint/README.md#eslint-convention)
+
+Commit message format: `<Tag>: <Message>`
+
+Example commit message:
+
+```
+Breaking: Removed deprecated token.
+```
+
+Each commit message is linted with [`commitlint`](https://commitlint.js.org). See `commitlint.config.js` for configuration.
+
+### Publishing
+
+The release process is managed by [Semantic Release](https://semantic-release.gitbook.io/semantic-release/). New releases are published based on the `<Type>` tag in the commit messages when a the `main` branch receives a push/merge. See `release.config.js` for configuration.

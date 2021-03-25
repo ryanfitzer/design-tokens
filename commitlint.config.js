@@ -1,26 +1,35 @@
 // https://commitlint.js.org/#/reference-configuration
 module.exports = {
     parserPreset: 'conventional-changelog-conventionalcommits',
+
     // https://commitlint.js.org/#/reference-rules?id=rules
     /*
         Example commit message structure:
-        <Type>: <This is the subject.>
+        <Tag>: <Message>
         Docs: Updated the readme to add more detail.
     */
+    /* 
+        Mapping rules to ESLint convention:
+        type-* = tag
+        subject-* = message
+   */
     rules: {
-        'subject-empty': [ 2, 'never' ],
-        'type-case': [ 2, 'always', 'start-case' ],
-        'type-empty': [ 2, 'never' ],
-        'type-enum': [ 2, 'always', [
-            'Breaking',
-            'Build',
-            'Chore',
-            'Docs',
-            'Fix',
-            'New',
-            'Update',
-            'Upgrade',
-            'WIP'
-        ] ]
-    }
+        'subject-empty': [2, 'never'],
+        'type-case': [2, 'always', 'start-case'],
+        'type-empty': [2, 'never'],
+        'type-enum': [
+            2,
+            'always',
+            [
+                'Breaking', // Backwards-incompatible change
+                'New', // Backwards-compatible addition
+                'Update', // Backwards-compatible enhancement
+                'Fix', // Bug fix
+                'Upgrade', // Dependency upgrade
+                'Docs', // Changes to documentation
+                'Build', // Changes to build process
+                'Chore', // WIP, refactoring, adding tests, etc
+            ],
+        ],
+    },
 };

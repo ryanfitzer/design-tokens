@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const { paths } = require('../constants');
 const pkg = require(`${paths.root}package.json`);
 
-const files = ['README.md'];
+const files = ['.npmrc', 'README.md'];
 
 const copyFiles = () =>
     files.forEach((file) =>
