@@ -1,4 +1,4 @@
-# Design Tokens System
+# Tapestry Design Tokens
 
 Design tokens are style primitives (color, typography, spacing, etc.) that are stored in a platform/code/use-agnostic system, enabling greater efficiency in maintaining and scaling a brand's style.
 

@@ -3,10 +3,9 @@
   "version": "0.0.0-development",
   "description": "Tapestry Design Tokens",
   "license": "UNLICENSED",
-  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Tapestry-Inc/design_tokens.git"
+    "url": "https://github.com/Tapestry-Inc/design-tokens.git"
   },
   "scripts": {
     "build": "npm run tokens && npm run tailwind && npm run copy",
@@ -15,13 +14,13 @@
     "test": "echo '[ToDo] Setup testing framework!'",
     "tailwind": "node scripts/tailwind",
     "tokens": "node scripts/style-dictionary",
-    "prepare": "husky install",
-    "semantic-release": "semantic-release"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "autoprefixer": "^10.2.5",
+    "conventional-changelog-eslint": "^3.0.9",
     "cross-env": "^7.0.3",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
@@ -35,11 +34,5 @@
     "semantic-release": "^17.4.2",
     "style-dictionary": "^3.0.0-rc.6",
     "tailwindcss": "^2.0.4"
-  },
-  "publishConfig": {
-    "access": "restricted"
-  },
-  "dependencies": {
-    "conventional-changelog-eslint": "^3.0.9"
   }
 }
