@@ -1,0 +1,38 @@
+name: FTP Assets
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Latest Tag
+        id: tag
+        run: echo ::set-output name=latest::${GITHUB_REF#refs/*/}
+      - run: echo ${{ steps.tag.outputs.latest }}
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ steps.vars.outputs.tag }}
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - run: npm ci
+      - run: npm test
+      - run: npm run dist
+
+      - uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          local-dir: ./dist
+          server-dir: ./design-tokens
+          server: ${{ secrets.FTP_ADDRESS }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
