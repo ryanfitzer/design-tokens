@@ -1,9 +1,8 @@
 name: FTP Assets
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  registry_package:
+    types: [published]
 
 jobs:
   web-deploy:
