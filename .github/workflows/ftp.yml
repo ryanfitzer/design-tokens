@@ -1,8 +1,6 @@
 name: FTP Assets
 
-on:
-  registry_package:
-    types: [published]
+on: registry_package
 
 jobs:
   web-deploy:
