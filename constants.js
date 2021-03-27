@@ -5,7 +5,7 @@ const root = path.resolve(__dirname);
 
 const resolve = (part) => path.normalize(`${path.resolve(root, part)}/`);
 
-console.log('process.env.PKG_VERSION', process.env.NODE_PKG_VERSION);
+const pkgVersion = process.env.NODE_PKG_VERSION || pkg.version;
 
 module.exports = {
     brands: ['coach', 'kate-spade', 'stuart-weitzman'],
@@ -15,17 +15,17 @@ module.exports = {
     },
     pkg: {
         name: pkg.name,
-        version: process.env.NODE_PKG_VERSION || pkg.version,
+        version: pkgVersion,
     },
     paths: {
         root: resolve(root),
         build: {
             root: resolve('build'),
-            version: resolve(`build/${pkg.version}`),
+            version: resolve(`build/${pkgVersion}`),
         },
         dist: {
             root: resolve('dist'),
-            version: resolve(`dist/${pkg.version}`),
+            version: resolve(`dist/${pkgVersion}`),
         },
         scripts: {
             root: resolve('scripts'),

@@ -18,9 +18,6 @@ jobs:
         id: version
         run: echo ::set-output name=latest::${GITHUB_REF#refs/*/v}
 
-      - run: echo ${{ steps.tag.outputs.latest }}
-      - run: echo ${{ steps.version.outputs.latest }}
-
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
