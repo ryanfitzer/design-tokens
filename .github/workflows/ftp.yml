@@ -1,6 +1,9 @@
 name: FTP Assets
 
-on: registry_package
+on:
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   web-deploy:
@@ -16,6 +19,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+          token: ${{ secrets.GH_PAT }}
           ref: ${{ steps.vars.outputs.tag }}
 
       - uses: actions/setup-node@v1
