@@ -16,7 +16,7 @@ jobs:
 
       - name: Set Latest Version
         id: version
-        run: echo ::set-output name=latest::${steps.tag.outputs.latest:1}
+        run: echo ::set-output name=latest::${GITHUB_REF#refs/*/v}
 
       - run: echo ${{ steps.tag.outputs.latest }}
       - run: echo ${{ steps.version.outputs.latest }}
