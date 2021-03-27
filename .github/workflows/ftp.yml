@@ -13,7 +13,13 @@ jobs:
       - name: Set Latest Tag
         id: tag
         run: echo ::set-output name=latest::${GITHUB_REF#refs/*/}
+
+      - name: Set Latest Version
+        id: version
+        run: echo ::set-output name=latest::${steps.tag.outputs.latest:1}
+
       - run: echo ${{ steps.tag.outputs.latest }}
+      - run: echo ${{ steps.version.outputs.latest }}
 
       - uses: actions/checkout@v2
         with:
@@ -22,10 +28,11 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           ref: ${{ steps.vars.outputs.tag }}
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
-
+        env:
+          PKG_VERSION: ${{ steps.version.outputs.latest }}
       - run: npm ci
       - run: npm test
       - run: npm run dist
