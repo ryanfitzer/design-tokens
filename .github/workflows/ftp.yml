@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
           token: ${{ secrets.GH_PAT }}
-          ref: ${{ steps.vars.outputs.tag }}
+          ref: ${{ steps.tag.outputs.latest }}
 
       - uses: actions/setup-node@v2
         with:

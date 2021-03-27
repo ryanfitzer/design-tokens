@@ -10,7 +10,7 @@
   "scripts": {
     "build": "npm run tokens && npm run tailwind && npm run copy",
     "copy": "node scripts/copy",
-    "dist": "npm run build && node scripts/dist",
+    "dist": "node scripts/dist",
     "test": "echo '[ToDo] Setup testing framework!'",
     "tailwind": "node scripts/tailwind",
     "tokens": "node scripts/style-dictionary",
