@@ -1,5 +1,8 @@
 {
   "color": {
+    "primary": {
+      "value": "#000000"
+    },
     "neutral": {
       "base": { "value": "#333333" },
       "dark": { "value": "#333333" }
