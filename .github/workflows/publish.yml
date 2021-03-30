@@ -36,13 +36,14 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Create Distribution
-        if: ${{ steps.package.outputs.new-release-published }}
+        if: ${{ steps.package.outputs.new-release-published == 'true' }}
         run: npm run dist
         env:
           NODE_PKG_VERSION: ${{ steps.package.outputs.release-version }}
 
       - name: FTP Assets to CDN
         uses: sebastianpopp/ftp-action@releases/v2
+        if: ${{ steps.package.outputs.new-release-published == 'true' }}
         with:
           options: --overwrite --asci --transfer-all --parallel=5
           localDir: ./dist
