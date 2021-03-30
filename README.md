@@ -4,6 +4,8 @@ Design tokens are style primitives (color, typography, spacing, etc.) that are s
 
 With these tokens, we also generate a customized version of [Tailwind](https://tailwindcss.com/docs). This enables using utility classes encoded with a brand's design tokens for situations where using a utility class is more optimal than using a variable.
 
+This project publishes assets (css, js, json) to Akamai and an NPM package to the Github Packages registry.
+
 ## Development
 
 ### Commit Conventions
