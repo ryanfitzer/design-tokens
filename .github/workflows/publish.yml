@@ -50,10 +50,3 @@ jobs:
           host: ${{ secrets.FTP_ADDRESS }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-        # uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        # with:
-        #   local-dir: ./dist/
-        #   server-dir: ./design-tokens/
-        #   server: ${{ secrets.FTP_ADDRESS }}
-        #   username: ${{ secrets.FTP_USERNAME }}
-        #   password: ${{ secrets.FTP_PASSWORD }}
