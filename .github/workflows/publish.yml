@@ -45,7 +45,7 @@ jobs:
         uses: sebastianpopp/ftp-action@releases/v2
         if: ${{ steps.package.outputs.new-release-published == 'true' }}
         with:
-          options: --verbose --overwrite --asci --transfer-all --parallel=5
+          options: --verbose --overwrite --asci --transfer-all --no-perms --parallel=5
           localDir: ./dist
           remoteDir: ./design-tokens
           host: ${{ secrets.FTP_ADDRESS }}
