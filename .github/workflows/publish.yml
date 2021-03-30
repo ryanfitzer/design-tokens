@@ -42,10 +42,18 @@ jobs:
           NODE_PKG_VERSION: ${{ steps.package.outputs.release-version }}
 
       - name: FTP Assets to CDN
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
-          local-dir: ./dist/
-          server-dir: ./design-tokens/
-          server: ${{ secrets.FTP_ADDRESS }}
-          username: ${{ secrets.FTP_USERNAME }}
+          options: --overwrite --asci --transfer-all --parallel=5
+          localDir: ./dist
+          remoteDir: ./design-tokens
+          host: ${{ secrets.FTP_ADDRESS }}
+          user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+        # uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        # with:
+        #   local-dir: ./dist/
+        #   server-dir: ./design-tokens/
+        #   server: ${{ secrets.FTP_ADDRESS }}
+        #   username: ${{ secrets.FTP_USERNAME }}
+        #   password: ${{ secrets.FTP_PASSWORD }}
