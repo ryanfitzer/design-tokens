@@ -61,7 +61,7 @@ module.exports = brands.map((brand) => [
                         },
                     },
                     {
-                        destination: 'font.json',
+                        destination: 'font-family.json',
                         format: 'json/properties',
                         filter: {
                             attributes: {
@@ -71,11 +71,32 @@ module.exports = brands.map((brand) => [
                         },
                     },
                     {
-                        destination: 'size.json',
+                        destination: 'font-size.json',
                         format: 'json/properties',
                         filter: {
                             attributes: {
                                 category: 'size',
+                                type: 'font',
+                            },
+                        },
+                    },
+                    {
+                        destination: 'letter-spacing.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'size',
+                                type: 'letter-spacing',
+                            },
+                        },
+                    },
+                    {
+                        destination: 'line-height.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'size',
+                                type: 'line-height',
                             },
                         },
                     },

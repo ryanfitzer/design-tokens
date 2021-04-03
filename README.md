@@ -20,8 +20,10 @@ Each brand contains the same files. Directory/file naming convention is [kebab-c
     └── properties
         ├── index.json
         ├── color.json
-        ├── font.json
-        └── size.json
+        ├── font-family.json
+        ├── font-size.json
+        ├── letter-spacing.json
+        └── line-height.json
 ```
 
 ## Usage

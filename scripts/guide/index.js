@@ -3,11 +3,31 @@ const { brands, paths } = require('../../constants');
 const handlebars = require('./config');
 const capitalize = require('./helpers/capitalize');
 
+const props = {
+    colors: 'color',
+    fontFamily: 'font-family',
+    fontSize: 'font-size',
+    letterSpacing: 'letter-spacing',
+    lineHeight: 'line-height',
+};
+
 brands.forEach((brand) => {
-    const jsonPath = `${paths.build.root}${brand}/properties/`;
-    const colors = Object.values(fs.readJsonSync(`${jsonPath}color.json`));
-    const fonts = Object.values(fs.readJsonSync(`${jsonPath}font.json`));
-    const sizes = Object.values(fs.readJsonSync(`${jsonPath}size.json`));
+    const destPath = `${paths.build.root}${brand}/index.html`;
+
+    console.info(
+        `\n[guide] Building ${brand.replace('-', ' ').toUpperCase()}\n`
+    );
+
+    const data = Object.entries(props).reduce((accum, [name, file]) => {
+        const values = Object.values(
+            fs.readJsonSync(
+                `${paths.build.root}${brand}/properties/${file}.json`
+            )
+        );
+        accum[name] = values;
+
+        return accum;
+    }, {});
 
     const page = fs.readFileSync(`${paths.scripts.guide}page.hbs`, {
         encoding: 'utf8',
@@ -16,12 +36,17 @@ brands.forEach((brand) => {
     const renderPage = handlebars.compile(page);
 
     fs.writeFileSync(
-        `${paths.build.root}${brand}/index.html`,
+        destPath,
         renderPage({
             brand: capitalize(brand.split('-')),
-            colors,
-            fonts,
-            sizes,
+            ...data,
+            // colors,
+            // fontFamily,
+            // fontSize,
+            // letterSpacing,
+            // lineHeight,
         })
     );
+
+    console.info(`✔︎ ${destPath}`);
 });

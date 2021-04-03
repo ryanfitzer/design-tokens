@@ -21,8 +21,12 @@ configs.forEach(async ([brand, config]) => {
             to: destPath,
         })
         .then((result) => {
-            console.log(`\nBuilding ${brand.replace('-', ' ').toUpperCase()}`);
+            console.info(
+                `\n[tailwind] Building ${brand
+                    .replace('-', ' ')
+                    .toUpperCase()}\n`
+            );
             fs.writeFileSync(destPath, result.css);
-            console.log(`✔︎ ${destPath}`);
+            console.info(`✔︎ ${destPath}`);
         });
 });

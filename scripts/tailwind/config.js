@@ -5,9 +5,7 @@ const parseProperties = require('./helpers/parse-properties');
 module.exports = module.exports = brands.map((brand) => {
     const jsonPath = `${paths.build.root}${brand}/properties/`;
 
-    const colors = fs.readJsonSync(`${jsonPath}color.json`);
-    const fonts = fs.readJsonSync(`${jsonPath}font.json`);
-    const sizes = fs.readJsonSync(`${jsonPath}size.json`);
+    const props = fs.readJsonSync(`${jsonPath}index.json`);
 
     return [
         brand,
@@ -15,19 +13,19 @@ module.exports = module.exports = brands.map((brand) => {
             // https://tailwindcss.com/docs/theme
             theme: {
                 colors: {
-                    ...parseProperties(colors),
+                    ...parseProperties(props, { category: 'color' }),
                 },
                 fontFamily: {
-                    ...parseProperties(fonts, { type: 'family' }),
+                    ...parseProperties(props, { type: 'family' }),
                 },
                 fontSize: {
-                    ...parseProperties(sizes, { type: 'font' }),
+                    ...parseProperties(props, { type: 'font' }),
                 },
                 letterSpacing: {
-                    ...parseProperties(sizes, { type: 'letter-spacing' }),
+                    ...parseProperties(props, { type: 'letter-spacing' }),
                 },
                 lineHeight: {
-                    ...parseProperties(sizes, { type: 'line-height' }),
+                    ...parseProperties(props, { type: 'line-height' }),
                 },
             },
 
