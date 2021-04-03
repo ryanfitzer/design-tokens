@@ -9,7 +9,7 @@ const { paths } = require('../../constants');
 // Build each brand
 configs.forEach(async ([brand, config]) => {
     const tailwindFilePath = `${paths.src.root}${brand}/tailwind.css`;
-    const destPath = `${paths.build.root}${brand}/tailwind.css`;
+    const destPath = `${paths.build.root}${brand}/utilities.css`;
 
     const css = fs.readFileSync(tailwindFilePath, 'utf8');
 

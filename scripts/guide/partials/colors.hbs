@@ -1,0 +1,27 @@
+{{> section-heading title='Colors'}}
+  
+<table>
+  <thead>
+    <td class="heading-identifier">Identifier</td>
+    <td class="heading-value center">Value</td>
+    <td class="heading-example center">Example</td>
+  </thead>
+  <tbody>
+    {{#each colors as | color |}}
+      <tr class="color">
+        <td class="identifier">
+          <ul>
+            <li><span>CSS</span> <code>{{ color.attributes.identity.css.customProperty }}</code></li>
+            <li><span>SCSS</span> <code>{{ color.attributes.identity.css.scssVariable }}</code></li>
+          </ul>
+        </td>
+        <td class="value"><pre>{{ color.value }}</pre></td>
+        <td class="example">
+          <div class='bg-grid fill'>
+            <div style="background-color: {{ color.value }}; position: absolute; width: 100%; height: 100%;"></div>
+              </div>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

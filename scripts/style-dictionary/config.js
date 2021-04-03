@@ -8,6 +8,7 @@ module.exports = brands.map((brand) => [
         source: [`${paths.src.root}${brand}/**/*.json`],
         platforms: {
             css: {
+                description: 'CSS variables',
                 transformGroup: 'css-custom',
                 buildPath: `${paths.build.root}${brand}/`,
                 files: [
@@ -24,10 +25,12 @@ module.exports = brands.map((brand) => [
                 ],
             },
             'css/asset/font-face': {
+                description: 'CSS `@font-face` rules',
                 buildPath: `${paths.build.root}${brand}/`,
                 transforms: ['attribute/cti', 'name/cti/kebab'],
                 files: [
                     {
+                        description: 'CSS `@font-face` rules',
                         destination: 'font-face.css',
                         format: 'css/font-face',
                         filter: {
@@ -40,6 +43,7 @@ module.exports = brands.map((brand) => [
                 ],
             },
             json: {
+                description: 'Data for generating token documentation',
                 buildPath: `${paths.build.root}${brand}/properties/`,
                 transformGroup: 'json-custom',
                 files: [

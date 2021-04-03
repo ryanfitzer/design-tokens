@@ -10,6 +10,14 @@
   "useTabs": false,
   "overrides": [
     {
+      "files": "*.hbs",
+      "options": {
+        "tabWidth": 2,
+        "parser": "glimmer",
+        "singleQuote": false
+      }
+    },
+    {
       "files": "*.js",
       "options": {
         "tabWidth": 4

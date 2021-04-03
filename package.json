@@ -8,9 +8,10 @@
     "url": "https://github.com/Tapestry-Inc/design-tokens.git"
   },
   "scripts": {
-    "build": "npm run tokens && npm run tailwind && npm run copy",
+    "build": "npm run tokens && npm run tailwind && npm run guide && npm run copy",
     "copy": "node scripts/copy",
     "dist": "node scripts/dist",
+    "guide": "node scripts/guide",
     "test": "echo '[ToDo] Setup testing framework!'",
     "tailwind": "node scripts/tailwind",
     "tokens": "node scripts/style-dictionary",
@@ -19,12 +20,14 @@
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
+    "@mdx-js/mdx": "^2.0.0-next.9",
     "autoprefixer": "^10.2.5",
     "conventional-changelog-eslint": "^3.0.9",
     "cross-env": "^7.0.3",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
     "fs-extra": "^9.1.0",
+    "handlebars": "^4.7.7",
     "husky": "^5.1.3",
     "lint-staged": "^10.5.4",
     "postcss": "^8.2.8",

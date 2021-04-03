@@ -35,8 +35,9 @@ module.exports = ({ attributes, path }) => {
             prefix,
             name,
             css: {
-                class: `.${prefix}-${name}`,
-                variable: `--${prefix}-${name}`,
+                // class: `.${prefix}-${name}`,
+                customProperty: `--${prefix}-${name}`,
+                scssVariable: `$${prefix}-${name}`,
             },
         },
     };
