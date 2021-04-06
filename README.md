@@ -79,19 +79,22 @@ This results in a small utility class framework (currently less than 1K when min
 
 ## Development
 
-### Frameworks
-
-[ToDo]
+[ToDo] List tools used.
 
 ### Tokens
 
-[ToDo]
+[ToDo] Discuss tokens organization.
 
 ### Build & Release
 
-[ToDo]
+[ToDo] Document Github workflow
+[ToDo] Document each npm scripts command.
 
-### Commit Conventions
+### Publishing
+
+The release process is managed by [Semantic Release](https://semantic-release.gitbook.io/semantic-release/). New releases are published based on the `<Type>` tag in the commit messages when a the `main` branch receives a push/merge. See `release.config.js` for configuration.
+
+#### Commit Conventions
 
 This projects requires commit messages use the [ESLint convention](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-eslint/README.md#eslint-convention)
 
@@ -104,7 +107,3 @@ Breaking: Removed deprecated token.
 ```
 
 Each commit message is linted with [`commitlint`](https://commitlint.js.org). See `commitlint.config.js` for configuration.
-
-### Publishing
-
-The release process is managed by [Semantic Release](https://semantic-release.gitbook.io/semantic-release/). New releases are published based on the `<Type>` tag in the commit messages when a the `main` branch receives a push/merge. See `release.config.js` for configuration.
