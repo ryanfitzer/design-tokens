@@ -9,17 +9,18 @@
 </head>
 <body>
 
-  <h1>{{ brand }}<sup>®</sup> Design Tokens</h1>
+  <header>
+    <h1>{{ brand }}<sup>®</sup> Design Tokens</h1>
+    <p>version <code>{{ version }}</code></p>
+  </header>
 
-  {{> colors}}
-
-  {{> font-family}}
-
-  {{> font-size}}
-
-  {{> letter-spacing}}
-
-  {{> line-height}}
+  <main>
+    {{> color}}
+    {{> font-family}}
+    {{> font-size}}
+    {{> letter-spacing}}
+    {{> line-height}}
+  </main>
   
 </body>
 </html>

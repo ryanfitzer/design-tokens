@@ -8,16 +8,19 @@
             background-color: #fbf9f9;
             font-family: Helvetica, sans-serif;
         }
-
-        h1 {
+        header {
             text-align: center;
             margin-bottom: 55px;
         }
-
+        header p {
+            font-size: 18px;
+        }
         h1 sup {
             font-size: 1rem;
         }
-
+        main {
+            grid-area: col-b;
+        }
         p {
             margin: 0;
         }
@@ -192,12 +195,11 @@
         }
     }
 
-    @media screen and (min-width: 550px) {
+    @media screen and (min-width: 675px) {
 
         body {
             background-color: #fff;
         }
-
         h2 {
             padding-left: 15px;
         }

@@ -1,5 +1,5 @@
 const fs = require('fs-extra');
-const { brands, paths } = require('../../constants');
+const { brands, paths, pkg } = require('../../constants');
 const handlebars = require('./config');
 const capitalize = require('./helpers/capitalize');
 
@@ -38,13 +38,9 @@ brands.forEach((brand) => {
     fs.writeFileSync(
         destPath,
         renderPage({
-            brand: capitalize(brand.split('-')),
             ...data,
-            // colors,
-            // fontFamily,
-            // fontSize,
-            // letterSpacing,
-            // lineHeight,
+            version: pkg.version,
+            brand: capitalize(brand.split('-')),
         })
     );
 
