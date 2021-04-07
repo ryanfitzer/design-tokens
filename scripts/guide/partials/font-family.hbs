@@ -7,17 +7,17 @@
     <td class="heading-example center">Example</td>
   </thead>
   <tbody>
-    {{#each fontFamily as | font |}}
+    {{#each font-family}}
       <tr class="font">
         <td class="identifier">
           <ul>
-            <li><span>CSS</span> <code>{{ font.attributes.identity.css.customProperty }}</code></li>
-            <li><span>SCSS</span> <code>{{ font.attributes.identity.css.scssVariable }}</code></li>
+            <li><span>CSS</span> <code>{{ attributes.identity.css.customProperty }}</code></li>
+            <li><span>SCSS</span> <code>{{ attributes.identity.css.scssVariable }}</code></li>
           </ul>
         </td>
-        <td class="value"><pre>{{ font.value }}</pre></td>
+        <td class="value"><pre>{{ value }}</pre></td>
         <td class="example">
-          <div style="font-family: {{ value }}; font-size: 50px; text-align: center;">Aa</div>
+          <div style="font-family: var({{ attributes.identity.css.customProperty }}); font-size: 50px; text-align: center;">Aa</div>
         </td>
       </tr>
     {{/each}}

@@ -7,7 +7,7 @@ module.exports = brands.map((brand) => [
         include: [`${paths.src.root}@defaults/**/*.json`],
         source: [`${paths.src.root}${brand}/**/*.json`],
         platforms: {
-            css: {
+            'css/variables': {
                 description: 'CSS variables',
                 transformGroup: 'css-custom',
                 buildPath: `${paths.build.root}${brand}/`,
@@ -17,22 +17,16 @@ module.exports = brands.map((brand) => [
                         destination: `variables.css`,
                         filter: checkAttr([['type', 'face', false]]),
                     },
-                    {
-                        format: `scss/variables`,
-                        destination: `_variables.scss`,
-                        filter: checkAttr([['type', 'face', false]]),
-                    },
                 ],
             },
-            'css/asset/font-face': {
-                description: 'CSS `@font-face` rules',
+            'css/font-face': {
+                description: 'CSS @font-face rules',
                 buildPath: `${paths.build.root}${brand}/`,
                 transforms: ['attribute/cti', 'name/cti/kebab'],
                 files: [
                     {
-                        description: 'CSS `@font-face` rules',
-                        destination: 'font-face.css',
                         format: 'css/font-face',
+                        destination: 'font-face.css',
                         filter: {
                             attributes: {
                                 category: 'font',
@@ -42,7 +36,19 @@ module.exports = brands.map((brand) => [
                     },
                 ],
             },
-            json: {
+            'scss/variables': {
+                description: 'SCSS variables',
+                transformGroup: 'css-custom',
+                buildPath: `${paths.build.root}${brand}/`,
+                files: [
+                    {
+                        format: `scss/variables`,
+                        destination: `_variables.scss`,
+                        filter: checkAttr([['type', 'face', false]]),
+                    },
+                ],
+            },
+            properties: {
                 description: 'Data for generating token documentation',
                 buildPath: `${paths.build.root}${brand}/properties/`,
                 transformGroup: 'json-custom',

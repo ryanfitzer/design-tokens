@@ -7,17 +7,17 @@
     <td class="heading-example center">Example</td>
   </thead>
   <tbody>
-    {{#each lineHeight as | line |}}
+    {{#each line-height}}
       <tr class="font">
         <td class="identifier">
           <ul>
-            <li><span>CSS</span> <code>{{ line.attributes.identity.css.customProperty }}</code></li>
-            <li><span>SCSS</span> <code>{{ line.attributes.identity.css.scssVariable }}</code></li>
+            <li><span>CSS</span> <code>{{ attributes.identity.css.customProperty }}</code></li>
+            <li><span>SCSS</span> <code>{{ attributes.identity.css.scssVariable }}</code></li>
           </ul>
         </td>
-        <td class="value"><pre>{{ line.value }}</pre></td>
+        <td class="value"><pre>{{ value }}</pre></td>
         <td class="example">
-          <div style="padding: '15px'; line-height: {{ line.value }}; text-align: 'justify';">
+          <div style="padding: '15px'; line-height: {{ value }}; text-align: 'justify';">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
           </div>
         </td>

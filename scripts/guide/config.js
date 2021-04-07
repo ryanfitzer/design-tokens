@@ -1,5 +1,6 @@
 const fs = require('fs-extra');
 const handlebars = require('handlebars');
+const markdown = require('helper-markdown');
 const { paths } = require('../../constants');
 
 const options = { encoding: 'utf8' };
@@ -27,5 +28,6 @@ partials.forEach(([name, partial]) =>
 
 // Register helpers
 helpers.forEach(([name, helper]) => handlebars.registerHelper(name, helper));
+handlebars.registerHelper('markdown', markdown());
 
 module.exports = handlebars;

@@ -19,6 +19,7 @@ module.exports = {
     },
     paths: {
         root: resolve(root),
+        cdn: 'https://assets.tapestry.com/ux/design-tokens/',
         build: {
             root: resolve('build'),
             version: resolve(`build/${pkgVersion}`),

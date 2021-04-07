@@ -1,6 +1,6 @@
 const getSources = (props) => {
     const srcs = [];
-    const delim = ',\n\t\t ';
+    const delim = ',\n     ';
     const names = [].concat(props.local.value);
     const formats = [
         'embedded-opentype',
@@ -28,28 +28,28 @@ module.exports = ({ dictionary }) => {
             return Object.values(group)
                 .map((variation) => {
                     const result = [
-                        `\tfont-family: "${variation.family.value}";`,
+                        `  font-family: "${variation.family.value}";`,
                     ];
 
                     if (variation.style)
-                        result.push(`\tfont-style: ${variation.style.value};`);
+                        result.push(`  font-style: ${variation.style.value};`);
 
                     if (variation.weight)
                         result.push(
-                            `\tfont-weight: ${variation.weight.value};`
+                            `  font-weight: ${variation.weight.value};`
                         );
 
                     result.push(
-                        `\tfont-display: ${
+                        `  font-display: ${
                             variation.display ? variation.display.value : 'swap'
                         };`
                     );
 
-                    result.push(`\tsrc: ${getSources(variation)};`);
+                    result.push(`  src: ${getSources(variation)};`);
 
                     if (variation['unicode-range']) {
                         result.push(
-                            `\tunicode-range: ${variation['unicode-range']};`
+                            `  unicode-range: ${variation['unicode-range']};`
                         );
                     }
 

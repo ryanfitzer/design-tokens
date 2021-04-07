@@ -1,0 +1,9 @@
+{{> section-heading title='Assets'}}
+
+<ul>
+  {{#each assets as | asset |}}
+    <li>
+      {{asset.desc}}: <a href="{{asset.name}}" target="_blank">{{asset.url}}</a>
+    </li>
+  {{/each}}
+</ul>
