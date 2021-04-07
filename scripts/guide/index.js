@@ -12,7 +12,7 @@ const props = {
 };
 
 brands.forEach((brand) => {
-    const destPath = `${paths.build.root}${brand}/index.html`;
+    const destPath = `${paths.dist.root}${brand}/index.html`;
 
     console.info(
         `\n[guide] Building ${brand.replace('-', ' ').toUpperCase()}\n`
@@ -21,7 +21,7 @@ brands.forEach((brand) => {
     const data = Object.entries(props).reduce((accum, [name, file]) => {
         const values = Object.values(
             fs.readJsonSync(
-                `${paths.build.root}${brand}/properties/${file}.json`
+                `${paths.dist.root}${brand}/properties/${file}.json`
             )
         );
         accum[name] = values;
