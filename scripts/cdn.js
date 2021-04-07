@@ -5,7 +5,7 @@ const { paths } = require('../constants');
     // Make sure build directory exists
     if (!(await fs.pathExists(paths.build.root))) {
         return console.error(
-            `\n[dist] ERROR: No build directory found at "${paths.build.root}"\n`
+            `\n[cdn] ERROR: No build directory found at "${paths.build.root}"\n`
         );
     }
 

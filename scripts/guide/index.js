@@ -27,8 +27,8 @@ const listAssets = (index) => {
 
 brands.forEach(async (brand, index) => {
     const displayBrand = brand.replace('-', ' ').toUpperCase();
-    const destPath = `${paths.dist.root}${brand}/index.html`;
-    const propsPath = `${paths.dist.root}${brand}/properties/`;
+    const destPath = `${paths.build.root}${brand}/index.html`;
+    const propsPath = `${paths.build.root}${brand}/properties/`;
     const propsExist = await fs.pathExists(propsPath);
     const propsFiles = fs.readdirSync(propsPath, { encoding: 'utf8' });
 

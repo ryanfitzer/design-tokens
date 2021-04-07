@@ -4,15 +4,10 @@ This project contains design tokens for each Tapestry brand and publishes assets
 
 ## Assets
 
-- CSS: variables (CSS, SCSS)
-- CSS: `@font-face` rules
-- CSS: A customized version of [Tailwind](https://tailwindcss.com/docs) (see Tailwind section below for more info).
-- JSON: data for generating token documentation
-
-Each brand contains the same files. Directory/file naming convention is [kebab-case](<https://en.wikipedia.org/wiki/Naming_convention_(programming)#Delimiter-separated_words>).
+Each brand contains the same files. Directory/file naming convention uses [kebab-case](<https://en.wikipedia.org/wiki/Naming_convention_(programming)#Delimiter-separated_words>).
 
 ```
-└── brand-name
+└── <brand>
     ├── font-face.css
     ├── _variables.scss
     ├── variables.css
@@ -23,8 +18,37 @@ Each brand contains the same files. Directory/file naming convention is [kebab-c
         ├── font-family.json
         ├── font-size.json
         ├── letter-spacing.json
-        └── line-height.json
+        ├── line-height.json
+        └── ...
 ```
+
+### CSS
+
+- Custom properties
+- `@font-face` rules
+- Utility classes: classes for applying tokens values to your HTML.
+
+#### Utility Classes
+
+Included in each brand's assets is a tiny `utilities.css` (<1K minified/gzipped) that uses [tailwindcss](https://tailwindcss.com/docs) to generate utility classes based on the available tokens. These utilities are **limited** to the following [core plugins](https://tailwindcss.com/docs/configuration#core-plugins):
+
+| Core Plugin       | Class Prefix      | Example Class     |
+| ----------------- | ----------------- | ----------------- |
+| `backgroundColor` | `bg-[color]`      | `bg-primary`      |
+| `borderColor`     | `border-[color]`  | `border-primary`  |
+| `textColor`       | `text-[color]`    | `text-primary`    |
+| `fontFamily`      | `font-[family]`   | `font-sans-serif` |
+| `fontSize`        | `text-[px]`       | `text-16`         |
+| `letterSpacing`   | `tracking-[size]` | `tracking-xl`     |
+| `lineHeight`      | `leading-[size]`  | `leading-xs`      |
+
+### SCSS
+
+- Variables (same as CSS)
+
+### JSON
+
+- Metadata for every token. Useful for generating documentation ([example](https://assets.tapestry.com/ux/design-tokens/stuart-weitzman/index.html)).
 
 ## Usage
 
@@ -45,7 +69,7 @@ npm install @tapestry-inc/design-tokens
 
 Once installed, you can import the assets as needed. It is expected that your module bundler and/or your CSS processor is configured to import/build CSS assets into your application.
 
-### CDN Assets
+### CDN
 
 All assets are available on a CDN. The current version for each brand is located in the root directory. You can also access a specific version by appending the version number as a directory to the root.
 
@@ -63,40 +87,33 @@ URL structure for a specific version:
 <root-url>/<x.x.x>/<brand>/*
 ```
 
-#### Tailwind
-
-Included in each brand's assets is a customized version of Tailwind that contains the following [core plugins](https://tailwindcss.com/docs/configuration#core-plugins), which are configured to use the Tapestry core theme instead of Tailwind's defaults:
-
-- `backgroundColor`
-- `borderColor`
-- `fontFamily`
-- `fontSize`
-- `letterSpacing`
-- `lineHeight`
-- `textColor`
-
-This results in a small utility class framework (currently less than 1K when minified and gzipped) that can be used within markup. It is expected that these utility classes will grow and it is recommended that each codebase use [PurgeCSS](https://purgecss.com/) to remove any unused CSS at build time.
-
 ## Development
 
-[ToDo] List tools used.
+Development within this codebase requires experience with the following tools:
+
+- [Style Dictionary](https://amzn.github.io/style-dictionary/): Build system for design tokens.
+- [PostCSS](https://postcss.org/): A tool for transforming CSS.
+- [tailwindcss](https://tailwindcss.com/docs): Customizable CSS utility framework.
+- [Handlebars](https://handlebarsjs.com/): HTML templating.
+- [semantic-release](https://semantic-release.gitbook.io/semantic-release/): Automated version management and package publishing.
+- [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions): GitHub's CI/CD automation tool.
+
+### NPM Commands
+
+- `npm run build`: Creates the needed files for the npm package.
+- `npm run cdn`: Creates the needed files for CDN distribution. Depends on `npm run build`.
 
 ### Tokens
 
-[ToDo] Discuss tokens organization.
-
-### Build & Release
-
-[ToDo] Document Github workflow
-[ToDo] Document each npm scripts command.
+This is the core of this codebase, a collection of JSON files that organize each brand's styles into a semantic hierarchy. Everything one needs to know can be found in Style Dictionary's [documentation](https://amzn.github.io/style-dictionary/#/README).
 
 ### Publishing
 
 The release process is managed by [Semantic Release](https://semantic-release.gitbook.io/semantic-release/). New releases are published based on the `<Type>` tag in the commit messages when a the `main` branch receives a push/merge. See `release.config.js` for configuration.
 
-#### Commit Conventions
+#### Commit Message Conventions
 
-This projects requires commit messages use the [ESLint convention](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-eslint/README.md#eslint-convention)
+This project adheres to the [ESLint commit convention](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-eslint#readme).
 
 Commit message format: `<Tag>: <Message>`
 
