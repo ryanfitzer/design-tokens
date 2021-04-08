@@ -1,3 +1,6 @@
+/**
+ * Creates the distribution directory used for CDN.
+ */
 const fs = require('fs-extra');
 const { paths } = require('../constants');
 
@@ -13,7 +16,7 @@ const { paths } = require('../constants');
     fs.copySync(paths.build.root, paths.dist.root);
     fs.copySync(paths.build.root, paths.dist.version);
 
-    // Remove unneeded files
+    // Remove unneeded package files
     ['package.json', 'README.md'].forEach((file) => {
         fs.removeSync(`${paths.dist.root}${file}`);
         fs.removeSync(`${paths.dist.version}${file}`);

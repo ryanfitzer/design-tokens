@@ -1,3 +1,6 @@
+/**
+ * Runs build for each brand.
+ */
 const fs = require('fs-extra');
 const { brands, paths, pkg } = require('../../constants');
 const handlebars = require('./config');

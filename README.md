@@ -2,6 +2,12 @@
 
 This project contains design tokens for each Tapestry brand and publishes assets derived from these tokens to a CDN (Akamai), as well as an NPM package to the Github Packages registry.
 
+Each brand's token documentation can be viewed at:
+
+- Coach: https://assets.tapestry.com/ux/design-tokens/coach/index.html
+- Kate Spade: https://assets.tapestry.com/ux/design-tokens/kate-spade/index.html
+- Stuart Weitzman: https://assets.tapestry.com/ux/design-tokens/stuart-weitzman/index.html
+
 ## Assets
 
 Each brand contains the same files. Directory/file naming convention uses [kebab-case](<https://en.wikipedia.org/wiki/Naming_convention_(programming)#Delimiter-separated_words>).

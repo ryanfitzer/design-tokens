@@ -1,3 +1,6 @@
+/**
+ * Runs build for each brand.
+ */
 const fs = require('fs-extra');
 const postcss = require('postcss');
 const tailwindcss = require('tailwindcss');

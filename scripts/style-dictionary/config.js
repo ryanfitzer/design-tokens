@@ -1,3 +1,6 @@
+/**
+ * Creates the configuration for each brand.
+ */
 const { brands, paths } = require('../../constants');
 const checkAttr = require('./filters/check-attr');
 

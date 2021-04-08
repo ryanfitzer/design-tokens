@@ -1,3 +1,8 @@
+/**
+ * Creates the `src` value for an `@font-face` rule.
+ * @param {object} object - A font face item properties object.
+ * @returns {string}
+ */
 const getSources = (props) => {
     const srcs = [];
     const delim = ',\n     ';
@@ -22,6 +27,11 @@ const getSources = (props) => {
     return `${locals}${delim}${srcs.join(delim)}`;
 };
 
+/**
+ * Creates an `@font-face` css file.
+ * @param {object} object - The Style Dictionary properties object.
+ * @returns {string}
+ */
 module.exports = ({ dictionary }) => {
     return Object.values(dictionary.properties.font.face)
         .map((group) => {

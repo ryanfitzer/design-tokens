@@ -1,3 +1,6 @@
+/**
+ * Configures and exports `handlebars` instance.
+ */
 const fs = require('fs-extra');
 const handlebars = require('handlebars');
 const { paths } = require('../../constants');

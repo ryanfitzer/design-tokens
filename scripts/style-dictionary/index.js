@@ -1,3 +1,6 @@
+/**
+ * Runs build for each brand.
+ */
 const StyleDictionary = require('style-dictionary');
 const configs = require('./config');
 const registrations = require('./register');

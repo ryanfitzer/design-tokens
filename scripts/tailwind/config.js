@@ -1,3 +1,7 @@
+/**
+ * Creates a configuration for each brand.
+ * See {@link https://tailwindcss.com/docs} for options.
+ */
 const fs = require('fs-extra');
 const { brands, paths } = require('../../constants');
 const parseProperties = require('./helpers/parse-properties');

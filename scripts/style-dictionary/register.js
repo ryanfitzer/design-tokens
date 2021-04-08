@@ -1,3 +1,8 @@
+/**
+ * Helpers to register with Style Dictionary.
+ * See API docs for more info {@link https://amzn.github.io/style-dictionary/#/api?id=registeraction}
+ * Names are capitalized in order to construct the respective register method.
+ */
 const checkAttr = require('./filters/check-attr');
 const fontFace = require('./formats/css-font-face');
 const jsonProperties = require('./formats/json-properties');
