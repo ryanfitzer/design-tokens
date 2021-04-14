@@ -1,5 +1,5 @@
 {
   "color": {
-    "local": {}
+    "test": { "value": "#231f20" }
   }
 }

@@ -2,6 +2,7 @@
   "color": {
     "grey": {
       "cool": { "value": "#f5f7f8" }
-    }
+    },
+    "test": { "value": "#001489" }
   }
 }
