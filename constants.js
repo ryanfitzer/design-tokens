@@ -8,7 +8,7 @@ const resolve = (part) => path.normalize(`${path.resolve(root, part)}/`);
 const pkgVersion = process.env.NODE_PKG_VERSION || pkg.version;
 
 module.exports = {
-    brands: ['coach', 'kate-spade', 'stuart-weitzman'],
+    brands: ['coach', 'stuart-weitzman'],
     namespace: {
         prefix: 'dt',
         global: 'DT',
