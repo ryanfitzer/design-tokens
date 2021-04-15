@@ -1,5 +1,5 @@
 module.exports = {
-    dryRun: false,
+    dryRun: true,
     branches: ['main'],
     plugins: [
         [
@@ -12,6 +12,12 @@ module.exports = {
                     { tag: 'Update', release: 'minor' },
                     { tag: 'Fix', release: 'patch' },
                 ],
+            },
+        ],
+        [
+            '@semantic-release/release-notes-generator',
+            {
+                preset: 'eslint',
             },
         ],
         [
