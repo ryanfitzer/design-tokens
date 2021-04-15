@@ -18,6 +18,12 @@ module.exports = {
             '@semantic-release/release-notes-generator',
             {
                 preset: 'eslint',
+                parserOpts: {
+                    noteKeywords: ['Breaking'],
+                },
+                writerOpts: {
+                    debug: (args) => console.log(args),
+                },
             },
         ],
         [
