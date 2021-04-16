@@ -1,3 +1,5 @@
 {
-  "color": {}
+  "color": {
+    "sale": { "value": "#CC0000" }
+  }
 }
