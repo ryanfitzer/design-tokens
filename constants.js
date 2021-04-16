@@ -2,9 +2,7 @@ const path = require('path');
 const pkg = require('./package.json');
 
 const root = path.resolve(__dirname);
-
 const resolve = (part) => path.normalize(`${path.resolve(root, part)}/`);
-
 const pkgVersion = process.env.NODE_PKG_VERSION || pkg.version;
 
 module.exports = {

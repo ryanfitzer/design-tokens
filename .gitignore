@@ -24,6 +24,6 @@ dist/
 public/
 coverage/
 .nyc_output/
-.notes*
+.notes.md
 *.zip
 storybook/report*

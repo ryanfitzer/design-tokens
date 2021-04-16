@@ -7,7 +7,7 @@ const checkAttr = require('./filters/check-attr');
 module.exports = brands.map((brand) => [
     brand,
     {
-        include: [`${paths.src.root}@defaults/**/*.json`],
+        include: [`${paths.src.root}@global/**/*.json`],
         source: [`${paths.src.root}${brand}/**/*.json`],
         platforms: {
             'css/variables': {

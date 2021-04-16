@@ -25,7 +25,7 @@ module.exports = {
                     noteKeywords: ['Breaking'],
                 },
                 writerOpts: {
-                    debug: (args) => console.log(args),
+                    // debug: (args) => console.log(args),
                     groupBy: false,
                     repoUrl: 'https://github.com/Tapestry-Inc/design-tokens/',
                     headerPartial: readFileSync(
