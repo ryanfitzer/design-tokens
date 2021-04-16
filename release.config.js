@@ -27,6 +27,7 @@ module.exports = {
                 writerOpts: {
                     debug: (args) => console.log(args),
                     groupBy: false,
+                    repoUrl: 'https://github.com/Tapestry-Inc/design-tokens/',
                     headerPartial: readFileSync(
                         `${paths.scripts.changelog}header.hbs`,
                         'utf8'
@@ -35,6 +36,16 @@ module.exports = {
                         `${paths.scripts.changelog}commit.hbs`,
                         'utf8'
                     ),
+                    partials: {
+                        'short-hash': readFileSync(
+                            `${paths.scripts.changelog}short-hash.hbs`,
+                            'utf8'
+                        ),
+                        references: readFileSync(
+                            `${paths.scripts.changelog}references.hbs`,
+                            'utf8'
+                        ),
+                    },
                 },
             },
         ],

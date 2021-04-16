@@ -14,7 +14,8 @@
       "options": {
         "tabWidth": 2,
         "parser": "glimmer",
-        "singleQuote": false
+        "singleQuote": false,
+        "printWidth": 160
       }
     },
     {
