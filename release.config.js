@@ -23,20 +23,22 @@ module.exports = {
                 },
                 writerOpts: {
                     debug: (args) => console.log(args),
+                    groupBy: false,
+                    headerPartial: './scripts/changelog/header.hbs',
                 },
             },
         ],
         [
             '@semantic-release/changelog',
             {
-                changelogTitle: 'Changelog | Tapestry Design Tokens',
+                changelogTitle: '# Changelog | Tapestry Design Tokens',
                 changelogFile: './build/CHANGELOG.md',
             },
         ],
         [
             '@semantic-release/changelog',
             {
-                changelogTitle: 'Changelog | Tapestry Design Tokens',
+                changelogTitle: '# Changelog | Tapestry Design Tokens',
                 changelogFile: 'CHANGELOG.md',
             },
         ],
