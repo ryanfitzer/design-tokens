@@ -1,6 +1,7 @@
 {
   "size": {
     "font": {
+      "9": { "value": "9px" },
       "10": { "value": "10px" },
       "12": { "value": "12px" },
       "14": { "value": "14px" },
