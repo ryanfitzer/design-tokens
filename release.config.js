@@ -1,11 +1,13 @@
 const { readFileSync } = require('fs-extra');
 const { paths } = require('./constants');
 
+// https://semantic-release.gitbook.io/semantic-release/usage/configuration
 module.exports = {
     // dryRun: true,
     branches: ['main'],
     plugins: [
         [
+            // https://github.com/semantic-release/commit-analyzer#readme
             '@semantic-release/commit-analyzer',
             {
                 preset: 'eslint',
@@ -18,12 +20,14 @@ module.exports = {
             },
         ],
         [
+            // https://github.com/semantic-release/release-notes-generator#readme
             '@semantic-release/release-notes-generator',
             {
                 preset: 'eslint',
                 parserOpts: {
                     noteKeywords: ['Breaking'],
                 },
+                // https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-writer#options
                 writerOpts: {
                     // debug: (args) => console.log(args),
                     groupBy: false,
@@ -50,6 +54,7 @@ module.exports = {
             },
         ],
         [
+            // https://github.com/semantic-release/changelog#readme
             '@semantic-release/changelog',
             {
                 changelogTitle: '# Changelog | Tapestry Design Tokens',
@@ -57,6 +62,7 @@ module.exports = {
             },
         ],
         [
+            // https://github.com/semantic-release/changelog#readme
             '@semantic-release/changelog',
             {
                 changelogTitle: '# Changelog | Tapestry Design Tokens',
@@ -64,12 +70,14 @@ module.exports = {
             },
         ],
         [
+            // https://github.com/semantic-release/npm#readme
             '@semantic-release/npm',
             {
                 pkgRoot: './build',
             },
         ],
         [
+            // https://github.com/semantic-release/git#readme
             '@semantic-release/git',
             {
                 assets: ['CHANGELOG.md'],
