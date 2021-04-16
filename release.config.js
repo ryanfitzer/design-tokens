@@ -1,4 +1,5 @@
 module.exports = {
+    // dryRun: true,
     branches: ['main'],
     plugins: [
         [
@@ -26,9 +27,29 @@ module.exports = {
             },
         ],
         [
+            '@semantic-release/changelog',
+            {
+                changelogTitle: 'Changelog | Tapestry Design Tokens',
+                changelogFile: './build/CHANGELOG.md',
+            },
+        ],
+        [
+            '@semantic-release/changelog',
+            {
+                changelogTitle: 'Changelog | Tapestry Design Tokens',
+                changelogFile: 'CHANGELOG.md',
+            },
+        ],
+        [
             '@semantic-release/npm',
             {
                 pkgRoot: './build',
+            },
+        ],
+        [
+            '@semantic-release/git',
+            {
+                assets: ['CHANGELOG.md'],
             },
         ],
     ],
