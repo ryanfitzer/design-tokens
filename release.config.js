@@ -1,3 +1,6 @@
+const { readFileSync } = require('fs-extra');
+const { paths } = require('./constants');
+
 module.exports = {
     // dryRun: true,
     branches: ['main'],
@@ -24,7 +27,14 @@ module.exports = {
                 writerOpts: {
                     debug: (args) => console.log(args),
                     groupBy: false,
-                    headerPartial: './scripts/changelog/header.hbs',
+                    headerPartial: readFileSync(
+                        `${paths.scripts.changelog}header.hbs`,
+                        'utf8'
+                    ),
+                    commitPartial: readFileSync(
+                        `${paths.scripts.changelog}commit.hbs`,
+                        'utf8'
+                    ),
                 },
             },
         ],

@@ -30,6 +30,7 @@ module.exports = {
         },
         scripts: {
             root: resolve('scripts'),
+            changelog: resolve('scripts/changelog'),
             guide: resolve('scripts/guide'),
             styleDictionary: resolve('scripts/style-dictionary'),
             filters: resolve('scripts/style-dictionary/filters'),
