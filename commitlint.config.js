@@ -21,6 +21,7 @@ module.exports = {
             2,
             'always',
             [
+                // https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-eslint#readme
                 'Breaking', // Backwards-incompatible change
                 'New', // Backwards-compatible addition
                 'Update', // Backwards-compatible enhancement

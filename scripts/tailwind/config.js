@@ -27,6 +27,15 @@ module.exports = module.exports = brands.map((brand) => {
                 fontSize: {
                     ...parseProperties(props, { type: 'font' }),
                 },
+                screens: {
+                    ...Object.entries(
+                        parseProperties(props, { category: 'viewport' })
+                    ).reduce((accum, [key, value]) => {
+                        accum[key] = { raw: value };
+
+                        return accum;
+                    }, {}),
+                },
             },
 
             // https://tailwindcss.com/docs/configuration#core-plugins
@@ -39,6 +48,8 @@ module.exports = module.exports = brands.map((brand) => {
             ],
 
             // https://tailwindcss.com/docs/configuring-variants
+            // Disable all variants: https://github.com/tailwindlabs/tailwindcss/issues/1911#issuecomment-650607989
+            // Enable specific variants buy property: https://github.com/tailwindlabs/tailwindcss/issues/1133#issuecomment-535167002
             variants: [],
 
             // https://tailwindcss.com/docs/plugins

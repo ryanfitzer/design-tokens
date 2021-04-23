@@ -10,6 +10,7 @@ module.exports = {
             // https://github.com/semantic-release/commit-analyzer#readme
             '@semantic-release/commit-analyzer',
             {
+                // https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-eslint#readme
                 preset: 'eslint',
                 releaseRules: [
                     { tag: 'Breaking', release: 'major' },
