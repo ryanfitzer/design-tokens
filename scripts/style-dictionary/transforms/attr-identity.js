@@ -10,9 +10,10 @@ const getStyleType = ({ category, type }) => {
 
     if (category === 'size') {
         if (type === 'font') return 'text';
-        if (type === 'letter-spacing') return 'tracking';
-        if (type === 'line-height') return 'leading';
+        else return type;
     }
+
+    return category;
 };
 
 /**

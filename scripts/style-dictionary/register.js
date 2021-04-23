@@ -5,6 +5,7 @@
  */
 const checkAttr = require('./filters/check-attr');
 const fontFace = require('./formats/css-font-face');
+const customMedia = require('./formats/css-custom-media');
 const jsonProperties = require('./formats/json-properties');
 const sizeUnitless = require('./transforms/size-unitless');
 const nameKabab = require('./transforms/name-kabab');
@@ -18,6 +19,10 @@ module.exports = {
         {
             name: 'css/font-face',
             formatter: fontFace,
+        },
+        {
+            name: 'css/custom-media',
+            formatter: customMedia,
         },
         {
             name: 'json/properties',

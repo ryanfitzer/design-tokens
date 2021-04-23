@@ -4,6 +4,8 @@
  */
 const fs = require('fs-extra');
 const { brands, paths } = require('../../constants');
+const pluginLineHeight = require('./plugins/line-height');
+const pluginLetterSpacing = require('./plugins/letter-spacing');
 const parseProperties = require('./helpers/parse-properties');
 
 module.exports = module.exports = brands.map((brand) => {
@@ -25,12 +27,6 @@ module.exports = module.exports = brands.map((brand) => {
                 fontSize: {
                     ...parseProperties(props, { type: 'font' }),
                 },
-                letterSpacing: {
-                    ...parseProperties(props, { type: 'letter-spacing' }),
-                },
-                lineHeight: {
-                    ...parseProperties(props, { type: 'line-height' }),
-                },
             },
 
             // https://tailwindcss.com/docs/configuration#core-plugins
@@ -39,8 +35,6 @@ module.exports = module.exports = brands.map((brand) => {
                 'borderColor',
                 'fontFamily',
                 'fontSize',
-                'letterSpacing',
-                'lineHeight',
                 'textColor',
             ],
 
@@ -48,7 +42,14 @@ module.exports = module.exports = brands.map((brand) => {
             variants: [],
 
             // https://tailwindcss.com/docs/plugins
-            plugins: [],
+            plugins: [
+                pluginLineHeight(
+                    parseProperties(props, { type: 'line-height' })
+                ),
+                pluginLetterSpacing(
+                    parseProperties(props, { type: 'letter-spacing' })
+                ),
+            ],
         },
     ];
 });

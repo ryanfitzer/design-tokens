@@ -18,7 +18,10 @@ module.exports = brands.map((brand) => [
                     {
                         format: `css/variables`,
                         destination: `variables.css`,
-                        filter: checkAttr([['type', 'face', false]]),
+                        filter: checkAttr([
+                            ['type', 'face', false],
+                            ['category', 'viewport', false],
+                        ]),
                     },
                 ],
             },
@@ -34,6 +37,22 @@ module.exports = brands.map((brand) => [
                             attributes: {
                                 category: 'font',
                                 type: 'face',
+                            },
+                        },
+                    },
+                ],
+            },
+            'css/custom-media': {
+                description: 'CSS @custom-media variables',
+                buildPath: `${paths.build.root}${brand}/`,
+                transforms: ['attribute/cti', 'name/cti/kebab'],
+                files: [
+                    {
+                        format: 'css/custom-media',
+                        destination: 'custom-media.css',
+                        filter: {
+                            attributes: {
+                                category: 'viewport',
                             },
                         },
                     },
