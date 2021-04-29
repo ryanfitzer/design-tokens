@@ -36,7 +36,6 @@ module.exports = brands.map((brand) => [
                         filter: {
                             attributes: {
                                 category: 'font',
-                                type: 'face',
                             },
                         },
                     },
@@ -71,7 +70,7 @@ module.exports = brands.map((brand) => [
                 ],
             },
             properties: {
-                description: 'Data for generating token documentation',
+                description: 'Data for generating documentation',
                 buildPath: `${paths.build.root}${brand}/properties/`,
                 transformGroup: 'json-custom',
                 files: [

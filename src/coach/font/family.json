@@ -2,14 +2,19 @@
   "font": {
     "family": {
       "sans-serif": {
-        "value": "Helvetica, Arial, sans-serif"
+        "regular": {
+          "value": "{font.face.sans-serif.regular.family.value}, Helvetica, Arial, sans-serif"
+        },
+        "bold": {
+          "value": "{font.face.sans-serif.bold.family.value}, Helvetica, Arial, sans-serif"
+        }
       },
       "serif": {
         "regular": {
-          "value": "BemboMTPro-Regular, serif"
+          "value": "{font.face.serif.regular.family.value}, serif"
         },
         "bold": {
-          "value": "BemboMTPro-Bold, serif"
+          "value": "{font.face.serif.bold.family.value}, serif"
         }
       }
     }

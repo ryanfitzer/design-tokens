@@ -1,7 +1,43 @@
 {
   "font": {
     "face": {
-      "bembomtpro": {
+      "sans-serif": {
+        "regular": {
+          "family": {
+            "value": "HelveticaLTPro-Roman"
+          },
+          "style": {
+            "value": "normal"
+          },
+          "weight": {
+            "value": "normal"
+          },
+          "local": {
+            "value": ["HelveticaLTPro-Roman"]
+          },
+          "truetype": {
+            "value": "https://assets.coach.com/na/fonts/HelveticaLTPro-Roman.ttf"
+          }
+        },
+        "bold": {
+          "family": {
+            "value": "HelveticaLTPro-Bold"
+          },
+          "style": {
+            "value": "normal"
+          },
+          "weight": {
+            "value": "normal"
+          },
+          "local": {
+            "value": ["HelveticaLTPro-Bold"]
+          },
+          "truetype": {
+            "value": "https://assets.coach.com/na/fonts/HelveticaLTPro-Bold.ttf"
+          }
+        }
+      },
+      "serif": {
         "regular": {
           "family": {
             "value": "BemboMTPro-Regular"

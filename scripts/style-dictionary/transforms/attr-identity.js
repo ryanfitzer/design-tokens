@@ -26,12 +26,13 @@ const normalizeName = (attributes, path) => {
     const isSingleName = path.length < 3;
     const isSizeName = attributes.category === 'size';
     const isFamilyName = attributes.type === 'family';
+    const isFaceName = attributes.type === 'face';
 
     if (isSingleName || isSizeName) {
         return path[path.length - 1];
     }
 
-    if (isFamilyName) {
+    if (isFamilyName || isFaceName) {
         return path.slice(2).join('-');
     }
 
@@ -46,13 +47,24 @@ const normalizeName = (attributes, path) => {
 module.exports = ({ attributes, path }) => {
     const prefix = getStyleType(attributes);
     const name = normalizeName(attributes, path);
+    const isFontFace = attributes.type === 'face';
+    const isFontTrack = attributes.type === 'track';
+    const noIdent = isFontFace || isFontTrack;
+
+    if (noIdent) {
+        return {
+            identity: {
+                prefix,
+                name,
+            },
+        };
+    }
 
     return {
         identity: {
             prefix,
             name,
             css: {
-                // class: `.${prefix}-${name}`,
                 customProperty: `--${prefix}-${name}`,
                 scssVariable: `$${prefix}-${name}`,
             },
