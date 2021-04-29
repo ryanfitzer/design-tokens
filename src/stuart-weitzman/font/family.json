@@ -2,11 +2,16 @@
   "font": {
     "family": {
       "sans-serif": {
-        "value": "FuturaBT, Arial, sans-serif"
+        "book": {
+          "value": "{font.face.sans-serif.book.family.value}, Helvetica, Arial, sans-serif"
+        },
+        "medium": {
+          "value": "{font.face.sans-serif.medium.family.value}, Helvetica, Arial, sans-serif"
+        }
       },
       "serif": {
         "regular": {
-          "value": "HeldaneText-Regular, serif"
+          "value": "{font.face.serif.regular.family.value}, serif"
         }
       }
     }

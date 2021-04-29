@@ -7,6 +7,7 @@ const getStyleType = ({ category, type }) => {
     if (category === 'color') return 'color';
     if (category === 'component') return 'component';
     if (category === 'font') return 'font';
+    if (category === 'utility') return type;
 
     if (category === 'size') {
         if (type === 'font') return 'text';
@@ -27,15 +28,19 @@ const normalizeName = (attributes, path) => {
     const isSizeName = attributes.category === 'size';
     const isFamilyName = attributes.type === 'family';
     const isFaceName = attributes.type === 'face';
+    const isUtilityName = attributes.category === 'utility';
 
+    // Remove category and type from name
+    if (isFamilyName || isFaceName || isUtilityName) {
+        return path.slice(2).join('-');
+    }
+
+    // Use last word
     if (isSingleName || isSizeName) {
         return path[path.length - 1];
     }
 
-    if (isFamilyName || isFaceName) {
-        return path.slice(2).join('-');
-    }
-
+    // Use last 2 words
     return path.slice(-2).join('-');
 };
 
@@ -49,7 +54,8 @@ module.exports = ({ attributes, path }) => {
     const name = normalizeName(attributes, path);
     const isFontFace = attributes.type === 'face';
     const isFontTrack = attributes.type === 'track';
-    const noIdent = isFontFace || isFontTrack;
+    const isUtility = attributes.category === 'utility';
+    const noIdent = isFontFace || isFontTrack || isUtility;
 
     if (noIdent) {
         return {

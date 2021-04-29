@@ -2,8 +2,8 @@
   "font": {
     "family": {
       "sans-serif": {
-        "regular": {
-          "value": "{font.face.sans-serif.regular.family.value}, Helvetica, Arial, sans-serif"
+        "roman": {
+          "value": "{font.face.sans-serif.roman.family.value}, Helvetica, Arial, sans-serif"
         },
         "bold": {
           "value": "{font.face.sans-serif.bold.family.value}, Helvetica, Arial, sans-serif"
@@ -12,9 +12,6 @@
       "serif": {
         "regular": {
           "value": "{font.face.serif.regular.family.value}, serif"
-        },
-        "bold": {
-          "value": "{font.face.serif.bold.family.value}, serif"
         }
       }
     }

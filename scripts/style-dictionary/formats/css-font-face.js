@@ -33,10 +33,8 @@ const getSources = (props) => {
  * @returns {string}
  */
 module.exports = ({ dictionary }) => {
-    const hasTracking = dictionary.properties.font.track;
-    const track = hasTracking
-        ? `@import url(${dictionary.properties.font.track.url.value});\n`
-        : '';
+    const trackURL = dictionary.properties.font.track.url.value;
+    const track = trackURL ? `@import url(${trackURL});\n` : '';
 
     const fonts = Object.values(dictionary.properties.font.face)
         .map((group) => {

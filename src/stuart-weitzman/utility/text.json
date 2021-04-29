@@ -1,0 +1,14 @@
+{
+  "utility": {
+    "text": {
+      "primary": {
+        "display": {
+          "xs": {
+            "font-family": { "value": "{font.family.sans-serif.medium.value}" },
+            "font-size": { "value": "{size.font.20.value}" }
+          }
+        }
+      }
+    }
+  }
+}
