@@ -6,6 +6,7 @@ const fs = require('fs-extra');
 const { brands, paths } = require('../../constants');
 const pluginLineHeight = require('./plugins/line-height');
 const pluginLetterSpacing = require('./plugins/letter-spacing');
+const pluginUtilityTypography = require('./plugins/utility-typography');
 const parseProperties = require('./helpers/parse-properties');
 
 module.exports = module.exports = brands.map((brand) => {
@@ -59,6 +60,16 @@ module.exports = module.exports = brands.map((brand) => {
                 ),
                 pluginLetterSpacing(
                     parseProperties(props, { type: 'letter-spacing' })
+                ),
+                pluginUtilityTypography(
+                    parseProperties(
+                        props,
+                        {
+                            category: 'utility',
+                            type: 'typography',
+                        },
+                        false
+                    )
                 ),
             ],
         },
