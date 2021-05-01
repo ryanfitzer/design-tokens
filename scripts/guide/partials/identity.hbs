@@ -1,0 +1,22 @@
+<ul>
+  {{#each ctx.vars}}
+    <li>
+      <span>
+        {{@key}}
+      </span>
+      <code>
+        {{this}}
+      </code>
+    </li>
+  {{/each}}
+  {{#if ctx.class}}
+    <li>
+      <span>
+        class
+      </span>
+      <code>
+        {{ctx.class}}
+      </code>
+    </li>
+  {{/if}}
+</ul>

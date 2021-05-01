@@ -70,6 +70,11 @@ module.exports = ({ attributes, path }) => {
         identity: {
             prefix,
             name,
+            vars: {
+                css: `--${prefix}-${name}`,
+                scss: `$${prefix}-${name}`,
+            },
+            // [TODO] Deprecate
             css: {
                 customProperty: `--${prefix}-${name}`,
                 scssVariable: `$${prefix}-${name}`,

@@ -18,13 +18,49 @@
 
 
   <main>
+    
     {{> assets}}
-    {{> color}}
-    {{> font-family}}
-    {{> font-size}}
-    {{> letter-spacing}}
-    {{> line-height}}
-    {{> viewport}}
+
+    {{> heading level=2 title='Variables'}}
+
+    {{> section
+        ctx=color
+        title='Color'
+        example='bg-color'
+    }}
+    
+    {{> section
+        ctx=font-family
+        title='Font Family'
+        example='font-family'
+    }}
+
+    {{> section
+        ctx=font-size
+        title='Font Size'
+        example='font-size'
+        original-value='true'
+    }}
+
+    {{> section
+        ctx=letter-spacing
+        title='Letter Spacing'
+        example='letter-spacing'
+        original-value='true'
+    }}
+
+    {{> section
+        ctx=line-height
+        title='Line Height'
+        example='line-height'
+    }}
+
+    {{> section
+        ctx=viewport
+        title='Viewport'
+        example='viewport'
+    }}
+
   </main>
   
 </body>
