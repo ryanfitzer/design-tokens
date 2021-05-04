@@ -18,6 +18,7 @@
     },
     "success": {
       "primary": { "value": "#2d9d78" }
-    }
+    },
+    "sale": { "value": "#CC0000" }
   }
 }

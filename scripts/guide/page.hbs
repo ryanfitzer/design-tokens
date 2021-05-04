@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="font-face.css">
   <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="utilities.css">
-  {{> styles}}
+  {{> styles.css}}
+  {{> tabs.css}}
 </head>
 <body>
 
@@ -22,105 +23,127 @@
     
     {{~> assets}}
 
-    {{~> heading level=2 title='Variables'}}
+    <div class="tabs">
+      
+      <div role="tablist" aria-label="Design Tokens Documentation">
+        
+        <button id="vars" aria-controls="vars-tab" role="tab" aria-selected="true">Variables</button>
 
-    {{~> section
-        ctx=vars.color
-        title='Color'
-        example='bg-color'
-    }}
-    
-    {{~> section
-        ctx=vars.font-family
-        title='Font Family'
-        example='font-family'
-    }}
+        <button id="classes" aria-controls="classes-tab" role="tab" aria-selected="false" tabindex="-1">Classes</button>
 
-    {{~> section
-        ctx=vars.font-size
-        title='Font Size'
-        example='font-size'
-        original-value='true'
-    }}
+      </div>
 
-    {{~> section
-        ctx=vars.letter-spacing
-        title='Letter Spacing'
-        example='letter-spacing'
-        original-value='true'
-    }}
+      <div id="vars-tab" aria-labelledby="vars" tabindex="0" role="tabpanel">
 
-    {{~> section
-        ctx=vars.line-height
-        title='Line Height'
-        example='line-height'
-    }}
+        {{~> heading level=2 title='Variables'}}
 
-    {{~> section
-        ctx=vars.viewport
-        title='Viewport'
-        example='viewport'
-    }}
+        {{~> section
+            ctx=vars.color
+            title='Color'
+            example='bg-color'
+        }}
+        
+        {{~> section
+            ctx=vars.font-family
+            title='Font Family'
+            example='font-family'
+        }}
 
-    {{~> heading level=2 title='Classes'}}
+        {{~> section
+            ctx=vars.font-size
+            title='Font Size'
+            example='font-size'
+            original-value='true'
+        }}
 
-    {{~> section
-        ctx=classes.background-color
-        title='Background Color'
-        example='bg-color'
-        util='true'
-    }}
+        {{~> section
+            ctx=vars.letter-spacing
+            title='Letter Spacing'
+            example='letter-spacing'
+            original-value='true'
+        }}
 
-    {{~> section
-        ctx=classes.border-color
-        title='Border Color'
-        example='border-color'
-        util='true'
-    }}
+        {{~> section
+            ctx=vars.line-height
+            title='Line Height'
+            example='line-height'
+        }}
 
-    {{~> section
-        ctx=classes.font-family
-        title='Font Family'
-        example='font-family'
-        util='true'
-    }}
+        {{~> section
+            ctx=vars.viewport
+            title='Viewport'
+            example='viewport'
+        }}
 
-    {{~> section
-        ctx=classes.font-size
-        title='Font Size'
-        example='font-size'
-        util='true'
-    }}
+      </div>
 
-    {{~> section
-        ctx=classes.letter-spacing
-        title='Letter Spacing'
-        example='letter-spacing'
-        util='true'
-    }}
+      <div id="classes-tab" aria-labelledby="classes" tabindex="0" role="tabpanel">
 
-    {{~> section
-        ctx=classes.line-height
-        title='Line Height'
-        example='line-height'
-        util='true'
-    }}
+        {{~> heading level=2 title='Classes'}}
 
-    {{~> section
-        ctx=classes.text-color
-        title='Text Color'
-        example='text-color'
-        util='true'
-    }}
+        {{~> section
+            ctx=classes.background-color
+            title='Background Color'
+            example='bg-color'
+            util='true'
+        }}
 
-    {{~> section
-        ctx=classes.typography
-        title='Typography'
-        example='typography'
-        util='true'
-    }}
+        {{~> section
+            ctx=classes.border-color
+            title='Border Color'
+            example='border-color'
+            util='true'
+        }}
+
+        {{~> section
+            ctx=classes.font-family
+            title='Font Family'
+            example='font-family'
+            util='true'
+        }}
+
+        {{~> section
+            ctx=classes.font-size
+            title='Font Size'
+            example='font-size'
+            util='true'
+        }}
+
+        {{~> section
+            ctx=classes.letter-spacing
+            title='Letter Spacing'
+            example='letter-spacing'
+            util='true'
+        }}
+
+        {{~> section
+            ctx=classes.line-height
+            title='Line Height'
+            example='line-height'
+            util='true'
+        }}
+
+        {{~> section
+            ctx=classes.text-color
+            title='Text Color'
+            example='text-color'
+            util='true'
+        }}
+
+        {{~> section
+            ctx=classes.typography
+            title='Typography'
+            example='typography'
+            util='true'
+        }}
+
+      </div>
+
+    </div>
 
   </main>
   
+  {{> tabs.js }}
+
 </body>
 </html>
