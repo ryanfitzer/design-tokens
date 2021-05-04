@@ -1,7 +1,10 @@
 <section data-section="{{ title }}">
 
-  {{> heading level=3 title=title}}
-  
+  {{> heading
+      level=3
+      title=title
+  }}
+
   <table>
     <thead>
       <td class="heading-identifier">Identifier</td>
@@ -15,12 +18,13 @@
             {{> identity ctx=attributes.identity }}
           </td>
           <td class="value">
-            <pre>{{ value }} {{~#if ../original-value}} /*{{original.value}}*/{{/if}}</pre>
+            <pre>{{value}} {{~#if ../original-value}} /*{{original.value}}*/{{/if}}</pre>
           </td>
           <td class="example">
             {{> (lookup .. 'example')
                 value=value
-                class=attributes.identity.html.class
+                attrs=attributes
+                classname=attributes.identity.classname
                 variable=attributes.identity.css.customProperty
             }}
           </td>

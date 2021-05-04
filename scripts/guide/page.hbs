@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="font-face.css">
   <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="utilities.css">
   {{> styles}}
 </head>
 <body>
@@ -19,46 +20,104 @@
 
   <main>
     
-    {{> assets}}
+    {{~> assets}}
 
-    {{> heading level=2 title='Variables'}}
+    {{~> heading level=2 title='Variables'}}
 
-    {{> section
-        ctx=color
+    {{~> section
+        ctx=vars.color
         title='Color'
         example='bg-color'
     }}
     
-    {{> section
-        ctx=font-family
+    {{~> section
+        ctx=vars.font-family
         title='Font Family'
         example='font-family'
     }}
 
-    {{> section
-        ctx=font-size
+    {{~> section
+        ctx=vars.font-size
         title='Font Size'
         example='font-size'
         original-value='true'
     }}
 
-    {{> section
-        ctx=letter-spacing
+    {{~> section
+        ctx=vars.letter-spacing
         title='Letter Spacing'
         example='letter-spacing'
         original-value='true'
     }}
 
-    {{> section
-        ctx=line-height
+    {{~> section
+        ctx=vars.line-height
         title='Line Height'
         example='line-height'
     }}
 
-    {{> section
-        ctx=viewport
+    {{~> section
+        ctx=vars.viewport
         title='Viewport'
         example='viewport'
+    }}
+
+    {{~> heading level=2 title='Classes'}}
+
+    {{~> section
+        ctx=classes.background-color
+        title='Background Color'
+        example='bg-color'
+        util='true'
+    }}
+
+    {{~> section
+        ctx=classes.border-color
+        title='Border Color'
+        example='border-color'
+        util='true'
+    }}
+
+    {{~> section
+        ctx=classes.font-family
+        title='Font Family'
+        example='font-family'
+        util='true'
+    }}
+
+    {{~> section
+        ctx=classes.font-size
+        title='Font Size'
+        example='font-size'
+        util='true'
+    }}
+
+    {{~> section
+        ctx=classes.letter-spacing
+        title='Letter Spacing'
+        example='letter-spacing'
+        util='true'
+    }}
+
+    {{~> section
+        ctx=classes.line-height
+        title='Line Height'
+        example='line-height'
+        util='true'
+    }}
+
+    {{~> section
+        ctx=classes.text-color
+        title='Text Color'
+        example='text-color'
+        util='true'
+    }}
+
+    {{~> section
+        ctx=classes.typography
+        title='Typography'
+        example='typography'
+        util='true'
     }}
 
   </main>

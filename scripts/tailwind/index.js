@@ -8,6 +8,7 @@ const autoprefixer = require('autoprefixer');
 const postcssImport = require('postcss-import');
 const configs = require('./config');
 const { paths } = require('../../constants');
+const createJSON = require('./properties');
 
 // Build each brand
 configs.forEach(async ([brand, config]) => {
@@ -30,6 +31,7 @@ configs.forEach(async ([brand, config]) => {
                     .toUpperCase()}\n`
             );
             fs.writeFileSync(destPath, result.css);
+            createJSON(brand, result);
             console.info(`✔︎ ${destPath}`);
         });
 });

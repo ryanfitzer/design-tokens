@@ -45,8 +45,7 @@
             "font-family": { "value": "{font.family.sans-serif.roman.value}" },
             "font-size": { "value": "{size.font.8.value}" },
             "letter-spacing": { "value": "{size.letter-spacing.l.value}" },
-            "line-height": { "value": "{size.line-height.2xl.value}" },
-            "text-transform": { "value": "uppercase" }
+            "line-height": { "value": "{size.line-height.2xl.value}" }
           },
           "s": {
             "font-family": { "value": "{font.family.sans-serif.roman.value}" },

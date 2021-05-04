@@ -2,8 +2,8 @@
   {{title}}
   <a
     aria-hidden="true"
-    id="{{{kebab-case title}}}"
-    href="#{{{kebab-case title}}}"
+    id="{{#if util}}util-{{else}}var-{{/if}}{{{kebab-case title}}}"
+    href="#{{#if util}}util-{{else}}var-{{/if}}{{{kebab-case title}}}"
   >
     <svg
       width="16"
