@@ -8,12 +8,13 @@
     "url": "https://github.com/Tapestry-Inc/design-tokens.git"
   },
   "scripts": {
-    "build": "npm run tokens && npm run tailwind && node scripts/pkg",
-    "cdn": "npm run guide && node scripts/cdn",
-    "test": "echo '[ToDo] Setup testing framework!'",
-    "guide": "node scripts/guide",
+    "build": "npm run tokens && npm run tailwind && npm run pkg && npm run docs",
+    "cdn": "node scripts/cdn",
+    "docs": "node scripts/docs",
+    "pkg": "node scripts/pkg",
     "tailwind": "node scripts/tailwind",
     "tokens": "node scripts/style-dictionary",
+    "test": "echo '[ToDo] Setup testing framework!'",
     "prepare": "husky install"
   },
   "devDependencies": {

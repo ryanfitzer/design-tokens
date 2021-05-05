@@ -35,11 +35,11 @@ brands.forEach(async (brand, index) => {
     const propsExist = await fs.pathExists(propsPath);
     const propsFiles = fs.readdirSync(propsPath, { encoding: 'utf8' });
 
-    console.info(`\n[guide] Building ${displayBrand}\n`);
+    console.info(`\n[docs] Building ${displayBrand}\n`);
 
     if (!propsExist) {
         return console.error(
-            `\n[guide] ERROR: No properties directory found for ${displayBrand} at "${propsPath}"\n`
+            `\n[docs] ERROR: No properties directory found for ${displayBrand} at "${propsPath}"\n`
         );
     }
 
@@ -56,7 +56,7 @@ brands.forEach(async (brand, index) => {
 
     const { 'css-utilities': utils, ...vars } = data;
 
-    const page = fs.readFileSync(`${paths.scripts.guide}page.hbs`, {
+    const page = fs.readFileSync(`${paths.scripts.docs}page.hbs`, {
         encoding: 'utf8',
     });
 

@@ -29,7 +29,7 @@ module.exports = {
         scripts: {
             root: resolve('scripts'),
             changelog: resolve('scripts/changelog'),
-            guide: resolve('scripts/guide'),
+            docs: resolve('scripts/docs'),
             styleDictionary: resolve('scripts/style-dictionary'),
             filters: resolve('scripts/style-dictionary/filters'),
             transforms: resolve('scripts/style-dictionary/transforms'),

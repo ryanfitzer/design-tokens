@@ -8,8 +8,8 @@ const handlebars = require('handlebars');
 const { paths } = require('../../constants');
 
 const enc = { encoding: 'utf8' };
-const partialsPath = `${paths.scripts.guide}partials/`;
-const helpersPath = `${paths.scripts.guide}helpers/`;
+const partialsPath = `${paths.scripts.docs}partials/`;
+const helpersPath = `${paths.scripts.docs}helpers/`;
 
 const partials = globby.sync('**', { cwd: partialsPath }).map((file) => {
     const { name } = path.parse(file);
