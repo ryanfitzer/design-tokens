@@ -3,10 +3,10 @@
  * @param {object} prop - A property object.
  * @returns {string}
  */
-const getStyleType = ({ category, type }) => {
-    if (category === 'color') return 'color';
-    if (category === 'component') return 'component';
-    if (category === 'font') return 'font';
+const getPrefix = ({ category, type }) => {
+    if (category === 'color') return category;
+    if (category === 'font') return category;
+    if (type === 'icon') return type;
     if (category === 'utility') return type;
 
     if (category === 'size') {
@@ -26,12 +26,13 @@ const getStyleType = ({ category, type }) => {
 const normalizeName = (attributes, path) => {
     const isSingleName = path.length < 3;
     const isSizeName = attributes.category === 'size';
+    const isIconName = attributes.type === 'icon';
     const isFamilyName = attributes.type === 'family';
     const isFaceName = attributes.type === 'face';
     const isUtilityName = attributes.category === 'utility';
 
     // Remove category and type from name
-    if (isFamilyName || isFaceName || isUtilityName) {
+    if (isIconName || isFamilyName || isFaceName || isUtilityName) {
         return path.slice(2).join('-');
     }
 
@@ -50,12 +51,13 @@ const normalizeName = (attributes, path) => {
  * @returns {object}
  */
 module.exports = ({ attributes, path }) => {
-    const prefix = getStyleType(attributes);
+    const prefix = getPrefix(attributes);
     const name = normalizeName(attributes, path);
+    const isIcon = attributes.type === 'icon';
     const isFontFace = attributes.type === 'face';
     const isFontTrack = attributes.type === 'track';
     const isUtility = attributes.category === 'utility';
-    const noIdent = isFontFace || isFontTrack || isUtility;
+    const noIdent = isIcon || isFontFace || isFontTrack || isUtility;
 
     if (noIdent) {
         return {

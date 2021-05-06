@@ -74,9 +74,10 @@ module.exports = brands.map((brand) => [
                 ],
             },
             properties: {
+                brand,
                 description: 'Data for generating documentation',
                 buildPath: `${paths.build.root}${brand}/properties/`,
-                transformGroup: 'json-custom',
+                transformGroup: 'json-properties',
                 files: [
                     {
                         destination: 'index.json',
@@ -112,6 +113,15 @@ module.exports = brands.map((brand) => [
                         },
                     },
                     {
+                        destination: 'icon.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'asset',
+                            },
+                        },
+                    },
+                    {
                         destination: 'letter-spacing.json',
                         format: 'json/properties',
                         filter: {
@@ -141,6 +151,14 @@ module.exports = brands.map((brand) => [
                         },
                     },
                 ],
+            },
+            'copy icons': {
+                buildPath: `${paths.build.root}${brand}/icon/`,
+                source: [
+                    `${paths.src.root}@global/asset/icon/`,
+                    `${paths.src.root}${brand}/asset/icon/`,
+                ],
+                actions: ['copy-icons'],
             },
         },
     },
