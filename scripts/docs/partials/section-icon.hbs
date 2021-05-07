@@ -65,8 +65,8 @@
     {{#each this}}
       <li class="example">
         <div class="icon-wrapper">
-          <div class="icon bg-grid fill">
-            <img src="{{value}}" alt="" />
+          <div class="icon fill" style="background-color: {{svg.background}};">
+            {{{svg.source}}}
           </div>
         </div>
         <p class="identifier"><code>{{original.value}}</code></p>

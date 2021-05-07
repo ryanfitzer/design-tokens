@@ -58,9 +58,7 @@
         "favorite-fill": { "value": "favorite-fill.svg" },
         "edit": { "value": "edit.svg" },
         "bag": { "value": "bag.svg" },
-        "bag-white": { "value": "bag-white.svg" },
         "bag-3digit": { "value": "bag-3digit.svg" },
-        "bag-3digit-white": { "value": "bag-3digit-white.svg" },
         "account": { "value": "account.svg" }
       },
       "form": {

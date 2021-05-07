@@ -1,9 +1,32 @@
 {{> heading level=2 title='Assets'}}
 
-<ul>
+<style>
+  .assets {
+    padding: 0;
+    list-style: none;
+  }
+  .assets .list {
+    margin-top: 10px;
+  }
+</style>
+
+<ul class="assets">
   {{#each assets as | asset |}}
-    <li>
-      {{asset.desc}}: <a href="{{asset.name}}" target="_blank">{{asset.name}}</a>
-    </li>
+    {{#if asset.[0]}}
+      <li class="list">
+        <details>
+          <summary>Token data</summary>
+            <ul>
+              {{#each asset as | prop |}}
+                <li><a href="{{prop.path}}" target="_blank">{{prop.name}}</a></li>
+              {{/each}}
+            </ul>
+          </details>
+      </li>
+    {{else}}
+      <li>
+        {{asset.desc}}: <a href="{{asset.path}}" target="_blank">{{asset.name}}</a>
+      </li>
+    {{/if}}
   {{/each}}
 </ul>

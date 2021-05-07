@@ -22,6 +22,9 @@
             font-size: 28px;
             margin-bottom: 40px;
         }
+        details summary { 
+            cursor: pointer;
+        }
         main {
             grid-area: col-b;
         }
@@ -179,17 +182,15 @@
 
         .example .fill {
             width: 100%;
-            min-height: 75px;
-        }
-
-        .example .bg-grid {
-            width: 100%;
             display: flex;
             padding: 20px;
             min-height: 75px;
             position: relative;
             align-items: center;
             justify-content: center;
+        }
+
+        .example .bg-grid {
             background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='16' width='16'><path fill='%23F0F0F0' d='M0 0h8v8H0zm8 8h8v8H8z'/></svg>");
         }
 

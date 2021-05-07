@@ -2,11 +2,24 @@ const path = require('path');
 const fs = require('fs-extra');
 const chalk = require('chalk');
 const globby = require('globby');
-const { optimize } = require('svgo');
+const { optimize, extendDefaultPlugins } = require('svgo');
 
-const svgOptimize = (src, svgPath) => {
+const svgOptimize = (src, relPath, absPath) => {
+    const className = `icon-${relPath.replace(/\//g, '-').replace('.svg', '')}`;
+
     const result = optimize(src, {
-        path: svgPath,
+        path: absPath,
+        plugins: extendDefaultPlugins([
+            {
+                name: 'prefixIds',
+            },
+            {
+                name: 'addClassesToSVGElement',
+                params: {
+                    className,
+                },
+            },
+        ]),
     });
 
     return result.data;
@@ -19,8 +32,8 @@ const copy = (dictionary, config) => {
         svgPaths.forEach((svgPath) => {
             const relPath = path.relative(dirPath, svgPath);
             const destPath = path.resolve(config.buildPath, relPath);
-            const svgSrc = fs.readFileSync(svgPath);
-            const optSrc = svgOptimize(svgSrc, svgPath);
+            const svgSrc = fs.readFileSync(svgPath, { encoding: 'utf8' });
+            const optSrc = svgOptimize(svgSrc, relPath, svgPath);
 
             fs.outputFile(destPath, optSrc, (err) => {
                 if (err) console.error(err);

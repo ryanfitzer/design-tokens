@@ -76,8 +76,7 @@ module.exports = brands.map((brand) => [
                 ],
             },
             properties: {
-                brand,
-                description: 'Data for generating documentation',
+                description: 'Token data',
                 buildPath: `${paths.build.root}${brand}/properties/`,
                 transformGroup: 'json-properties',
                 files: [
@@ -149,6 +148,15 @@ module.exports = brands.map((brand) => [
                         filter: {
                             attributes: {
                                 category: 'viewport',
+                            },
+                        },
+                    },
+                    {
+                        destination: 'utility.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'utility',
                             },
                         },
                     },

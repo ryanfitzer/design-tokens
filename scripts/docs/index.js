@@ -1,6 +1,7 @@
 /**
  * Runs build for each brand.
  */
+const path = require('path');
 const fs = require('fs-extra');
 const { brands, paths, pkg } = require('../../constants');
 const handlebars = require('./config');
@@ -17,17 +18,34 @@ const listAssets = (index) => {
     const [brand, config] = tokenConfigs[index];
 
     return Object.entries(config.platforms).reduce(
-        (accum, [type, { description, files }]) => {
-            if (type === 'properties') return accum;
-            if (!type.match(/action\//)) return accum;
+        (accum, [type, { buildPath, description, files }]) => {
+            if (type.match(/asset\//)) return accum;
 
-            files.forEach(({ destination }) =>
-                accum.push({
-                    desc: description,
-                    name: destination,
-                    url: `${paths.cdn}${brand}/${destination}`,
-                })
+            const relPath = path.relative(
+                `${paths.build.root}/${brand}`,
+                buildPath
             );
+
+            if (type === 'properties') {
+                accum.push(
+                    files.map(({ destination }) => {
+                        return {
+                            desc: description,
+                            name: destination,
+                            path: `${relPath}/${destination}`,
+                        };
+                    })
+                );
+            } else {
+                files.forEach(({ destination }) => {
+                    accum.push({
+                        desc: description,
+                        name: destination,
+                        collapse: type === 'properties',
+                        path: `${relPath}/${destination}`,
+                    });
+                });
+            }
 
             return accum;
         },
@@ -73,6 +91,16 @@ brands.forEach(async (brand, index) => {
     }, {});
 
     const { utility, icon, ...vars } = data;
+
+    icon.forEach((props) => {
+        const filePath = `${paths.build.root}${brand}/${props.value}`;
+        const isVideoIcon = props.attributes.item === 'video';
+
+        props.svg = {
+            background: isVideoIcon ? '#7e7e7e' : 'white',
+            source: fs.readFileSync(filePath, { encoding: 'utf8' }),
+        };
+    });
 
     const classes = groupByAttr(utility, 'type');
 
