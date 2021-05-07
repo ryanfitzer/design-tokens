@@ -22,6 +22,7 @@ module.exports = brands.map((brand) => [
                             ['type', 'face', false],
                             ['category', 'viewport', false],
                             ['category', 'utility', false],
+                            ['category', 'asset', false],
                         ]),
                     },
                 ],
@@ -69,6 +70,7 @@ module.exports = brands.map((brand) => [
                         filter: checkAttr([
                             ['type', 'face', false],
                             ['category', 'utility', false],
+                            ['category', 'asset', false],
                         ]),
                     },
                 ],

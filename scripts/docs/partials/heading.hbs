@@ -1,1 +1,4 @@
-<h{{level}}>{{title}}</h{{level}}>
+<h{{level}}>
+  {{#if @partial-block}}{{> @partial-block }}{{/if}}
+  {{#if title}}{{title}}{{/if}}
+</h{{level}}>

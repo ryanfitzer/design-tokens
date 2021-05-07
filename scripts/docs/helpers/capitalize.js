@@ -4,11 +4,8 @@
  * @returns {string}
  */
 module.exports = (words) => {
+    const parts = Array.isArray(words) ? words : words.split(' ');
     const format = (part) => part.charAt(0).toUpperCase() + part.slice(1);
 
-    if (Array.isArray(words)) {
-        return words.map(format).join(' ');
-    }
-
-    return format(words);
+    return parts.map(format).join(' ');
 };
