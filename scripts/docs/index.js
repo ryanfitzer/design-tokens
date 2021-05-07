@@ -6,13 +6,20 @@ const { brands, paths, pkg } = require('../../constants');
 const handlebars = require('./config');
 const capitalize = require('./helpers/capitalize');
 const tokenConfigs = require(`${paths.scripts.styleDictionary}config`);
+const log = require(`${paths.scripts.lib}log`)('docs');
 
+/**
+ * Creates a list of the generated css/js assets.
+ * @param {number} index - The index of the token config to use.
+ * @returns {array} Array of assets paths.
+ */
 const listAssets = (index) => {
     const [brand, config] = tokenConfigs[index];
 
     return Object.entries(config.platforms).reduce(
         (accum, [type, { description, files }]) => {
             if (type === 'properties') return accum;
+            if (!type.match(/action\//)) return accum;
 
             files.forEach(({ destination }) =>
                 accum.push({
@@ -28,6 +35,13 @@ const listAssets = (index) => {
     );
 };
 
+const groupByAttr = (props, attr) =>
+    props.reduce((acuum, prop) => {
+        if (!acuum[prop.attributes[attr]]) acuum[prop.attributes[attr]] = [];
+        acuum[prop.attributes[attr]].push(prop);
+        return acuum;
+    }, {});
+
 brands.forEach(async (brand, index) => {
     const displayBrand = brand.replace('-', ' ').toUpperCase();
     const destPath = `${paths.build.root}${brand}/index.html`;
@@ -35,13 +49,17 @@ brands.forEach(async (brand, index) => {
     const propsExist = await fs.pathExists(propsPath);
     const propsFiles = fs.readdirSync(propsPath, { encoding: 'utf8' });
 
-    console.info(`\n[docs] Building ${displayBrand}\n`);
+    log.tag(`Building ${displayBrand}\n`);
 
     if (!propsExist) {
-        return console.error(
-            `\n[docs] ERROR: No properties directory found for ${displayBrand} at "${propsPath}"\n`
+        return log.error(
+            `No properties directory found for ${displayBrand} at "${propsPath}"\n`
         );
     }
+
+    const page = fs.readFileSync(`${paths.scripts.docs}page.hbs`, {
+        encoding: 'utf8',
+    });
 
     const data = propsFiles.reduce((accum, file) => {
         if (file === 'index.json') return accum;
@@ -54,17 +72,11 @@ brands.forEach(async (brand, index) => {
         return accum;
     }, {});
 
-    const { 'css-utilities': utils, ...vars } = data;
+    const { utility, icon, ...vars } = data;
 
-    const page = fs.readFileSync(`${paths.scripts.docs}page.hbs`, {
-        encoding: 'utf8',
-    });
+    const classes = groupByAttr(utility, 'type');
 
-    const classes = utils.reduce((acuum, util) => {
-        if (!acuum[util.attributes.type]) acuum[util.attributes.type] = [];
-        acuum[util.attributes.type].push(util);
-        return acuum;
-    }, {});
+    const icons = groupByAttr(icon, 'item');
 
     const renderPage = handlebars.compile(page);
 
@@ -72,6 +84,7 @@ brands.forEach(async (brand, index) => {
         destPath,
         renderPage({
             vars,
+            icons,
             classes,
             version: pkg.version,
             assets: listAssets(index),
@@ -79,5 +92,5 @@ brands.forEach(async (brand, index) => {
         })
     );
 
-    console.info(`✔︎ ${destPath}`);
+    log.add(destPath);
 });

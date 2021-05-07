@@ -152,13 +152,13 @@ module.exports = brands.map((brand) => [
                     },
                 ],
             },
-            'copy icons': {
+            'asset/icon/optimize': {
                 buildPath: `${paths.build.root}${brand}/icon/`,
                 source: [
                     `${paths.src.root}@global/asset/icon/`,
                     `${paths.src.root}${brand}/asset/icon/`,
                 ],
-                actions: ['copy-icons'],
+                actions: ['svg-optimize'],
             },
         },
     },

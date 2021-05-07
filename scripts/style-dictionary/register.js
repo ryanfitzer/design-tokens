@@ -12,14 +12,14 @@ const nameKabab = require('./transforms/name-kabab');
 const capitalize = require('./transforms/capitalize');
 const iconPath = require('./transforms/icon-path');
 const attrIdentity = require('./transforms/attr-identity');
-const copyIcon = require('./actions/copy-icons');
+const svgOptimize = require('./actions/svg-optimize');
 
 module.exports = {
     Action: [
         {
-            name: 'copy-icons',
-            do: copyIcon.copy,
-            undo: copyIcon.clear,
+            name: 'svg-optimize',
+            do: svgOptimize.copy,
+            undo: svgOptimize.clear,
         },
     ],
     Filter: [],

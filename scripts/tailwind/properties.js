@@ -45,7 +45,7 @@ const createProperty = (selector, decls) => {
 
 const createPropertiesJSON = (brand, data) => {
     const result = {};
-    const destPath = `${paths.build.root}${brand}/properties/css-utilities.json`;
+    const destPath = `${paths.build.root}${brand}/properties/utility.json`;
 
     data.root.walkRules(function (rule) {
         const decls = [];

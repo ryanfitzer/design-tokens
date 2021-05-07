@@ -1,13 +1,13 @@
 /**
- * Set icon path relative to build root.
+ * Set icon path relative to properties file.
  * @param {object} prop - The property object.
  * @param {object} platform - The platform config object.
  * @returns {string}
  */
-module.exports = ({ attributes, value }, { brand }) => {
+module.exports = ({ attributes, value }) => {
     if (attributes.type !== 'icon') return value;
 
     const { type, item } = attributes;
 
-    return `${brand}/${type}/${item}/${value}`;
+    return `${type}/${item}/${value}`;
 };

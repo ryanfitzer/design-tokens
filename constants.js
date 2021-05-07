@@ -28,6 +28,7 @@ module.exports = {
         },
         scripts: {
             root: resolve('scripts'),
+            lib: resolve('scripts/lib'),
             changelog: resolve('scripts/changelog'),
             docs: resolve('scripts/docs'),
             styleDictionary: resolve('scripts/style-dictionary'),

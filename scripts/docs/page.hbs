@@ -31,6 +31,8 @@
 
         <button id="classes" aria-controls="classes-tab" role="tab" aria-selected="false" tabindex="-1">Classes</button>
 
+        <button id="icons" aria-controls="icons-tab" role="tab" aria-selected="false" tabindex="-1">Icons</button>
+
       </div>
 
       <div id="vars-tab" aria-labelledby="vars" tabindex="0" role="tabpanel">
@@ -135,6 +137,16 @@
             title='Typography'
             example='typography'
             util='true'
+        }}
+
+      </div>
+
+      <div id="icons-tab" aria-labelledby="icons" tabindex="0" role="tabpanel">
+
+        {{~> heading level=2 title='Icons'}}
+
+        {{~> section-icon
+            ctx=icons
         }}
 
       </div>
