@@ -1,10 +1,10 @@
 {
   "font": {
     "face": {
-      "futurabt": {
-        "book": {
+      "primary": {
+        "normal": {
           "family": {
-            "value": "FuturaBT"
+            "value": "FuturaBT-Book"
           },
           "style": {
             "value": "normal"
@@ -12,8 +12,11 @@
           "weight": {
             "value": "normal"
           },
+          "stretch": {
+            "value": "normal"
+          },
           "local": {
-            "value": ["FuturaBT"]
+            "value": ["FuturaBT-Book"]
           },
           "woff2": {
             "value": "https://assets.stuartweitzman.com/na/fonts/FuturaBT-Book.woff2"
@@ -21,24 +24,47 @@
         },
         "medium": {
           "family": {
-            "value": "FuturaBT"
+            "value": "FuturaBT-Medium"
           },
           "style": {
             "value": "normal"
           },
           "weight": {
-            "value": 500
+            "value": "normal"
+          },
+          "stretch": {
+            "value": "normal"
           },
           "local": {
-            "value": ["FuturaBT"]
+            "value": ["FuturaBT-Medium"]
           },
           "woff2": {
             "value": "https://assets.stuartweitzman.com/na/fonts/FuturaBT-Medium.woff2"
           }
+        },
+        "bold": {
+          "family": {
+            "value": "FuturaBT-Bold"
+          },
+          "style": {
+            "value": "normal"
+          },
+          "weight": {
+            "value": "normal"
+          },
+          "stretch": {
+            "value": "normal"
+          },
+          "local": {
+            "value": ["FuturaBT-Bold"]
+          },
+          "woff2": {
+            "value": "https://assets.stuartweitzman.com/na/fonts/FuturaBT-Bold.woff2"
+          }
         }
       },
-      "heldanetext": {
-        "regular": {
+      "secondary": {
+        "normal": {
           "family": {
             "value": "HeldaneText-Regular"
           },
@@ -46,6 +72,9 @@
             "value": "normal"
           },
           "weight": {
+            "value": "normal"
+          },
+          "stretch": {
             "value": "normal"
           },
           "local": {

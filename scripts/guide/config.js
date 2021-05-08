@@ -2,25 +2,25 @@
  * Configures and exports `handlebars` instance.
  */
 const fs = require('fs-extra');
+const path = require('path');
+const globby = require('globby');
 const handlebars = require('handlebars');
 const { paths } = require('../../constants');
 
-const options = { encoding: 'utf8' };
+const enc = { encoding: 'utf8' };
 const partialsPath = `${paths.scripts.guide}partials/`;
 const helpersPath = `${paths.scripts.guide}helpers/`;
 
-const partials = fs
-    .readdirSync(partialsPath, options)
-    .map((file) => [
-        file.replace('.hbs', ''),
-        fs.readFileSync(`${partialsPath}${file}`, options),
-    ]);
+const partials = globby.sync('**', { cwd: partialsPath }).map((file) => {
+    const { name } = path.parse(file);
+    return [name, fs.readFileSync(`${partialsPath}${file}`, enc)];
+});
 
 const helpers = fs
-    .readdirSync(helpersPath, options)
+    .readdirSync(helpersPath, enc)
     .map((file) => [
         file.replace('.js', ''),
-        require(`${helpersPath}${file}`, options),
+        require(`${helpersPath}${file}`, enc),
     ]);
 
 // Register partials

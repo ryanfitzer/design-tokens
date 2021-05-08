@@ -21,6 +21,7 @@ module.exports = brands.map((brand) => [
                         filter: checkAttr([
                             ['type', 'face', false],
                             ['category', 'viewport', false],
+                            ['category', 'utility', false],
                         ]),
                     },
                 ],
@@ -36,7 +37,6 @@ module.exports = brands.map((brand) => [
                         filter: {
                             attributes: {
                                 category: 'font',
-                                type: 'face',
                             },
                         },
                     },
@@ -66,12 +66,15 @@ module.exports = brands.map((brand) => [
                     {
                         format: `scss/variables`,
                         destination: `_variables.scss`,
-                        filter: checkAttr([['type', 'face', false]]),
+                        filter: checkAttr([
+                            ['type', 'face', false],
+                            ['category', 'utility', false],
+                        ]),
                     },
                 ],
             },
             properties: {
-                description: 'Data for generating token documentation',
+                description: 'Data for generating documentation',
                 buildPath: `${paths.build.root}${brand}/properties/`,
                 transformGroup: 'json-custom',
                 files: [

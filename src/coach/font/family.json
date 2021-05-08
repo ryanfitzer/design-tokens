@@ -1,15 +1,17 @@
 {
   "font": {
     "family": {
-      "sans-serif": {
-        "value": "Helvetica, Arial, sans-serif"
-      },
-      "serif": {
-        "regular": {
-          "value": "BemboMTPro-Regular, serif"
+      "primary": {
+        "normal": {
+          "value": "{font.face.primary.normal.family.value}, Helvetica, Arial, sans-serif"
         },
         "bold": {
-          "value": "BemboMTPro-Bold, serif"
+          "value": "{font.face.primary.bold.family.value}, Helvetica, Arial, sans-serif"
+        }
+      },
+      "secondary": {
+        "normal": {
+          "value": "{font.face.secondary.normal.family.value}, serif"
         }
       }
     }

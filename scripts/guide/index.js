@@ -47,7 +47,6 @@ brands.forEach(async (brand, index) => {
         if (file === 'index.json') return accum;
 
         const name = file.replace('.json', '');
-
         const values = Object.values(fs.readJsonSync(`${propsPath}${file}`));
 
         accum[name] = values;
@@ -55,16 +54,25 @@ brands.forEach(async (brand, index) => {
         return accum;
     }, {});
 
+    const { 'css-utilities': utils, ...vars } = data;
+
     const page = fs.readFileSync(`${paths.scripts.guide}page.hbs`, {
         encoding: 'utf8',
     });
+
+    const classes = utils.reduce((acuum, util) => {
+        if (!acuum[util.attributes.type]) acuum[util.attributes.type] = [];
+        acuum[util.attributes.type].push(util);
+        return acuum;
+    }, {});
 
     const renderPage = handlebars.compile(page);
 
     fs.writeFileSync(
         destPath,
         renderPage({
-            ...data,
+            vars,
+            classes,
             version: pkg.version,
             assets: listAssets(index),
             brand: capitalize(brand.split('-')),
