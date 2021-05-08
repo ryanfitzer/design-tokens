@@ -10,8 +10,7 @@ module.exports = brands.map((brand) => [
         include: [`${paths.src.root}@global/**/*.json`],
         source: [`${paths.src.root}${brand}/**/*.json`],
         platforms: {
-            'css/variables': {
-                description: 'CSS variables',
+            'CSS variables': {
                 transformGroup: 'css-custom',
                 buildPath: `${paths.build.root}${brand}/`,
                 files: [
@@ -27,8 +26,7 @@ module.exports = brands.map((brand) => [
                     },
                 ],
             },
-            'css/font-face': {
-                description: 'CSS @font-face rules',
+            'CSS @font-face': {
                 buildPath: `${paths.build.root}${brand}/`,
                 transforms: ['attribute/cti', 'name/cti/kebab'],
                 files: [
@@ -43,8 +41,7 @@ module.exports = brands.map((brand) => [
                     },
                 ],
             },
-            'css/custom-media': {
-                description: 'CSS @custom-media variables',
+            'CSS @custom-media': {
                 buildPath: `${paths.build.root}${brand}/`,
                 transforms: ['attribute/cti', 'name/cti/kebab'],
                 files: [
@@ -59,8 +56,7 @@ module.exports = brands.map((brand) => [
                     },
                 ],
             },
-            'scss/variables': {
-                description: 'SCSS variables',
+            'SCSS variables': {
                 transformGroup: 'css-custom',
                 buildPath: `${paths.build.root}${brand}/`,
                 files: [
@@ -75,8 +71,7 @@ module.exports = brands.map((brand) => [
                     },
                 ],
             },
-            properties: {
-                description: 'Token data',
+            'Token properties': {
                 buildPath: `${paths.build.root}${brand}/properties/`,
                 transformGroup: 'json-properties',
                 files: [
@@ -162,7 +157,7 @@ module.exports = brands.map((brand) => [
                     },
                 ],
             },
-            'asset/icon/optimize': {
+            'Icon optimize': {
                 buildPath: `${paths.build.root}${brand}/icon/`,
                 source: [
                     `${paths.src.root}@global/asset/icon/`,

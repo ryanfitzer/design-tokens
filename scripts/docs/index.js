@@ -18,33 +18,30 @@ const listAssets = (index) => {
     const [brand, config] = tokenConfigs[index];
 
     return Object.entries(config.platforms).reduce(
-        (accum, [type, { buildPath, description, files }]) => {
-            if (type.match(/asset\//)) return accum;
-
+        (accum, [type, { buildPath, files = [] }]) => {
             const relPath = path.relative(
-                `${paths.build.root}/${brand}`,
+                path.join(paths.build.root, brand),
                 buildPath
             );
 
-            if (type === 'properties') {
+            if (files.length <= 1) {
+                files.forEach(({ destination }) => {
+                    accum.push({
+                        desc: type,
+                        name: destination,
+                        path: path.join(relPath, destination),
+                    });
+                });
+            } else {
                 accum.push(
                     files.map(({ destination }) => {
                         return {
-                            desc: description,
+                            desc: type,
                             name: destination,
-                            path: `${relPath}/${destination}`,
+                            path: path.join(relPath, destination),
                         };
                     })
                 );
-            } else {
-                files.forEach(({ destination }) => {
-                    accum.push({
-                        desc: description,
-                        name: destination,
-                        collapse: type === 'properties',
-                        path: `${relPath}/${destination}`,
-                    });
-                });
             }
 
             return accum;
@@ -62,8 +59,8 @@ const groupByAttr = (props, attr) =>
 
 brands.forEach(async (brand, index) => {
     const displayBrand = brand.replace('-', ' ').toUpperCase();
-    const destPath = `${paths.build.root}${brand}/index.html`;
-    const propsPath = `${paths.build.root}${brand}/properties/`;
+    const destPath = path.join(paths.build.root, brand, 'index.html');
+    const propsPath = path.join(paths.build.root, brand, 'properties/');
     const propsExist = await fs.pathExists(propsPath);
     const propsFiles = fs.readdirSync(propsPath, { encoding: 'utf8' });
 
