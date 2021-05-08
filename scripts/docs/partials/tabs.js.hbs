@@ -41,6 +41,10 @@
         addListeners(i);
     }
 
+    for (i = 0; i < panels.length; ++i) {
+        if (i) panels[i].setAttribute('hidden', 'hidden');
+    }
+
     function addListeners(index) {
         tabs[index].addEventListener('click', clickEventListener);
         tabs[index].addEventListener('keydown', keydownEventListener);
