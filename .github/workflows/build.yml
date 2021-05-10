@@ -2,8 +2,9 @@ name: Build
 
 on:
   pull_request:
-    - main
-    - release/**
+    branches:
+      - main
+      - release/**
 
 jobs:
   build:
