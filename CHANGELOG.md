@@ -1,23 +1,5 @@
 # Changelog | Tapestry Design Tokens
 
-## [v1.0.0](https://github.com/Tapestry-Inc/design-tokens/compare/v0.11.9...v1.0.0)
-
-2021-05-10
-
-- Breaking: Removed `color-neutral-grey` from global. Now SW-only as `color-cool-grey`. ([61fc583](https://github.com/Tapestry-Inc/design-tokens/commit/61fc583)) (Ryan Fitzer)
-- Breaking: Updated Coach font sizes (added/removed). ([eebea25](https://github.com/Tapestry-Inc/design-tokens/commit/eebea25)) (Ryan Fitzer)
-- Chore: Added `screens` to tailwind config. ([4dc6d7f](https://github.com/Tapestry-Inc/design-tokens/commit/4dc6d7f)) (Ryan Fitzer)
-- Chore: Consolidate JSON file naming convention. ([5b5a305](https://github.com/Tapestry-Inc/design-tokens/commit/5b5a305)) (Ryan Fitzer)
-- Chore: Fix commit links. ([b2f0b3d](https://github.com/Tapestry-Inc/design-tokens/commit/b2f0b3d)) (Ryan Fitzer)
-- Chore: Release v1.0.0 [skip ci] ([c8867b2](https://github.com/Tapestry-Inc/design-tokens/commit/c8867b2)) (semantic-release-bot)
-- Chore: Release v1.0.0 [skip ci] ([ac6c5b6](https://github.com/Tapestry-Inc/design-tokens/commit/ac6c5b6)) (semantic-release-bot)
-- Chore: Remove old content. ([4ff2c73](https://github.com/Tapestry-Inc/design-tokens/commit/4ff2c73)) (Ryan Fitzer)
-- Docs: Add links to each plugin's docs. [skip ci] ([7b33777](https://github.com/Tapestry-Inc/design-tokens/commit/7b33777)) (Ryan Fitzer)
-- Docs: Add Viewport Section to Docs ([25129da](https://github.com/Tapestry-Inc/design-tokens/commit/25129da)) (Ryan Fitzer)
-- Fix: Coach should use the global color-neutral-base. Fixes #5. [#5](https://github.com/Tapestry-Inc/design-tokens /issues/5) ([2600d5c](https://github.com/Tapestry-Inc/design-tokens/commit/2600d5c)) (Ryan Fitzer)
-- New: Added `color-sale` to Coach. ([6bf394e](https://github.com/Tapestry-Inc/design-tokens/commit/6bf394e)) (Ryan Fitzer)
-- New: Added media-query tokens. ([9228654](https://github.com/Tapestry-Inc/design-tokens/commit/9228654)) (Ryan Fitzer)
-
 ## [v0.11.9](https://github.com/Tapestry-Inc/design-tokens/compare/v0.11.8...v0.11.9)
 
 2021-04-16
