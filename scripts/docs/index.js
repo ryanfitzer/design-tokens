@@ -87,6 +87,8 @@ brands.forEach(async (brand, index) => {
         return accum;
     }, {});
 
+    Object.keys(data).forEach((key) => log.add(`parsed ${key} section`));
+
     const { utility, icon, ...vars } = data;
 
     icon.forEach((props) => {
@@ -118,5 +120,5 @@ brands.forEach(async (brand, index) => {
         })
     );
 
-    log.add(destPath);
+    log.add(`Built ${destPath}`);
 });
