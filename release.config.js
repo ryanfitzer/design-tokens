@@ -97,11 +97,14 @@ const config = {
     ],
 };
 
-// Disable changelog generation for pre-releases
+// Disable changelog generation/commit for pre-releases
 config.plugins = config.plugins.filter(([name]) => {
     if (!isPreRelease) return true;
 
-    return name !== '@semantic-release/changelog';
+    return (
+        name !== '@semantic-release/changelog' ||
+        name !== '@semantic-release/git'
+    );
 });
 
 module.exports = config;
