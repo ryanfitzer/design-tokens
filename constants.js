@@ -4,7 +4,7 @@ const globby = require('globby');
 
 const root = path.resolve(__dirname);
 const resolve = (part) => path.normalize(`${path.resolve(root, part)}/`);
-const pkgVersion = process.env.NODE_PKG_VERSION || pkg.version;
+const pkgVersion = process.env.NPM_PKG_VERSION || pkg.version;
 
 module.exports = {
     brands: globby.sync('**', {

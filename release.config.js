@@ -1,9 +1,10 @@
 const { readFileSync } = require('fs-extra');
 const { paths } = require('./constants');
+const isPreRelease = process.env.NPM_PRE_RELEASE;
 
 // https://semantic-release.gitbook.io/semantic-release/usage/configuration
 // Dry Run: `NPM_TOKEN=blah npx semantic-release --dry-run`
-module.exports = {
+const config = {
     branches: ['main', { name: 'next', prerelease: true }],
     plugins: [
         [
@@ -95,3 +96,12 @@ module.exports = {
         ],
     ],
 };
+
+// Disable changelog generation for pre-releases
+config.plugins = config.plugins.filter(([name]) => {
+    if (!isPreRelease) return true;
+
+    return name !== '@semantic-release/changelog';
+});
+
+module.exports = config;
