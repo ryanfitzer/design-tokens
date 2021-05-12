@@ -1,5 +1,12 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.0.0-motif.2](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.0-motif.1...v1.0.0-motif.2)
+
+2021-05-12
+
+- fix test change to coach primary ([55c496f](https://github.com/Tapestry-Inc/design-tokens/commit/55c496f)) (Dan Merfeld)
+- New: The motif branch is now a pre-release branch. ([f7e06f8](https://github.com/Tapestry-Inc/design-tokens/commit/f7e06f8)) (Ryan Fitzer)
+
 ## [v1.0.0-motif.1](https://github.com/Tapestry-Inc/design-tokens/compare/v0.11.9...v1.0.0-motif.1)
 
 2021-05-12
