@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.0.0-next.3](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.0-next.2...v1.0.0-next.3)
+
+2021-05-12
+
+- Fix: Removed unused font sizes, updated references to correct sizes. ([ba31430](https://github.com/Tapestry-Inc/design-tokens/commit/ba31430)) (Ryan Fitzer)
+
 ## [v1.0.0-next.2](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.0-next.1...v1.0.0-next.2)
 
 2021-05-12
