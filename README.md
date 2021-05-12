@@ -85,15 +85,16 @@ The release process is managed by [Semantic Release](https://semantic-release.gi
 
 #### Pre-Release
 
-A pre-release can be published by merging a pull-request into the `next` branch. All of the same commit message rules still apply.
+A pre-release can be published by merging a pull-request into the `next` or `motif` branches. All of the same commit message rules still apply.
 
-The NPM package can be installed by appending the `@next` to the package name:
+The NPM package can be installed by appending the `@next` or `@motif` to the package name:
 
 ```
 npm install @tapestry-inc/design-tokens@next
+npm install @tapestry-inc/design-tokens@motif
 ```
 
-The CDN distribution is available in the `next` directory at the CDN root URL.
+The CDN distribution is available in the `next` or `motif` directories at the CDN root URL.
 
 #### Commit Message Conventions
 
