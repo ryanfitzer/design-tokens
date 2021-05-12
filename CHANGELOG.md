@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.0.0-next.2](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.0-next.1...v1.0.0-next.2)
+
+2021-05-12
+
+- Breaking: New font names, font size changes., added new font, added text utilities ([9c4d1a9](https://github.com/Tapestry-Inc/design-tokens/commit/9c4d1a9)) (Ryan Fitzer)
+
 ## [v1.0.0-next.1](https://github.com/Tapestry-Inc/design-tokens/compare/v0.11.9...v1.0.0-next.1)
 
 2021-05-12
