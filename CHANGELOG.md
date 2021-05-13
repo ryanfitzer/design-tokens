@@ -1,5 +1,14 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.0.0-motif.3](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.0-motif.2...v1.0.0-motif.3)
+
+2021-05-13
+
+- Fix: changes coach primary color to: #00001 [#00001](https://github.com/Tapestry-Inc/design-tokens/issues/00001) ([7a32178](https://github.com/Tapestry-Inc/design-tokens/commit/7a32178)) (Dan Merfeld)
+- FIX: changes coach primary color to: #0000FF [#0000](https://github.com/Tapestry-Inc/design-tokens/issues/0000) ([8a3f9c3](https://github.com/Tapestry-Inc/design-tokens/commit/8a3f9c3)) (Dan Merfeld)
+- Merge branch 'motif' of https://github.com/Tapestry-Inc/design-tokens into motif ([3d6a846](https://github.com/Tapestry-Inc/design-tokens/commit/3d6a846)) (Dan Merfeld)
+- FIX: reverted color change for coach color-primary ([4f75efd](https://github.com/Tapestry-Inc/design-tokens/commit/4f75efd)) (Dan Merfeld)
+
 ## [v1.0.0-motif.2](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.0-motif.1...v1.0.0-motif.2)
 
 2021-05-12
