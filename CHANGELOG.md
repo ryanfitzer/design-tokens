@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.0.0-next.5](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.0-next.4...v1.0.0-next.5)
+
+2021-05-13
+
+- Fix: Remove font-42 from Coach. ([1ba96c9](https://github.com/Tapestry-Inc/design-tokens/commit/1ba96c9)) (Ryan Fitzer)
+
 ## [v1.0.0-next.4](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.0-next.3...v1.0.0-next.4)
 
 2021-05-12
