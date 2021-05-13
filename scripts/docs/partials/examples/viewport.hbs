@@ -1,0 +1,31 @@
+<style type="text/css">
+  .{{name}}-fail {
+    color: #fff;
+    display: inline-block;
+  }
+  .{{name}}-pass {
+    display: none
+  }
+  @media {{value}} {
+    .{{
+    name
+  }}-signal {
+      background-color: lightgreen;
+    }
+    .{{name}}-fail {
+      display: none;
+    }
+    .{{name}}-pass {
+      display: inline-block
+    }
+  }
+</style>
+
+<div class="signal {{name}}-signal">
+  <span class="{{name}}-pass">
+    Matches
+  </span>
+  <span class="{{name}}-fail">
+    Does not Match
+  </span>
+</div>

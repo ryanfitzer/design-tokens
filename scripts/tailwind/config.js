@@ -6,6 +6,7 @@ const fs = require('fs-extra');
 const { brands, paths } = require('../../constants');
 const pluginLineHeight = require('./plugins/line-height');
 const pluginLetterSpacing = require('./plugins/letter-spacing');
+const pluginUtilityTypography = require('./plugins/utility-typography');
 const parseProperties = require('./helpers/parse-properties');
 
 module.exports = module.exports = brands.map((brand) => {
@@ -20,6 +21,12 @@ module.exports = module.exports = brands.map((brand) => {
             theme: {
                 colors: {
                     ...parseProperties(props, { category: 'color' }),
+                },
+                boxShadow: {
+                    ...parseProperties(props, {
+                        category: 'effect',
+                        type: 'box',
+                    }),
                 },
                 fontFamily: {
                     ...parseProperties(props, { type: 'family' }),
@@ -42,6 +49,7 @@ module.exports = module.exports = brands.map((brand) => {
             corePlugins: [
                 'backgroundColor',
                 'borderColor',
+                'boxShadow',
                 'fontFamily',
                 'fontSize',
                 'textColor',
@@ -59,6 +67,16 @@ module.exports = module.exports = brands.map((brand) => {
                 ),
                 pluginLetterSpacing(
                     parseProperties(props, { type: 'letter-spacing' })
+                ),
+                pluginUtilityTypography(
+                    parseProperties(
+                        props,
+                        {
+                            category: 'utility',
+                            type: 'typography',
+                        },
+                        false
+                    )
                 ),
             ],
         },

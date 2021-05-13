@@ -8,10 +8,12 @@ const autoprefixer = require('autoprefixer');
 const postcssImport = require('postcss-import');
 const configs = require('./config');
 const { paths } = require('../../constants');
+const createJSON = require('./properties');
+const log = require(`${paths.scripts.lib}log`)('tailwind');
 
 // Build each brand
 configs.forEach(async ([brand, config]) => {
-    const tailwindFilePath = `${paths.src.root}${brand}/tailwind.css`;
+    const tailwindFilePath = `${paths.src.brands}${brand}/tailwind.css`;
     const destPath = `${paths.build.root}${brand}/utilities.css`;
 
     const css = fs.readFileSync(tailwindFilePath, 'utf8');
@@ -24,12 +26,9 @@ configs.forEach(async ([brand, config]) => {
             to: destPath,
         })
         .then((result) => {
-            console.info(
-                `\n[tailwind] Building ${brand
-                    .replace('-', ' ')
-                    .toUpperCase()}\n`
-            );
+            log.tag(`Building ${brand.replace('-', ' ').toUpperCase()}\n`);
             fs.writeFileSync(destPath, result.css);
-            console.info(`✔︎ ${destPath}`);
+            createJSON(brand, result);
+            log.add(destPath);
         });
 });

@@ -33,7 +33,10 @@ const getSources = (props) => {
  * @returns {string}
  */
 module.exports = ({ dictionary }) => {
-    return Object.values(dictionary.properties.font.face)
+    const trackURL = dictionary.properties.font.track.url.value;
+    const track = trackURL ? `@import url(${trackURL});\n` : '';
+
+    const fonts = Object.values(dictionary.properties.font.face)
         .map((group) => {
             return Object.values(group)
                 .map((variation) => {
@@ -68,4 +71,6 @@ module.exports = ({ dictionary }) => {
                 .join('\n');
         })
         .join('\n');
+
+    return `${track}${fonts}`;
 };

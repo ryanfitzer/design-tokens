@@ -25,10 +25,8 @@ module.exports = (props, attrs = null, flatten = true) => {
     const properties = filterProps(props, attrs);
 
     return properties.reduce((accum, property) => {
-        const key = property.attributes.identity.name;
-
-        if (flatten) accum[key] = property.value;
-        else accum[key] = property;
+        if (flatten) accum[property.attributes.identity.name] = property.value;
+        else accum[property.name] = property;
 
         return accum;
     }, {});

@@ -7,11 +7,10 @@ const checkAttr = require('./filters/check-attr');
 module.exports = brands.map((brand) => [
     brand,
     {
-        include: [`${paths.src.root}@global/**/*.json`],
-        source: [`${paths.src.root}${brand}/**/*.json`],
+        include: [`${paths.src.root}global/**/*.json`],
+        source: [`${paths.src.brands}${brand}/**/*.json`],
         platforms: {
-            'css/variables': {
-                description: 'CSS variables',
+            'CSS variables': {
                 transformGroup: 'css-custom',
                 buildPath: `${paths.build.root}${brand}/`,
                 files: [
@@ -21,12 +20,13 @@ module.exports = brands.map((brand) => [
                         filter: checkAttr([
                             ['type', 'face', false],
                             ['category', 'viewport', false],
+                            ['category', 'utility', false],
+                            ['category', 'asset', false],
                         ]),
                     },
                 ],
             },
-            'css/font-face': {
-                description: 'CSS @font-face rules',
+            'CSS @font-face': {
                 buildPath: `${paths.build.root}${brand}/`,
                 transforms: ['attribute/cti', 'name/cti/kebab'],
                 files: [
@@ -36,14 +36,12 @@ module.exports = brands.map((brand) => [
                         filter: {
                             attributes: {
                                 category: 'font',
-                                type: 'face',
                             },
                         },
                     },
                 ],
             },
-            'css/custom-media': {
-                description: 'CSS @custom-media variables',
+            'CSS @custom-media': {
                 buildPath: `${paths.build.root}${brand}/`,
                 transforms: ['attribute/cti', 'name/cti/kebab'],
                 files: [
@@ -58,26 +56,38 @@ module.exports = brands.map((brand) => [
                     },
                 ],
             },
-            'scss/variables': {
-                description: 'SCSS variables',
+            'SCSS variables': {
                 transformGroup: 'css-custom',
                 buildPath: `${paths.build.root}${brand}/`,
                 files: [
                     {
                         format: `scss/variables`,
                         destination: `_variables.scss`,
-                        filter: checkAttr([['type', 'face', false]]),
+                        filter: checkAttr([
+                            ['type', 'face', false],
+                            ['category', 'utility', false],
+                            ['category', 'asset', false],
+                        ]),
                     },
                 ],
             },
-            properties: {
-                description: 'Data for generating token documentation',
+            'Token properties': {
                 buildPath: `${paths.build.root}${brand}/properties/`,
-                transformGroup: 'json-custom',
+                transformGroup: 'json-properties',
                 files: [
                     {
                         destination: 'index.json',
                         format: 'json/properties',
+                    },
+                    {
+                        destination: 'shadow.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'effect',
+                                type: 'box',
+                            },
+                        },
                     },
                     {
                         destination: 'color.json',
@@ -109,6 +119,15 @@ module.exports = brands.map((brand) => [
                         },
                     },
                     {
+                        destination: 'icon.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'asset',
+                            },
+                        },
+                    },
+                    {
                         destination: 'letter-spacing.json',
                         format: 'json/properties',
                         filter: {
@@ -129,6 +148,16 @@ module.exports = brands.map((brand) => [
                         },
                     },
                     {
+                        destination: 'spacing.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'size',
+                                type: 'spacing',
+                            },
+                        },
+                    },
+                    {
                         destination: 'viewport.json',
                         format: 'json/properties',
                         filter: {
@@ -137,7 +166,24 @@ module.exports = brands.map((brand) => [
                             },
                         },
                     },
+                    {
+                        destination: 'utility.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'utility',
+                            },
+                        },
+                    },
                 ],
+            },
+            'Icon optimize': {
+                buildPath: `${paths.build.root}${brand}/icon/`,
+                source: [
+                    `${paths.src.root}global/asset/icon/`,
+                    `${paths.src.brands}${brand}/asset/icon/`,
+                ],
+                actions: ['svg-optimize'],
             },
         },
     },
