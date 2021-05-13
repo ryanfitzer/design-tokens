@@ -102,8 +102,9 @@ config.plugins = config.plugins.filter(([name]) => {
     if (!isPreRelease) return true;
 
     return (
-        name !== '@semantic-release/changelog' ||
-        name !== '@semantic-release/git'
+        name !== '@semantic-release/changelog' &&
+        name !== '@semantic-release/git' &&
+        name !== '@semantic-release/release-notes-generator'
     );
 });
 
