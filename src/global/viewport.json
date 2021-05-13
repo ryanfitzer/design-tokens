@@ -4,15 +4,15 @@
       "value": "screen and (min-width: 0)",
       "comment": "0px"
     },
-    "sm": {
+    "s": {
       "value": "screen and (min-width: 34em)",
       "comment": "544px"
     },
-    "md": {
+    "m": {
       "value": "screen and (min-width: 48.0625em)",
       "comment": "769px"
     },
-    "lg": {
+    "l": {
       "value": "screen and (min-width: 62em)",
       "comment": "992px"
     },
