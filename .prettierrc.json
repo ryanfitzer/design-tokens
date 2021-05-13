@@ -18,15 +18,6 @@
       }
     },
     {
-      "files": "*.hbs",
-      "options": {
-        "tabWidth": 2,
-        "parser": "glimmer",
-        "singleQuote": false,
-        "printWidth": 160
-      }
-    },
-    {
       "files": "*.js",
       "options": {
         "tabWidth": 4
