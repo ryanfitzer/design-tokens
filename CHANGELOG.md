@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.0.1](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.0...v1.0.1)
+
+2021-05-20
+
+- Fix: Quote URLs when vars. Remove tracking URLs from vars. Fixes #17. [#17](https://github.com/Tapestry-Inc/design-tokens/issues/17) ([389467f](https://github.com/Tapestry-Inc/design-tokens/commit/389467f)) (Ryan Fitzer)
+
 ## [v1.0.0](https://github.com/Tapestry-Inc/design-tokens/compare/v0.11.9...v1.0.0)
 
 2021-05-13
