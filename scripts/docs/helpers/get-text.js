@@ -20,6 +20,9 @@ module.exports = (attrs) => {
         case 'badge':
             return 'Badge Text';
 
+        case 'label':
+            return 'Label Text';
+
         default:
             return 'We are a global house of brands.';
     }
