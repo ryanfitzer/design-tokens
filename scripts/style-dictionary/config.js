@@ -126,6 +126,7 @@ module.exports = brands.map((brand) => [
                         filter: {
                             attributes: {
                                 category: 'asset',
+                                type: 'icon',
                             },
                         },
                     },
@@ -146,6 +147,16 @@ module.exports = brands.map((brand) => [
                             attributes: {
                                 category: 'size',
                                 type: 'line-height',
+                            },
+                        },
+                    },
+                    {
+                        destination: 'logo.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'asset',
+                                type: 'logo',
                             },
                         },
                     },
@@ -185,6 +196,11 @@ module.exports = brands.map((brand) => [
                     `${paths.src.root}global/asset/icon/`,
                     `${paths.src.brands}${brand}/asset/icon/`,
                 ],
+                actions: ['svg-optimize'],
+            },
+            'Logo optimize': {
+                buildPath: `${paths.build.root}${brand}/logo/`,
+                source: [`${paths.src.brands}${brand}/asset/logo/`],
                 actions: ['svg-optimize'],
             },
         },
