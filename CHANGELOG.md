@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.1.0](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.1...v1.1.0)
+
+2021-05-21
+
+- New: Added logo tokens. ([d3a56cf](https://github.com/Tapestry-Inc/design-tokens/commit/d3a56cf)) (Ryan Fitzer)
+
 ## [v1.0.1](https://github.com/Tapestry-Inc/design-tokens/compare/v1.0.0...v1.0.1)
 
 2021-05-20
