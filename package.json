@@ -21,7 +21,8 @@
     "tailwind": "node scripts/tailwind",
     "tokens": "node scripts/style-dictionary",
     "test": "echo '[ToDo] Setup testing framework!'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postversion": "npm run docs"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
