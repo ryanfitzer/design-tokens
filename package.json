@@ -22,7 +22,7 @@
     "tokens": "node scripts/style-dictionary",
     "test": "echo '[ToDo] Setup testing framework!'",
     "prepare": "husky install",
-    "postversion": "npm run docs"
+    "prepublishOnly": "npm run docs"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
