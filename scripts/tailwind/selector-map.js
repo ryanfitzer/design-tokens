@@ -21,6 +21,10 @@ module.exports = {
     ],
     border: [
         {
+            type: 'border-radius',
+            matcher: /^border-radius-/,
+        },
+        {
             type: 'border-color',
             matcher: /^border-/,
         },
