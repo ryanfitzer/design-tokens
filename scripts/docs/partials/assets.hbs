@@ -6,11 +6,13 @@
     font-size: 18px;
     list-style: none;
   }
+
   .assets .group {
     margin-top: 10px;
   }
-  .assets details summary { 
-      cursor: pointer;
+
+  .assets details summary {
+    cursor: pointer;
   }
 </style>
 
@@ -20,12 +22,12 @@
       <li class="group">
         <details>
           <summary>Token data</summary>
-            <ul>
-              {{#each asset as | prop |}}
-                <li><a href="{{prop.path}}" target="_blank"><code>{{prop.path}}</code></a></li>
-              {{/each}}
-            </ul>
-          </details>
+          <ul>
+            {{#each asset as | prop |}}
+              <li><a href="{{prop.path}}" target="_blank"><code>{{prop.path}}</code></a></li>
+            {{/each}}
+          </ul>
+        </details>
       </li>
     {{else}}
       <li>

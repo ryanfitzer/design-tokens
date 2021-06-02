@@ -38,9 +38,9 @@ jobs:
 
       - name: Create Distribution
         if: ${{ steps.package.outputs.new-release-published == 'true' }}
-        run: npm run cdn
+        run: npm run docs && npm run cdn
         env:
-          NODE_PKG_VERSION: ${{ steps.package.outputs.release-version }}
+          NPM_PKG_VERSION: ${{ steps.package.outputs.release-version }}
 
       # Docs: https://github.com/sebastianpopp/ftp-action#readme
       # `lftp` options: https://lftp.yar.ru/lftp-man.html

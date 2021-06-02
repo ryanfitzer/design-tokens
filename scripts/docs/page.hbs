@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>{{ brand }}® Design Tokens | Tapestry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="logo/favicon.svg">
+  <link rel="mask-icon" href="logo/favicon.svg" color="#000">
   <link rel="stylesheet" href="font-face.css">
   <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="utilities.css">
   {{> styles.css}}
   {{> tabs.css}}
 </head>
+
 <body>
 
   <header>
     <h1>{{ brand }}<sup>®</sup> Design Tokens</h1>
-    <p>version <code>{{ version }}</code> | <a href="https://github.com/Tapestry-Inc/design-tokens/blob/v{{ version }}/CHANGELOG.md
-" target="_blank">changelog</a></p>
+    <p>version <code>{{ version }}</code> | <a href="https://github.com/Tapestry-Inc/design-tokens/blob/v{{ version }}/CHANGELOG.md" target="_blank">changelog</a></p>
   </header>
 
-
   <main>
-    
+
     {{~> assets}}
 
     <div class="tabs">
-      
+
       <div role="tablist" aria-label="Design Tokens Documentation">
-        
+
         <button id="vars" aria-controls="vars-tab" role="tab" aria-selected="true">Variables</button>
 
         <button id="classes" aria-controls="classes-tab" role="tab" aria-selected="false" tabindex="-1">Classes</button>
 
         <button id="icons" aria-controls="icons-tab" role="tab" aria-selected="false" tabindex="-1">Icons</button>
+
+        <button id="logos" aria-controls="logos-tab" role="tab" aria-selected="false" tabindex="-1">Logos</button>
 
       </div>
 
@@ -44,7 +48,13 @@
             title='Color'
             example='bg-color'
         }}
-        
+
+        {{~> section
+            ctx=vars.border-radius
+            title='Border Radius'
+            example='border-radius'
+        }}
+
         {{~> section
             ctx=vars.font-family
             title='Font Family'
@@ -78,16 +88,16 @@
         }}
 
         {{~> section
-            ctx=vars.viewport
-            title='Viewport'
-            example='viewport'
-        }}
-
-        {{~> section
             ctx=vars.spacing
             title='Spacing'
             example='spacing'
             original-value='true'
+        }}
+
+        {{~> section
+            ctx=vars.viewport
+            title='Viewport'
+            example='viewport'
         }}
 
       </div>
@@ -108,6 +118,13 @@
             ctx=classes.border-color
             title='Border Color'
             example='border-color'
+        }}
+
+        {{~> section
+            util='true'
+            ctx=vars.border-radius
+            title='Border Radius'
+            example='border-radius'
         }}
 
         {{~> section
@@ -171,11 +188,26 @@
 
       </div>
 
+      <div id="logos-tab" aria-labelledby="logos" tabindex="0" role="tabpanel">
+
+        {{~> heading level=2 title='Logos'}}
+
+        {{~> section-logo
+            ctx=logos
+        }}
+
+      </div>
+
     </div>
 
   </main>
-  
+
+  <footer>
+    <p class="text-primary-body-m center">© 2021 Tapestry, Inc. TAPESTRY, COACH, KATE SPADE, STUART WEITZMAN and corresponding logos/designs are trademarks owned by subsidiaries of Tapestry, Inc.</p>
+  </footer>
+
   {{> tabs.js }}
 
 </body>
+
 </html>

@@ -7,8 +7,8 @@ const checkAttr = require('./filters/check-attr');
 module.exports = brands.map((brand) => [
     brand,
     {
-        include: [`${paths.src.root}@global/**/*.json`],
-        source: [`${paths.src.root}${brand}/**/*.json`],
+        include: [`${paths.src.root}global/**/*.json`],
+        source: [`${paths.src.brands}${brand}/**/*.json`],
         platforms: {
             'CSS variables': {
                 transformGroup: 'css-custom',
@@ -19,6 +19,7 @@ module.exports = brands.map((brand) => [
                         destination: `variables.css`,
                         filter: checkAttr([
                             ['type', 'face', false],
+                            ['type', 'track', false],
                             ['category', 'viewport', false],
                             ['category', 'utility', false],
                             ['category', 'asset', false],
@@ -65,11 +66,25 @@ module.exports = brands.map((brand) => [
                         destination: `_variables.scss`,
                         filter: checkAttr([
                             ['type', 'face', false],
+                            ['type', 'track', false],
                             ['category', 'utility', false],
                             ['category', 'asset', false],
                         ]),
                     },
                 ],
+            },
+            'Icon optimize': {
+                buildPath: `${paths.build.root}${brand}/icon/`,
+                source: [
+                    `${paths.src.root}global/asset/icon/`,
+                    `${paths.src.brands}${brand}/asset/icon/`,
+                ],
+                actions: ['svg-optimize'],
+            },
+            'Logo optimize': {
+                buildPath: `${paths.build.root}${brand}/logo/`,
+                source: [`${paths.src.brands}${brand}/asset/logo/`],
+                actions: ['svg-optimize'],
             },
             'Token properties': {
                 buildPath: `${paths.build.root}${brand}/properties/`,
@@ -86,6 +101,15 @@ module.exports = brands.map((brand) => [
                             attributes: {
                                 category: 'effect',
                                 type: 'box',
+                            },
+                        },
+                    },
+                    {
+                        destination: 'border-radius.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                type: 'border-radius',
                             },
                         },
                     },
@@ -124,6 +148,7 @@ module.exports = brands.map((brand) => [
                         filter: {
                             attributes: {
                                 category: 'asset',
+                                type: 'icon',
                             },
                         },
                     },
@@ -144,6 +169,16 @@ module.exports = brands.map((brand) => [
                             attributes: {
                                 category: 'size',
                                 type: 'line-height',
+                            },
+                        },
+                    },
+                    {
+                        destination: 'logo.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                category: 'asset',
+                                type: 'logo',
                             },
                         },
                     },
@@ -176,14 +211,6 @@ module.exports = brands.map((brand) => [
                         },
                     },
                 ],
-            },
-            'Icon optimize': {
-                buildPath: `${paths.build.root}${brand}/icon/`,
-                source: [
-                    `${paths.src.root}@global/asset/icon/`,
-                    `${paths.src.root}${brand}/asset/icon/`,
-                ],
-                actions: ['svg-optimize'],
             },
         },
     },

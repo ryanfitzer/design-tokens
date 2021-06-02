@@ -10,9 +10,10 @@ const jsonProperties = require('./formats/json-properties');
 const sizeUnitless = require('./transforms/size-unitless');
 const nameKabab = require('./transforms/name-kabab');
 const capitalize = require('./transforms/capitalize');
-const iconPath = require('./transforms/icon-path');
+const assetPath = require('./transforms/asset-path');
 const attrIdentity = require('./transforms/attr-identity');
 const svgOptimize = require('./actions/svg-optimize');
+const quoteURL = require('./transforms/quote-url');
 
 module.exports = {
     Action: [
@@ -40,9 +41,14 @@ module.exports = {
     Template: [],
     Transform: [
         {
-            name: 'path/asset/icon',
+            name: 'value/quote-url',
             type: 'value',
-            transformer: iconPath,
+            transformer: quoteURL,
+        },
+        {
+            name: 'asset/path',
+            type: 'value',
+            transformer: assetPath,
         },
         {
             name: 'attribute/identity',
@@ -73,6 +79,7 @@ module.exports = {
                 'attribute/cti',
                 'attribute/identity',
                 'name/identity/kabab',
+                'value/quote-url',
                 'size/pxToRem',
                 'size/line-height/unitless',
                 'color/css',
@@ -87,7 +94,7 @@ module.exports = {
                 'size/pxToRem',
                 'size/line-height/unitless',
                 'color/css',
-                'path/asset/icon',
+                'asset/path',
             ],
         },
     ],

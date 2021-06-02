@@ -21,6 +21,10 @@ module.exports = {
     ],
     border: [
         {
+            type: 'border-radius',
+            matcher: /^border-radius-/,
+        },
+        {
             type: 'border-color',
             matcher: /^border-/,
         },
@@ -62,15 +66,7 @@ module.exports = {
         },
         {
             type: 'typography',
-            matcher: new RegExp(`^text-${rLevel}-display-${rSize}`),
-        },
-        {
-            type: 'typography',
-            matcher: new RegExp(`^text-${rLevel}-body-${rSize}`),
-        },
-        {
-            type: 'typography',
-            matcher: new RegExp(`^text-${rLevel}-(eyebrow|cta|badge)-${rSize}`),
+            matcher: new RegExp(`^text-${rLevel}-(.+)-${rSize}`),
         },
         {
             type: 'text-color',
