@@ -38,7 +38,7 @@ jobs:
 
       - name: Create Distribution
         if: ${{ steps.package.outputs.new-release-published == 'true' }}
-        run: npm run cdn
+        run: npm run docs && cdn
         env:
           NODE_PKG_VERSION: ${{ steps.package.outputs.release-version }}
 
