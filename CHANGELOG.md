@@ -1,5 +1,31 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.3.0-motif.1](https://github.com/Tapestry-Inc/design-tokens/compare/v1.2.0...v1.3.0-motif.1)
+
+2021-06-02
+
+- Fix: Add a `postversion` npm script so docs get correct version. ([9ecd316](https://github.com/Tapestry-Inc/design-tokens/commit/9ecd316)) (Ryan Fitzer)
+- Fix: adds docs command to npm run ([08a69d9](https://github.com/Tapestry-Inc/design-tokens/commit/08a69d9)) (Dan Merfeld)
+- Fix: All test presets in docs should be properly grouped. ([79fc256](https://github.com/Tapestry-Inc/design-tokens/commit/79fc256)) (Ryan Fitzer)
+- Fix: changes coach primary color to: #000000 [#000000](https://github.com/Tapestry-Inc/design-tokens/issues/000000) ([8e08592](https://github.com/Tapestry-Inc/design-tokens/commit/8e08592)) (Dan Merfeld)
+- Fix: changes coach primary color to: #00001 [#00001](https://github.com/Tapestry-Inc/design-tokens/issues/00001) ([7a32178](https://github.com/Tapestry-Inc/design-tokens/commit/7a32178)) (Dan Merfeld)
+- Fix: Merge branch 'next' into motif. [#22](https://github.com/Tapestry-Inc/design-tokens/issues/22)[#17](https://github.com/Tapestry-Inc/design-tokens/issues/17) ([0c6d506](https://github.com/Tapestry-Inc/design-tokens/commit/0c6d506)) (Ryan Fitzer)
+- Fix: Quote URLs when vars. Remove tracking URLs from vars. Fixes #17. [#17](https://github.com/Tapestry-Inc/design-tokens/issues/17) ([fe84ea2](https://github.com/Tapestry-Inc/design-tokens/commit/fe84ea2)) (Ryan Fitzer)
+- Fix: Rerun the `docs` cmd during the `Create Distribution` step. ([f948ba6](https://github.com/Tapestry-Inc/design-tokens/commit/f948ba6)) (Ryan Fitzer)
+- Fix: Try the `prepublishOnly` to get correct version in docs. ([d2640a3](https://github.com/Tapestry-Inc/design-tokens/commit/d2640a3)) (Ryan Fitzer)
+- Fix: Vulnerability in dependency. ([e3cf862](https://github.com/Tapestry-Inc/design-tokens/commit/e3cf862)) (Ryan Fitzer)
+- Fix: workflow npm command fixed. ([f106471](https://github.com/Tapestry-Inc/design-tokens/commit/f106471)) (Ryan Fitzer)
+- FIX: changes coach primary color to #0000EE [#0000](https://github.com/Tapestry-Inc/design-tokens/issues/0000) ([3d0bb25](https://github.com/Tapestry-Inc/design-tokens/commit/3d0bb25)) (Dan Merfeld)
+- Merge branch 'main' into next ([c939770](https://github.com/Tapestry-Inc/design-tokens/commit/c939770)) (Ryan Fitzer)
+- Fix: Wrong protocol for font tracking. Fixes #22. [#22](https://github.com/Tapestry-Inc/design-tokens/issues/22) ([6f7e5c9](https://github.com/Tapestry-Inc/design-tokens/commit/6f7e5c9)) (Ryan Fitzer)
+- FIX: changes coach primary color to: #0000FF [#0000](https://github.com/Tapestry-Inc/design-tokens/issues/0000) ([8a3f9c3](https://github.com/Tapestry-Inc/design-tokens/commit/8a3f9c3)) (Dan Merfeld)
+- FIX: reverted color change for coach color-primary ([4f75efd](https://github.com/Tapestry-Inc/design-tokens/commit/4f75efd)) (Dan Merfeld)
+- New: Addded `border-radius` tokens. ([ef93137](https://github.com/Tapestry-Inc/design-tokens/commit/ef93137)) (Ryan Fitzer)
+- New: Added logo tokens. ([3861ac5](https://github.com/Tapestry-Inc/design-tokens/commit/3861ac5)) (Ryan Fitzer)
+- Merge branch 'motif' of https://github.com/Tapestry-Inc/design-tokens into motif ([3d6a846](https://github.com/Tapestry-Inc/design-tokens/commit/3d6a846)) (Dan Merfeld)
+- fix test change to coach primary ([55c496f](https://github.com/Tapestry-Inc/design-tokens/commit/55c496f)) (Dan Merfeld)
+- New: The motif branch is now a pre-release branch. ([f7e06f8](https://github.com/Tapestry-Inc/design-tokens/commit/f7e06f8)) (Ryan Fitzer)
+
 ## [v1.2.0](https://github.com/Tapestry-Inc/design-tokens/compare/v1.1.0...v1.2.0)
 
 2021-06-01
