@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.3.0-motif.2](https://github.com/Tapestry-Inc/design-tokens/compare/v1.3.0-motif.1...v1.3.0-motif.2)
+
+2021-06-03
+
+- Fix: Changes Coach primary color to #0000EE [#0000](https://github.com/Tapestry-Inc/design-tokens/issues/0000) ([23c3ec9](https://github.com/Tapestry-Inc/design-tokens/commit/23c3ec9)) (Dan Merfeld)
+
 ## [v1.3.0-motif.1](https://github.com/Tapestry-Inc/design-tokens/compare/v1.2.0...v1.3.0-motif.1)
 
 2021-06-02
