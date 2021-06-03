@@ -113,6 +113,15 @@ module.exports = brands.map((brand) => [
                         },
                     },
                     {
+                        destination: 'border-radius.json',
+                        format: 'json/properties',
+                        filter: {
+                            attributes: {
+                                type: 'border-radius',
+                            },
+                        },
+                    },
+                    {
                         destination: 'color.json',
                         format: 'json/properties',
                         filter: {
