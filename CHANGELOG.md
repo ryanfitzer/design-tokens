@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.3.0-motif.5](https://github.com/Tapestry-Inc/design-tokens/compare/v1.3.0-motif.4...v1.3.0-motif.5)
+
+2021-06-04
+
+- Fix: Changes coach primary color to: #FFA500 [#FFA500](https://github.com/Tapestry-Inc/design-tokens/issues/FFA500) ([7ff1af8](https://github.com/Tapestry-Inc/design-tokens/commit/7ff1af8)) (Dan Merfeld)
+
 ## [v1.3.0-motif.4](https://github.com/Tapestry-Inc/design-tokens/compare/v1.3.0-motif.3...v1.3.0-motif.4)
 
 2021-06-04
