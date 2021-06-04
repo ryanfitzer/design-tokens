@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.3.0-motif.6](https://github.com/Tapestry-Inc/design-tokens/compare/v1.3.0-motif.5...v1.3.0-motif.6)
+
+2021-06-04
+
+- Fix: reverts coach primary to #000001 [#000001](https://github.com/Tapestry-Inc/design-tokens/issues/000001) ([efeebaf](https://github.com/Tapestry-Inc/design-tokens/commit/efeebaf)) (Dan Merfeld)
+
 ## [v1.3.0-motif.5](https://github.com/Tapestry-Inc/design-tokens/compare/v1.3.0-motif.4...v1.3.0-motif.5)
 
 2021-06-04
