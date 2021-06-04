@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v1.3.0-motif.4](https://github.com/Tapestry-Inc/design-tokens/compare/v1.3.0-motif.3...v1.3.0-motif.4)
+
+2021-06-04
+
+- Fix: changes Coach neutral dark color to #333333 [#333333](https://github.com/Tapestry-Inc/design-tokens/issues/333333) ([ebc9add](https://github.com/Tapestry-Inc/design-tokens/commit/ebc9add)) (Dan Merfeld)
+
 ## [v1.3.0-motif.3](https://github.com/Tapestry-Inc/design-tokens/compare/v1.3.0-motif.2...v1.3.0-motif.3)
 
 2021-06-04
