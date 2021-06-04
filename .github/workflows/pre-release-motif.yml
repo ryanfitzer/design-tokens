@@ -1,5 +1,8 @@
 name: Motif Pre-Release
 
+env:
+  NPM_PRE_RELEASE: 'true'
+
 on:
   push:
     branches:
