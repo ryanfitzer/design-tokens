@@ -45,6 +45,13 @@
         if (i) panels[i].setAttribute('hidden', 'hidden');
     }
 
+    if (location.hash) {
+        const tabName = location.hash.replace('#', '');
+        const tab = document.querySelector(`[aria-controls=${tabName}]`);
+
+        if (tab) activateTab(tab, false);
+    }
+
     function addListeners(index) {
         tabs[index].addEventListener('click', clickEventListener);
         tabs[index].addEventListener('keydown', keydownEventListener);
@@ -58,6 +65,7 @@
     function clickEventListener(event) {
         var tab = event.target;
         activateTab(tab, false);
+        updateHistory(event)
     }
 
     // Handle keydown on tabs
@@ -104,7 +112,13 @@
         }
     }
 
-    // When a tablistâ€™s aria-orientation is set to vertical,
+    function updateHistory(event) {
+
+        const tabID = event.target.getAttribute('aria-controls');
+        history.replaceState(null, null, `index.html#${tabID}`)
+    }
+
+    // When a tablist aria-orientation is set to vertical,
     // only up and down arrow should function.
     // In all other cases only left and right arrow function.
     function determineOrientation(event) {
