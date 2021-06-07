@@ -73,6 +73,20 @@ module.exports = brands.map((brand) => [
                     },
                 ],
             },
+            'SCSS mixins': {
+                transformGroup: 'css-custom',
+                buildPath: `${paths.build.root}${brand}/`,
+                files: [
+                    {
+                        format: `scss/mixin/typography`,
+                        destination: `_mixins.scss`,
+                        filter: checkAttr([
+                            ['category', 'utility'],
+                            ['type', 'typography'],
+                        ]),
+                    },
+                ],
+            },
             'Icon optimize': {
                 buildPath: `${paths.build.root}${brand}/icon/`,
                 source: [

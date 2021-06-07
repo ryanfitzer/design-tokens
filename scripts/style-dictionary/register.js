@@ -7,6 +7,7 @@ const checkAttr = require('./filters/check-attr');
 const fontFace = require('./formats/css-font-face');
 const customMedia = require('./formats/css-custom-media');
 const jsonProperties = require('./formats/json-properties');
+const scssMixinTypography = require('./formats/scss-mixin-typography');
 const sizeUnitless = require('./transforms/size-unitless');
 const sizePXtoEM = require('./transforms/px-to-em');
 const nameKabab = require('./transforms/name-kabab');
@@ -37,6 +38,10 @@ module.exports = {
         {
             name: 'json/properties',
             formatter: jsonProperties,
+        },
+        {
+            name: 'scss/mixin/typography',
+            formatter: scssMixinTypography,
         },
     ],
     Template: [],
