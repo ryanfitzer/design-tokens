@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.1.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.0.0...v2.1.0)
+
+2021-06-08
+
+- New: Added responsive variants to typography utilities. ([1eadc0f](https://github.com/Tapestry-Inc/design-tokens/commit/1eadc0f)) (Ryan Fitzer)
+
 ## [v2.0.0](https://github.com/Tapestry-Inc/design-tokens/compare/v1.2.0...v2.0.0)
 
 2021-06-03
