@@ -7,14 +7,14 @@
             "value": "#fffffe"
         },
         "white": {
-            "value": "#ffff00"
+            "value": "#ffffff"
         },
         "black": {
             "value": "#000000"
         },
         "neutral": {
             "base": {
-                "value": "#FF0000"
+                "value": "#575757"
             },
             "light": {
                 "value": "#f7f7f7"
