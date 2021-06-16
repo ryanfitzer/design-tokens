@@ -30,6 +30,9 @@
         },
         "sale": {
             "value": "#CC0000"
+        },
+        "white": {
+            "value": "#ff0000"
         }
     }
 }
