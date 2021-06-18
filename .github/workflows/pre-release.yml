@@ -45,6 +45,14 @@ jobs:
         env:
           NPM_PKG_VERSION: ${{ steps.package.outputs.release-version }}
 
+      - name: Invoke Motif New Release Webhook
+        uses: distributhor/workflow-webhook@v2
+        if: ${{ steps.package.outputs.new-release-published == 'true' }}
+        env:
+          webhook_url: ${{ secrets.MOTIF_WEBHOOK_URL }}
+          webhook_secret: ${{ secrets.MOTIF_WEBHOOK_TOKEN }}
+          data: '{ "version": "${{ steps.package.outputs.release-version }}" }'
+
       # Docs: https://github.com/sebastianpopp/ftp-action#readme
       # `lftp` options: https://lftp.yar.ru/lftp-man.html
       - name: FTP Assets to CDN
