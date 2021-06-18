@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.2.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.1.0...v2.2.0)
+
+2021-06-11
+
+- New: Added `border-width` tokens. ([631514c](https://github.com/Tapestry-Inc/design-tokens/commit/631514c)) (Ryan Fitzer)
+
 ## [v2.1.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.0.0...v2.1.0)
 
 2021-06-08
