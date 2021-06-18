@@ -39,15 +39,6 @@ jobs:
           NPM_TOKEN: ${{ secrets.GH_PAT }}
           NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
 
-      - name: Invoke Motif New Release Webhook
-        uses: distributhor/workflow-webhook@v2
-        if: ${{ steps.package.outputs.new-release-published == 'true' }}
-        env:
-          verbose: true # Remove once tested
-          webhook_url: ${{ secrets.MOTIF_WEBHOOK_URL }}
-          webhook_secret: ${{ secrets.MOTIF_WEBHOOK_TOKEN }}
-          data: '{ "version": "${{ steps.package.outputs.release-version }}" }'
-
       - name: Create Distribution
         if: ${{ steps.package.outputs.new-release-published == 'true' }}
         run: npm run docs && npm run cdn
