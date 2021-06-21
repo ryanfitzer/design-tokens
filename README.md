@@ -1,6 +1,6 @@
 # Design Tokens
 
-This project contains design tokens for [Tapestry](https://www.tapestry.com/) brands. Assets derived from these tokens are published as an NPM package to the Github Packages Registry, as well as to a CDN.
+This project contains design tokens for [Tapestry](https://www.tapestry.com/) brands. Assets derived from these tokens are published as an NPM package to Github's Packages Registry, as well as to a CDN.
 
 Each brand's token documentation can be viewed at:
 
