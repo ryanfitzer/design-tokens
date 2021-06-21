@@ -6,6 +6,9 @@
           "family": {
             "value": "FuturaBT-Book"
           },
+          "type": {
+            "value": "sans-serif"
+          },
           "style": {
             "value": "normal"
           },
@@ -26,6 +29,9 @@
           "family": {
             "value": "FuturaBT-Medium"
           },
+          "type": {
+            "value": "sans-serif"
+          },
           "style": {
             "value": "normal"
           },
@@ -45,6 +51,9 @@
         "bold": {
           "family": {
             "value": "FuturaBT-Bold"
+          },
+          "type": {
+            "value": "sans-serif"
           },
           "style": {
             "value": "normal"
@@ -67,6 +76,9 @@
         "normal": {
           "family": {
             "value": "HeldaneText-Regular"
+          },
+          "type": {
+            "value": "serif"
           },
           "style": {
             "value": "normal"
