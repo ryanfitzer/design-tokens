@@ -6,6 +6,9 @@
           "family": {
             "value": "HelveticaLTPro-Roman"
           },
+          "type": {
+            "value": "sans-serif"
+          },
           "style": {
             "value": "normal"
           },
@@ -25,6 +28,9 @@
         "bold": {
           "family": {
             "value": "HelveticaLTPro-Bold"
+          },
+          "type": {
+            "value": "sans-serif"
           },
           "style": {
             "value": "normal"
@@ -47,6 +53,9 @@
         "normal": {
           "family": {
             "value": "BemboMTPro-Regular"
+          },
+          "type": {
+            "value": "serif"
           },
           "style": {
             "value": "normal"
