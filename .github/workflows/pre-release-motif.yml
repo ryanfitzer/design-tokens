@@ -46,7 +46,7 @@ jobs:
         env:
           webhook_url: ${{ secrets.TEMP_MOTIF_WEBHOOK_URL }}
           webhook_secret: ${{ secrets.TEMP_MOTIF_WEBHOOK_TOKEN }}
-          data: '{ "version": "${{ steps.package.outputs.release-version }}", "auth_token": "${{ secrets.TEMP_MOTIF_WEBHOOK_TOKEN }}" }'
+          data: '{ "version": "${{ steps.package.outputs.release-version }}" }'
 
       - name: Create Distribution
         if: ${{ steps.package.outputs.new-release-published == 'true' }}
