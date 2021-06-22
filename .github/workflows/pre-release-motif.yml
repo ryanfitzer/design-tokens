@@ -39,6 +39,15 @@ jobs:
           NPM_TOKEN: ${{ secrets.GH_PAT }}
           NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
 
+      # https://github.com/marketplace/actions/workflow-webhook-action
+      - name: Invoke Motif New Release Webhook
+        uses: distributhor/workflow-webhook@v2
+        if: ${{ steps.package.outputs.new-release-published == 'true' }}
+        env:
+          webhook_url: ${{ secrets.TEMP_MOTIF_WEBHOOK_URL }}
+          webhook_secret: ${{ secrets.TEMP_MOTIF_WEBHOOK_TOKEN }}
+          data: '{ "version": "${{ steps.package.outputs.release-version }}", "auth_token": "${{ secrets.TEMP_MOTIF_WEBHOOK_TOKEN }}" }'
+
       - name: Create Distribution
         if: ${{ steps.package.outputs.new-release-published == 'true' }}
         run: npm run docs && npm run cdn
