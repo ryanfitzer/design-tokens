@@ -33,6 +33,9 @@
         },
         "white": {
             "value": "#ffffff"
+        },
+        "black": {
+            "value": "#ff0000"
         }
     }
 }
