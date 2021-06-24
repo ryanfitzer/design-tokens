@@ -19,6 +19,9 @@
             "secondary": {
                 "value": "#F0FFF4"
             }
+        },
+        "primary": {
+            "value": "#0000FF"
         }
     }
 }
