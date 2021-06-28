@@ -1,6 +1,8 @@
 # Design Tokens
 
-This project contains design tokens for [Tapestry](https://www.tapestry.com/) brands. Assets derived from these tokens are published as an NPM package to the Github Packages Registry, as well as to a CDN.
+Tokens are a collection of JSON files that organize a [Tapestry's](https://www.tapestry.com/)brand's styles into a semantic hierarchy and enable generating multiple types of assets via [Style Dictionary](https://amzn.github.io/style-dictionary/#/README).
+
+Assets derived from these tokens are published as an NPM package to the Github Packages Registry, as well as to a CDN.
 
 Each brand's token documentation can be viewed at:
 
@@ -62,49 +64,4 @@ Development within this codebase requires experience with the following tools:
 - [Semantic Release](https://semantic-release.gitbook.io/semantic-release/): Automates the version management and package publishing.
 - [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions): GitHub's CI/CD automation tool.
 
-### NPM Commands
-
-- `npm run build`: Creates the needed files for the npm package.
-- `npm run cdn`: Creates the needed files for CDN distribution. Depends on `npm run build`.
-
-### Tokens
-
-A collection of JSON files that organize each brand's styles into a semantic hierarchy and enable multiple types of assets via [Style Dictionary](https://amzn.github.io/style-dictionary/#/README).
-
-#### Editing a Token
-
-[ToDo]
-
-#### Adding a New Token Category/Type/Item
-
-[ToDo]
-
-### Release
-
-The release process is managed by [Semantic Release](https://semantic-release.gitbook.io/semantic-release/). Stable releases are published as an NPM package and CDN distribution based on the `<Type>` tag in the commit messages when a PR is merged into the `main` branch. See `release.config.js` for configuration.
-
-#### Pre-Release
-
-A pre-release can be published by merging a pull-request into the `next` branch. All of the same commit message rules still apply.
-
-The NPM package can be installed by appending the `@next` to the package name:
-
-```
-npm install @tapestry-inc/design-tokens@next
-```
-
-The CDN distribution is available in the `next` directory at the CDN root URL.
-
-#### Commit Message Conventions
-
-This project adheres to the [ESLint commit convention](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-eslint#readme).
-
-Commit message format: `<Tag>: <Message>`
-
-Example commit message:
-
-```
-Breaking: Removed deprecated token.
-```
-
-Each commit message is linted with [`commitlint`](https://commitlint.js.org). See `commitlint.config.js` for configuration.
+For more info read the docs on [adding new tokens](docs/adding-new-tokens.md) and the [development/release process](docs/development.md).
