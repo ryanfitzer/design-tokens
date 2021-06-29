@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.2.1](https://github.com/Tapestry-Inc/design-tokens/compare/v2.2.0...v2.2.1)
+
+2021-06-29
+
+- Fix: Breakpoint should be `em` units. Fixes #44. [#44](https://github.com/Tapestry-Inc/design-tokens/issues/44) ([325d0de](https://github.com/Tapestry-Inc/design-tokens/commit/325d0de)) (Ryan Fitzer)
+
 ## [v2.2.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.1.0...v2.2.0)
 
 2021-06-11
