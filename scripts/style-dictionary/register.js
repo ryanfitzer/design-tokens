@@ -3,6 +3,7 @@
  * See API docs for more info {@link https://amzn.github.io/style-dictionary/#/api?id=registeraction}
  * Names are capitalized in order to construct the respective register method.
  */
+const StyleDictionary = require('style-dictionary');
 const checkAttr = require('./filters/check-attr');
 const fontFace = require('./formats/css-font-face');
 const customMedia = require('./formats/css-custom-media');
@@ -78,6 +79,15 @@ module.exports = {
             matcher: checkAttr('type', 'breakpoint'),
             transformer: sizePXtoEM,
         },
+        {
+            name: 'size/pxToRem',
+            type: 'value',
+            matcher: checkAttr([
+                ['category', 'size'],
+                ['type', 'breakpoint', false],
+            ]),
+            transformer: StyleDictionary.transform['size/pxToRem'].transformer,
+        },
     ],
     TransformGroup: [
         {
@@ -87,8 +97,8 @@ module.exports = {
                 'attribute/identity',
                 'name/identity/kabab',
                 'value/quote-url',
-                'size/pxToRem',
                 'size/pxToEm',
+                'size/pxToRem',
                 'size/line-height/unitless',
                 'color/css',
             ],
