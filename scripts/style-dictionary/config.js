@@ -200,12 +200,12 @@ module.exports = brands.map((brand) => [
                         },
                     },
                     {
-                        destination: 'shadow.json',
+                        destination: 'box-shadow.json',
                         format: 'json/properties',
                         filter: {
                             attributes: {
                                 category: 'effect',
-                                type: 'box',
+                                type: 'box-shadow',
                             },
                         },
                     },

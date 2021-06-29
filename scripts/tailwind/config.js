@@ -29,7 +29,7 @@ module.exports = module.exports = brands.map((brand) => {
                 boxShadow: {
                     ...parseProperties(props, {
                         category: 'effect',
-                        type: 'box',
+                        type: 'box-shadow',
                     }),
                 },
                 fontFamily: {
