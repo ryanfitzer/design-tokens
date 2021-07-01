@@ -1,5 +1,12 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.2.2](https://github.com/Tapestry-Inc/design-tokens/compare/v2.2.1...v2.2.2)
+
+2021-07-01
+
+- Fix: Bag icons have hardcoded values. Fixes #43 [#43](https://github.com/Tapestry-Inc/design-tokens/issues/43) ([480261e](https://github.com/Tapestry-Inc/design-tokens/commit/480261e)) (Ryan Fitzer)
+- Fix: Update SVGO. Fixes #31. [#31](https://github.com/Tapestry-Inc/design-tokens/issues/31) ([4884a71](https://github.com/Tapestry-Inc/design-tokens/commit/4884a71)) (Ryan Fitzer)
+
 ## [v2.2.1](https://github.com/Tapestry-Inc/design-tokens/compare/v2.2.0...v2.2.1)
 
 2021-06-29
