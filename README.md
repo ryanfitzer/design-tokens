@@ -1,6 +1,6 @@
 # Design Tokens
 
-Tokens are a collection of JSON files that organize a [Tapestry's](https://www.tapestry.com/)brand's styles into a semantic hierarchy and enable generating multiple types of assets via [Style Dictionary](https://amzn.github.io/style-dictionary/#/README).
+Tokens are a collection of JSON files that organize a [Tapestry](https://www.tapestry.com/) brand's styles into a semantic hierarchy and enable generating multiple types of assets via [Style Dictionary](https://amzn.github.io/style-dictionary/#/README).
 
 Assets derived from these tokens are published as an NPM package to the Github Packages Registry, as well as to a CDN.
 
