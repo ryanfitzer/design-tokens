@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.3.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.2.2...v2.3.0)
+
+2021-07-20
+
+- New: Themes are now supported. ([efef2a6](https://github.com/Tapestry-Inc/design-tokens/commit/efef2a6)) (Ryan Fitzer)
+
 ## [v2.2.2](https://github.com/Tapestry-Inc/design-tokens/compare/v2.2.1...v2.2.2)
 
 2021-07-01
