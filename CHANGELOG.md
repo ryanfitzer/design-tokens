@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.4.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.3.0...v2.4.0)
+
+2021-07-21
+
+- New: Added a draft version of Coach Outlet tokens (more updates to come) ([37ae353](https://github.com/Tapestry-Inc/design-tokens/commit/37ae353)) (Ryan Fitzer)
+
 ## [v2.3.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.2.2...v2.3.0)
 
 2021-07-20
