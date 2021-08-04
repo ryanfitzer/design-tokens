@@ -13,6 +13,9 @@
       "name": "Ryan Fitzer"
     }
   ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "build": "npm run tokens && npm run tailwind && npm run pkg && npm run docs",
     "cdn": "node scripts/cdn",
