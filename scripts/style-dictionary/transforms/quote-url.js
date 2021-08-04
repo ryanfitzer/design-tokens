@@ -1,4 +1,4 @@
-const urlRegex = require('url-regex-safe');
+const urlRegex = require('url-regex');
 
 /**
  * Quote URLs
