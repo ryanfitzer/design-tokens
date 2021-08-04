@@ -1,5 +1,16 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.5.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.4.0...v2.5.0)
+
+2021-08-04
+
+- Fix: Add `engines` to package.json. ([28b710c](https://github.com/Tapestry-Inc/design-tokens/commit/28b710c)) (Ryan Fitzer)
+- Fix: node setup action should always check for latest node version. ([82189c1](https://github.com/Tapestry-Inc/design-tokens/commit/82189c1)) (Ryan Fitzer)
+- Fix: Update deps, revert node version. ([80c4dfa](https://github.com/Tapestry-Inc/design-tokens/commit/80c4dfa)) (Ryan Fitzer)
+- Fix: update node version to 16.x. ([51d0c6e](https://github.com/Tapestry-Inc/design-tokens/commit/51d0c6e)) (Ryan Fitzer)
+- Fix: use `url-regex` instead of `url-regex-safe`. ([0429ead](https://github.com/Tapestry-Inc/design-tokens/commit/0429ead)) (Ryan Fitzer)
+- Update: Primary and Secondary fonts for Coach Outlet ([488a8ab](https://github.com/Tapestry-Inc/design-tokens/commit/488a8ab)) (Dan Merfeld)
+
 ## [v2.4.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.3.0...v2.4.0)
 
 2021-07-21
