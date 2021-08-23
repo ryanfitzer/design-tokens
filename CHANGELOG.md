@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.6.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.5.0...v2.6.0)
+
+2021-08-23
+
+- Update: Adds Motif theme to Coach ([886411f](https://github.com/Tapestry-Inc/design-tokens/commit/886411f)) (Dan Merfeld)
+
 ## [v2.5.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.4.0...v2.5.0)
 
 2021-08-04
