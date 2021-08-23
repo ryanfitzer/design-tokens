@@ -1,0 +1,90 @@
+{
+  "font": {
+    "face": {
+      "primary": {
+        "normal": {
+          "family": {
+            "value": "FuturaBT-Book"
+          },
+          "style": {
+            "value": "normal"
+          },
+          "weight": {
+            "value": "normal"
+          },
+          "stretch": {
+            "value": "normal"
+          },
+          "local": {
+            "value": ["FuturaBT-Book"]
+          },
+          "woff2": {
+            "value": "https://assets.stuartweitzman.com/na/fonts/FuturaBT-Book.woff2"
+          }
+        },
+        "medium": {
+          "family": {
+            "value": "FuturaBT-Medium"
+          },
+          "style": {
+            "value": "normal"
+          },
+          "weight": {
+            "value": "normal"
+          },
+          "stretch": {
+            "value": "normal"
+          },
+          "local": {
+            "value": ["FuturaBT-Medium"]
+          },
+          "woff2": {
+            "value": "https://assets.stuartweitzman.com/na/fonts/FuturaBT-Medium.woff2"
+          }
+        },
+        "bold": {
+          "family": {
+            "value": "FuturaBT-Bold"
+          },
+          "style": {
+            "value": "normal"
+          },
+          "weight": {
+            "value": "normal"
+          },
+          "stretch": {
+            "value": "normal"
+          },
+          "local": {
+            "value": ["FuturaBT-Bold"]
+          },
+          "woff2": {
+            "value": "https://assets.stuartweitzman.com/na/fonts/FuturaBT-Bold.woff2"
+          }
+        }
+      },
+      "secondary": {
+        "normal": {
+          "family": {
+            "value": "HeldaneText-Regular"
+          },
+          "style": {
+            "value": "normal"
+          },
+          "weight": {
+            "value": "normal"
+          },
+          "stretch": {
+            "value": "normal"
+          },
+          "local": {
+            "value": ["HeldaneText-Regular"]
+          },
+          "woff2": {
+            "value": "https://assets.stuartweitzman.com/na/fonts/HeldaneText-Regular.woff2"
+          }
+        }
+      }
+    }
+  }
+}

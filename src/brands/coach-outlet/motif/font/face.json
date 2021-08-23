@@ -1,0 +1,70 @@
+{
+  "font": {
+    "face": {
+      "primary": {
+        "normal": {
+          "family": {
+            "value": "HelveticaNeueExtended"
+          },
+          "style": {
+            "value": "normal"
+          },
+          "weight": {
+            "value": "normal"
+          },
+          "stretch": {
+            "value": "normal"
+          },
+          "local": {
+            "value": ["HelveticaNeueExtended"]
+          },
+          "woff": {
+            "value": "https://assets.coach.com/na/fonts/EOS/HelveticaNeueExtended.woff"
+          }
+        },
+        "bold": {
+          "family": {
+            "value": "HelveticaNeueBoldExtended"
+          },
+          "style": {
+            "value": "normal"
+          },
+          "weight": {
+            "value": "normal"
+          },
+          "stretch": {
+            "value": "normal"
+          },
+          "local": {
+            "value": ["HelveticaNeueBoldExtended"]
+          },
+          "woff": {
+            "value": "https://assets.coach.com/na/fonts/EOS/HelveticaNeueBoldExtended.woff"
+          }
+        }
+      },
+      "secondary": {
+        "normal": {
+          "family": {
+            "value": "BemboMTPro-Regular"
+          },
+          "style": {
+            "value": "normal"
+          },
+          "weight": {
+            "value": "normal"
+          },
+          "stretch": {
+            "value": "normal"
+          },
+          "local": {
+            "value": ["BemboMTPro-Regular"]
+          },
+          "woff2": {
+            "value": "https://assets.coach.com/na/fonts/BemboMTPro-Regular.woff2"
+          }
+        }
+      }
+    }
+  }
+}
