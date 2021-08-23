@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.7.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.6.0...v2.7.0)
+
+2021-08-23
+
+- Update: adds Motif theme to Coach Outlet and Stuart Weitzman ([db1708f](https://github.com/Tapestry-Inc/design-tokens/commit/db1708f)) (Dan Merfeld)
+
 ## [v2.6.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.5.0...v2.6.0)
 
 2021-08-23
