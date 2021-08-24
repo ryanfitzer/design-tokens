@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.7.1](https://github.com/Tapestry-Inc/design-tokens/compare/v2.7.0...v2.7.1)
+
+2021-08-24
+
+- Fix: Incorrect paths for non-default themes. (#50) [#50](https://github.com/Tapestry-Inc/design-tokens/issues/50) ([a41d466](https://github.com/Tapestry-Inc/design-tokens/commit/a41d466)) (Ryan Fitzer)
+
 ## [v2.7.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.6.0...v2.7.0)
 
 2021-08-23
