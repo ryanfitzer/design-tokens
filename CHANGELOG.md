@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.10.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.9.0...v2.10.0)
+
+2021-09-02
+
+- Update: adds logos for SW and Coach Outlet ([09bb319](https://github.com/Tapestry-Inc/design-tokens/commit/09bb319)) (Dan Merfeld)
+
 ## [v2.9.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.8.0...v2.9.0)
 
 2021-09-02
