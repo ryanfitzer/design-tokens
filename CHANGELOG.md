@@ -1,5 +1,12 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.8.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.7.2...v2.8.0)
+
+2021-09-02
+
+- Update: moves edit icon from navigation to object ([a7ee1d2](https://github.com/Tapestry-Inc/design-tokens/commit/a7ee1d2)) (Dan Merfeld)
+- Update: removes icon-navigation-profile from coach and coach outlet ([2f1bf6f](https://github.com/Tapestry-Inc/design-tokens/commit/2f1bf6f)) (Dan Merfeld)
+
 ## [v2.7.2](https://github.com/Tapestry-Inc/design-tokens/compare/v2.7.1...v2.7.2)
 
 2021-08-26
