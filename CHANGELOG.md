@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.10.2](https://github.com/Tapestry-Inc/design-tokens/compare/v2.10.1...v2.10.2)
+
+2021-09-02
+
+- Fix: replaces SW logos ([31e2176](https://github.com/Tapestry-Inc/design-tokens/commit/31e2176)) (Dan Merfeld)
+
 ## [v2.10.1](https://github.com/Tapestry-Inc/design-tokens/compare/v2.10.0...v2.10.1)
 
 2021-09-02
