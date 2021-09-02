@@ -1,5 +1,12 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.11.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.10.2...v2.11.0)
+
+2021-09-02
+
+- Update: replaces lock, repai, favorite, and store icons for test ([9e4de88](https://github.com/Tapestry-Inc/design-tokens/commit/9e4de88)) (Dan Merfeld)
+- Update: replaces lock, repai, favorite, and store icons for test ([9e075c8](https://github.com/Tapestry-Inc/design-tokens/commit/9e075c8)) (Dan Merfeld)
+
 ## [v2.10.2](https://github.com/Tapestry-Inc/design-tokens/compare/v2.10.1...v2.10.2)
 
 2021-09-02
