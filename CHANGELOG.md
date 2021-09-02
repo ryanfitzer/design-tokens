@@ -1,5 +1,12 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.10.1](https://github.com/Tapestry-Inc/design-tokens/compare/v2.10.0...v2.10.1)
+
+2021-09-02
+
+- Merge branch 'main' of github.com:Tapestry-Inc/design-tokens ([67d8cc1](https://github.com/Tapestry-Inc/design-tokens/commit/67d8cc1)) (Dan Merfeld)
+- Fix: removes SW primary logos ([eee1bca](https://github.com/Tapestry-Inc/design-tokens/commit/eee1bca)) (Dan Merfeld)
+
 ## [v2.10.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.9.0...v2.10.0)
 
 2021-09-02
