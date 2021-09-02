@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.11.2](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.1...v2.11.2)
+
+2021-09-02
+
+- Fix: typo fix on primary-logo for CO ([3975e3c](https://github.com/Tapestry-Inc/design-tokens/commit/3975e3c)) (Dan Merfeld)
+
 ## [v2.11.1](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.0...v2.11.1)
 
 2021-09-02
