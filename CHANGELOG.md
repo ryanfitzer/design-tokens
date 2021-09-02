@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.11.1](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.0...v2.11.1)
+
+2021-09-02
+
+- Fix: svg test for SW logo and lock ([be58c0d](https://github.com/Tapestry-Inc/design-tokens/commit/be58c0d)) (Dan Merfeld)
+
 ## [v2.11.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.10.2...v2.11.0)
 
 2021-09-02
