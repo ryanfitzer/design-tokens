@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.9.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.8.0...v2.9.0)
+
+2021-09-02
+
+- Update: adds new logos for Coach ([ac51547](https://github.com/Tapestry-Inc/design-tokens/commit/ac51547)) (Dan Merfeld)
+
 ## [v2.8.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.7.2...v2.8.0)
 
 2021-09-02
