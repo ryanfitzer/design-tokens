@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.11.5](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.4...v2.11.5)
+
+2021-09-03
+
+- Fix: updates repair icon with viewbox ([1d7641b](https://github.com/Tapestry-Inc/design-tokens/commit/1d7641b)) (Dan Merfeld)
+
 ## [v2.11.4](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.3...v2.11.4)
 
 2021-09-03
