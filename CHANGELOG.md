@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.11.3](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.2...v2.11.3)
+
+2021-09-03
+
+- Fix: changes write method of SVG optimization ([58e1263](https://github.com/Tapestry-Inc/design-tokens/commit/58e1263)) (Dan Merfeld)
+
 ## [v2.11.2](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.1...v2.11.2)
 
 2021-09-02
