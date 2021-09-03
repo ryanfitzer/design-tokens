@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.11.4](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.3...v2.11.4)
+
+2021-09-03
+
+- Fix: Primary and Secondary logo for SW ([7291d1f](https://github.com/Tapestry-Inc/design-tokens/commit/7291d1f)) (Dan Merfeld)
+
 ## [v2.11.3](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.2...v2.11.3)
 
 2021-09-03
