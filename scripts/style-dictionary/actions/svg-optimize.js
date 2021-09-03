@@ -37,7 +37,7 @@ const copy = (dictionary, config) => {
             const svgSrc = fs.readFileSync(svgPath, { encoding: 'utf8' });
             const optSrc = svgOptimize(svgSrc, relPath, svgPath);
 
-            fs.outputFile(destPath, optSrc, (err) => {
+            fs.outputFileSync(destPath, optSrc, (err) => {
                 if (err) console.error(err);
             });
         });
