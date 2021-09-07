@@ -1,5 +1,12 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.11.6](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.5...v2.11.6)
+
+2021-09-07
+
+- Fix: restores svg optimization ([28a188a](https://github.com/Tapestry-Inc/design-tokens/commit/28a188a)) (Dan Merfeld)
+- Fix: updates svg optimize to allow for viewBox attribute in SVG files ([c973517](https://github.com/Tapestry-Inc/design-tokens/commit/c973517)) (Dan Merfeld)
+
 ## [v2.11.5](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.4...v2.11.5)
 
 2021-09-03
