@@ -16,6 +16,10 @@ const svgOptimize = (src, relPath, absPath) => {
                 name: 'prefixIds',
             },
             {
+                name: 'removeViewBox',
+                active: false,
+            },
+            {
                 name: 'addClassesToSVGElement',
                 params: {
                     className,
