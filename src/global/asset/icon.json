@@ -89,20 +89,44 @@
         "thumb-up": {
           "value": "thumb-up.svg"
         },
+        "thumb-up-filled": {
+          "value": "thumb-up-filled.svg"
+        },
         "thumb-down": {
           "value": "thumb-down.svg"
+        },
+        "thumb-down-filled": {
+          "value": "thumb-down-filled.svg"
         },
         "star": {
           "value": "star.svg"
         },
+        "star-small": {
+          "value": "star-small.svg"
+        },
+        "star-empty": {
+          "value": "star-empty.svg"
+        },
+        "star-empty-small": {
+          "value": "star-empty-small.svg"
+        },
         "star-75": {
           "value": "star-75.svg"
+        },
+        "star-75-small": {
+          "value": "star-75-small.svg"
         },
         "star-50": {
           "value": "star-50.svg"
         },
+        "star-50-small": {
+          "value": "star-50-small.svg"
+        },
         "star-25": {
           "value": "star-25.svg"
+        },
+        "star-25-small": {
+          "value": "star-25-small.svg"
         }
       },
       "object": {
@@ -185,6 +209,56 @@
         },
         "default": {
           "value": "default.svg"
+        }
+      },
+      "credit": {
+        "affirm": {
+          "value": "affirm.svg"
+        },
+        "amex": {
+          "value": "amex.svg"
+        },
+        "apple-pay": {
+          "value": "apple-pay.svg"
+        },
+        "diners-club": {
+          "value": "diners-club.svg"
+        },
+        "discover": {
+          "value": "discover.svg"
+        },
+        "giftnow": {
+          "value": "giftnow.svg"
+        },
+        "jcb": {
+          "value": "jcb.svg"
+        },
+        "klarna": {
+          "value": "klarna.svg"
+        },
+        "maestro": {
+          "value": "maestro.svg"
+        },
+        "mastercard": {
+          "value": "mastercard.svg"
+        },
+        "paypal-credit": {
+          "value": "paypal-credit.svg"
+        },
+        "paypal": {
+          "value": "paypal.svg"
+        },
+        "shoprunner": {
+          "value": "shoprunner.svg"
+        },
+        "sofort": {
+          "value": "sofort.svg"
+        },
+        "union-pay": {
+          "value": "union-pay.svg"
+        },
+        "visa": {
+          "value": "visa.svg"
         }
       }
     }
