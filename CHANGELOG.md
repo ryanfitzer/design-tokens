@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.13.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.12.1...v2.13.0)
+
+2021-09-08
+
+- Update: adds credit icons to global icon set ([7e49135](https://github.com/Tapestry-Inc/design-tokens/commit/7e49135)) (Dan Merfeld)
+
 ## [v2.12.1](https://github.com/Tapestry-Inc/design-tokens/compare/v2.12.0...v2.12.1)
 
 2021-09-08
