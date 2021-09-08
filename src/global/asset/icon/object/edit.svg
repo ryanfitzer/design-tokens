@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M6.5,16v2.5H9l7.37-7.37-2.5-2.5ZM18.31,9.19a.66.66,0,0,0,0-.94L16.75,6.69a.66.66,0,0,0-.94,0L14.59,7.91l2.5,2.5Z" transform="translate(-6.5 -6.5)" fill-rule="evenodd"/></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Edit">
+<path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M5.99915 15.5008V18.0008H8.49915L15.8725 10.6275L13.3725 8.12749L5.99915 15.5008ZM17.8058 8.69416C18.0658 8.43416 18.0658 8.01416 17.8058 7.75416L16.2458 6.19416C15.9858 5.93416 15.5658 5.93416 15.3058 6.19416L14.0858 7.41416L16.5858 9.91416L17.8058 8.69416Z" fill="black"/>
+</g>
+</svg>
