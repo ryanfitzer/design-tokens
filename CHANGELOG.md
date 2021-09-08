@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.12.1](https://github.com/Tapestry-Inc/design-tokens/compare/v2.12.0...v2.12.1)
+
+2021-09-08
+
+- Fix: edit icon resize ([82fd875](https://github.com/Tapestry-Inc/design-tokens/commit/82fd875)) (Dan Merfeld)
+
 ## [v2.12.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.6...v2.12.0)
 
 2021-09-08
