@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.12.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.6...v2.12.0)
+
+2021-09-08
+
+- Update: logos and icons for global, SW and Coach ([dc12293](https://github.com/Tapestry-Inc/design-tokens/commit/dc12293)) (Dan Merfeld)
+
 ## [v2.11.6](https://github.com/Tapestry-Inc/design-tokens/compare/v2.11.5...v2.11.6)
 
 2021-09-07
