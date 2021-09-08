@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.14.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.13.0...v2.14.0)
+
+2021-09-08
+
+- Update: icons for care, chat, pickup, and phone ([de135a3](https://github.com/Tapestry-Inc/design-tokens/commit/de135a3)) (Dan Merfeld)
+
 ## [v2.13.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.12.1...v2.13.0)
 
 2021-09-08
