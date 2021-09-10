@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.15.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.14.0...v2.15.0)
+
+2021-09-10
+
+- Update: motif theme reset to brand default theme for Coach and SW ([6c53f15](https://github.com/Tapestry-Inc/design-tokens/commit/6c53f15)) (Dan Merfeld)
+
 ## [v2.14.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.13.0...v2.14.0)
 
 2021-09-08
