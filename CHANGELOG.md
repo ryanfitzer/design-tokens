@@ -1,5 +1,11 @@
 # Changelog | Tapestry Design Tokens
 
+## [v2.15.1](https://github.com/Tapestry-Inc/design-tokens/compare/v2.15.0...v2.15.1)
+
+2021-09-11
+
+- Fix: Remove `outputFileSync` callback and update SVGO deprecated method. (#53) [#53](https://github.com/Tapestry-Inc/design-tokens/issues/53) ([3347945](https://github.com/Tapestry-Inc/design-tokens/commit/3347945)) (Ryan Fitzer)
+
 ## [v2.15.0](https://github.com/Tapestry-Inc/design-tokens/compare/v2.14.0...v2.15.0)
 
 2021-09-10
